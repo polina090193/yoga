@@ -1,3 +1,49 @@
 body {
-	background-color: #fbf5f4;
+	margin: 70px 90px;
+	background: #fbf5f4;
+	display: grid;
+	grid-template-rows: 470px auto 470px: 
+	grid-template-columns: 160px 1.7fr 290px 1fr 160px;
+	grid-template-areas: 
+	"nav . nav . nav"
+	"logo main-image main-inscription . page"
+	"social . . . scroll-down";
+}
+
+nav {
+	grid-area: nav;
+}
+
+.welcome {
+	grid-area: welcome;
+}
+
+.phone-number {
+	grid-area: phone-number;
+}
+
+.logo {
+	grid-area: logo;
+}
+
+.main-image {
+	grid-area: main-image;
+}
+
+.main-inscription {
+	grid-area: main-inscription;
+}
+
+.pages {
+	grid-area: pages;
+}
+
+.social {
+	grid-area: social;
+	text-transform: uppercase;
+}
+
+.scroll-down {
+	grid-area: scroll-down;
+	text-transform: uppercase;
 }
