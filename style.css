@@ -8,6 +8,21 @@ header {
 	justify-content: space-between;
 }
 
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.social {
+	max-width: 6.75em;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*.scroll-down {
+	
+}
+
 /*
 display: grid;
 grid-template-rows: 40px auto 40px: 
