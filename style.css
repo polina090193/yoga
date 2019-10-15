@@ -8,13 +8,13 @@ header {
 	justify-content: space-between;
 }
 
-footer {
+.footer {
 	display: flex;
 	justify-content: space-between;
 }
 
 .social {
-	max-width: 6.75em;
+	min-width: 6.75em;
 	display: flex;
 	justify-content: space-between;
 }
