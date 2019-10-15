@@ -3,7 +3,7 @@ body {
 	background: #fbf5f4;
 }
 
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 }
@@ -19,61 +19,16 @@ header {
 	justify-content: space-between;
 }
 
-/*.scroll-down {
-	
-}
-
-/*
-display: grid;
-grid-template-rows: 40px auto 40px: 
-grid-template-columns: 160px 1.7fr 290px 1fr 160px;
-
-.welcome {
-	grid-column-start: 3;
-	grid-column-end: 3;
-}
-
-.phone-number {
-	grid-column-start: 5;
-	grid-column-end: 5;
-}
-
-.logo {
-	grid-row-start: 2;
-	grid-row-end: 2;
-}
-
-.main-image {
-	grid-row-start: 2;
-	grid-row-end: 2;
-	grid-column-start: 2;
-	grid-column-end: 2;
-}
-
-.main-inscription {
-	grid-row-start: 2;
-	grid-row-end: 2;
-	grid-column-start: 3;
-	grid-column-end: 4;
-}
-
-.pages {
-	grid-row-start: 2;
-	grid-row-end: 2;
-	grid-column-start: 5;
-	grid-column-end: 5;
-}
-
-.social {
-	grid-row-start: 3;
-	grid-row-end: 3;
-	text-transform: uppercase;
-}
-
 .scroll-down {
-	grid-row-start: 3;
-	grid-row-end: 3;
-	grid-column-start: 5;
-	grid-column-end: 5;
-	text-transform: uppercase;
-}*/
+	display: flex;
+	max-height: 30px;
+	align-items: center;
+}
+
+.scroll-down__arrow {
+	max-width: 30px;
+}
+
+.scroll-down__text {
+	margin-right: 0.625em;
+}
