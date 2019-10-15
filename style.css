@@ -8,6 +8,11 @@ body {
 	justify-content: space-between;
 }
 
+.menu {
+	display: flex;
+	align-items: center;
+}
+
 .menu__icon {
 	content: url('images/burger.png');
 	max-width: 24px;
