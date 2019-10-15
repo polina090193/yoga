@@ -8,6 +8,40 @@ body {
 	justify-content: space-between;
 }
 
+.menu__icon {
+	content: url('images/burger.png');
+	max-width: 24px;
+}
+
+.welcome {
+	display: flex;
+	align-items: center;
+}
+
+.welcome__dot {
+	background-color: #f78e6a;
+	width: 0.375em;
+	height: 0.375em;
+	border-radius: 50%;
+	margin-right: 0.625em;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+}
+
+.logo-left {
+	max-width: 49px;
+	max-height: 30px;
+	content: url('images/logo.png');
+}
+
+.main-image {
+	object-fit: contain;
+	max-height: 53.188em;
+}
+
 .footer {
 	display: flex;
 	justify-content: space-between;
@@ -27,6 +61,7 @@ body {
 
 .scroll-down__arrow {
 	max-width: 30px;
+	content: url('images/ellipse-arrow.png');
 }
 
 .scroll-down__text {
