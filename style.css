@@ -1,5 +1,5 @@
 body {
-	margin: 70px 90px;
+	margin: 4.375em 5.625em;
 	background: #fbf5f4;
 }
 
@@ -29,6 +29,7 @@ body {
 .main {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .logo-left {
@@ -39,7 +40,7 @@ body {
 
 .main-image {
 	object-fit: contain;
-	max-height: 53.188em;
+	max-height: 78.79vh;
 }
 
 .footer {
