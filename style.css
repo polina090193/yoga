@@ -1,11 +1,31 @@
+@import url('fonts.css');
+
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	margin: 4.375em 5.625em;
 	background: #fbf5f4;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Geometria';
+}
+
+.fullscreen-slide-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	padding: 0 8.33vh;
+	height: 100vh;
 }
 
 .header {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 6.48vh;
 }
 
 .menu {
@@ -15,7 +35,11 @@ body {
 
 .menu__icon {
 	content: url('images/burger.png');
-	max-width: 24px;
+	margin-right: 0.938em;
+}
+
+.menu__block {
+	font-size: 18px;
 }
 
 .welcome {
@@ -39,18 +63,17 @@ body {
 
 .logo-left {
 	max-width: 49px;
-	max-height: 30px;
 	content: url('images/logo.png');
 }
 
 .main-image {
-	object-fit: contain;
-	max-height: 78.79vh;
+	height: 78.79vh;
 }
 
 .footer {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 6.48vh;
 }
 
 .social {
@@ -61,7 +84,6 @@ body {
 
 .scroll-down {
 	display: flex;
-	max-height: 30px;
 	align-items: center;
 }
 
