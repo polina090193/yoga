@@ -79,8 +79,17 @@ body {
 }
 
 .main-inscription {
-	width: 28.95vw;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 40vw/*28.95vw*/;
 	height: 23.14vh;
+}
+
+.lotus-inscription {
+	display: flex;
+	align-items: flex-start;
+	width: 28.95vw;
 }
 
 .center-yoga {
@@ -97,7 +106,8 @@ body {
 }
 
 .lotos {
-	font-size: 200px;
+	font-size: 18.52vh;
+	font-weight: medium;
 }
 
 .footer {
