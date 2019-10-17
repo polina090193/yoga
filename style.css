@@ -80,40 +80,92 @@ body {
 
 .main-inscription {
 	display: flex;
-	align-items: center;
 	flex-wrap: wrap;
-	width: 40vw/*28.95vw*/;
-	height: 23.14vh;
+	justify-content: flex-start;
+	align-items: center;
+	max-width: 51.48vh;
 }
 
-.lotus-inscription {
+.lotos-inscription {
 	display: flex;
-	align-items: flex-start;
-	width: 28.95vw;
+	justify-content: center;
+	align-items: center;
 }
 
 .center-yoga {
-	font-size: 24px;
+	margin: 0;
+	padding: 0;
+	font-size: 2.22vh;
+
 	background: linear-gradient(to right, #f78e6a, #fc66a2);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	-webkit-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-ms-transform: rotate(270deg);
-	-o-transform: rotate(270deg);
-	transform: rotate(270deg);
+
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+	white-space: nowrap;
 }
 
 .lotos {
+	margin: 0;
+	padding: 0;
+	display: block;
+	margin-left: -1.38vh;
+	margin-bottom: -2.31vh;
 	font-size: 18.52vh;
 	font-weight: medium;
+	line-height: 15.27vh;
+	background: linear-gradient(to top, #f78e6a, #fc66a2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.try {
+	display: flex;
+}
+
+.try__plus {
+	width: 5.55vh;
+	object-fit: contain;
+	margin-right: 2.96vh;
+}
+
+.try__inscription {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: 30px;
+	max-width: 32.4vh;
+}
+
+.pages {
+	font-weight: lighter;
+	text-align: right;
+
+	background: linear-gradient(to right, #f78e6a, #fc66a2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.pages__top {
+	font-size: 6.67vh;
+	line-height: 2.22vh;
+}
+
+.pages__bottom {
+	font-size: 2.77vh;
+	line-height: 2.22vh;
 }
 
 .footer {
 	display: flex;
 	justify-content: space-between;
-
 }
 
 .social {
