@@ -1,4 +1,5 @@
 @import url('fonts.css');
+@import url('menu-opened.css');
 
 html {
 	height: 100%;
@@ -24,6 +25,13 @@ body {
 	height: 100vh;
 }
 
+.menu,
+.try,
+.social,
+.scroll-down {
+	cursor: pointer;
+ }
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -33,6 +41,7 @@ body {
 .menu {
 	display: flex;
 	align-items: center;
+	opacity: 1;
 }
 
 .menu__icon {
@@ -41,12 +50,13 @@ body {
 }
 
 .top-center-text {
-	line-height: 36px;
+	line-height: 3.33vh;
 }
 
 .welcome {
 	display: flex;
 	align-items: center;
+	align-self: flex-start;
 }
 
 .welcome__dot {
@@ -61,6 +71,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	color: black;
+	line-height: 3.33vh;
 }
 
 .main {
@@ -175,7 +186,6 @@ body {
 	font-family: 'Montserrat';
 	font-size: 10px;
 	text-transform: uppercase;
-	cursor: pointer;
 }
 
 .social__vk,

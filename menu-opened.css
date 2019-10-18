@@ -1,0 +1,59 @@
+.menu-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 16.2vh;
+    position: absolute;
+    opacity: 0;
+}
+
+.cross {
+    /*display: none;*/
+    content: url('./images/x.png');
+    width: 2.13vh;
+    margin-right: 2.31vh;
+    object-fit: contain;
+    align-self: flex-start;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+}
+
+.menu-opened {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25.46vh;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform .5s ease-in-out;
+}
+
+.menu:hover + .menu-block > .menu-opened,
+.menu-block:hover {
+    transform: scaleY(1);
+}
+
+.menu:hover + .menu-block > .cross,
+.menu-block:hover {
+    transform: scale(1);
+}
+
+.menu:hover + .menu-block {
+    opacity: 1;
+}
+
+.menu:hover {
+    opacity: 0;
+}
+
+.menu-opened__item {
+    list-style: none;
+    line-height: 3.33vh;
+    opacity: 0.5;
+}
+
+.menu-opened__item_selected {
+    opacity: 1;
+}
