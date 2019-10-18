@@ -174,11 +174,18 @@ body {
 	font-family: 'Montserrat';
 	font-size: 10px;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .social__vk,
 .social__fb {
 	margin-right: 3em;
+}
+
+.social__vk:hover,
+.social__fb:hover,
+.social__inst:hover {
+	color: #f89677;
 }
 
 .scroll-down {
