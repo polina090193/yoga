@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 @font-face {
-	font-family: 'Geometria';
+	font-family: 'Geometria', sans-serif;
 	src: url('fonts/Geometria.ttf');
 	src: url('fonts/Geometria.woff') format('woff'),
 		url('fonts/Geometria.svg') format('svg');
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: 'Geometria';
+	font-family: 'Geometria', sans-serif;
 	src: url('fonts/Geometria-Light.ttf');
 	src: url('fonts/Geometria-Light.woff') format('woff'),
 		url('fonts/Geometria-Light.svg') format('svg');
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-	font-family: 'Geometria';
+	font-family: 'Geometria', sans-serif;
 	src: url('fonts/Geometria-Bold.ttf');
 	src: url('fonts/Geometria-Bold.woff') format('woff'),
 		url('fonts/Geometria-Bold.svg') format('svg');
@@ -28,7 +28,7 @@
 }
 
 @font-face {
-	font-family: 'Geometria';
+	font-family: 'Geometria', sans-serif;
 	src: url('fonts/Geometria-Medium.ttf');
 	src: url('fonts/Geometria-Medium.woff') format('woff'),
 		url('fonts/Geometria-Medium.svg') format('svg');
