@@ -95,7 +95,7 @@ body {
 .center-yoga {
 	margin: 0;
 	padding: 0;
-	font-size: 2.22vh;
+	font-size: 2.5vh;
 
 	background: linear-gradient(to right, #f78e6a, #fc66a2);
 	-webkit-background-clip: text;
@@ -115,8 +115,8 @@ body {
 	margin: 0;
 	padding: 0;
 	display: block;
-	margin-left: -1.38vh;
-	margin-bottom: -2.31vh;
+	margin-left: -1vh;
+	/*margin-bottom: -2.31vh;*/
 	font-size: 18.52vh;
 	font-weight: medium;
 	line-height: 15.27vh;
@@ -140,7 +140,7 @@ body {
 	font-size: 20px;
 	font-weight: lighter;
 	line-height: 30px;
-	max-width: 32.4vh;
+	max-width: 35vh;
 }
 
 .pages {
@@ -169,9 +169,16 @@ body {
 }
 
 .social {
-	min-width: 6.75em;
+	min-width: 10.18vh;
 	display: flex;
-	justify-content: space-between;
+	font-family: 'Montserrat';
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.social__vk,
+.social__fb {
+	margin-right: 3em;
 }
 
 .scroll-down {
