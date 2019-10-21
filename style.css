@@ -41,7 +41,6 @@ body {
 .menu {
 	display: flex;
 	align-items: center;
-	opacity: 1;
 }
 
 .menu__icon {
