@@ -5,17 +5,17 @@
     width: 16.2vh;
     position: absolute;
     opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform .5s ease-in-out;
 }
 
 .cross {
-    /*display: none;*/
     content: url('./images/x.png');
     width: 2.13vh;
     margin-right: 2.31vh;
     object-fit: contain;
     align-self: flex-start;
-    transform: scale(0);
-    transition: .5s ease-in-out;
 }
 
 .menu-opened {
@@ -25,26 +25,20 @@
     justify-content: space-between;
     height: 25.46vh;
     position: absolute;
-    transform: scaleY(0);
-    transform-origin: 0 0;
-    transition: transform .5s ease-in-out;
 }
 
-.menu:hover + .menu-block > .menu-opened,
-.menu-block:hover {
+.menu:hover > .menu-block,
+.menu-block:hover > .menu-block {
+    opacity: 1;
     transform: scaleY(1);
 }
 
-.menu:hover + .menu-block > .cross,
-.menu-block:hover {
-    transform: scale(1);
-}
-
-.menu:hover + .menu-block {
+.menu:hover > .menu-block {
     opacity: 1;
 }
 
-.menu:hover {
+.menu:hover > .menu__icon,
+.menu:hover > .menu__header {
     opacity: 0;
 }
 
