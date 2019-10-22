@@ -17,21 +17,6 @@ body {
 	font-weight: normal;
 }
 
-@media screen and (max-width: 1024px) {
-	.menu {
-		color: red;
-		order: -2;
-	}
-
-	.logo-left {
-		order: -1;
-	}
-
-	.welcome {
-		display: none;
-	}
-  }
-
 .fullscreen-slide-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -229,4 +214,19 @@ body {
 
 .scroll-down__text {
 	margin-right: 0.625em;
+}
+
+@media screen and (max-width: 1024px) {
+	.menu {
+		color: red;
+		order: -2;
+	}
+
+	.logo-left {
+		order: -1;
+	}
+
+	.welcome {
+		display: none;
+	}
 }
