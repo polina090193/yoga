@@ -33,12 +33,12 @@ body {
 .scroll-down {
 	cursor: pointer;
  }
-
+/*
 .header {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 6.4vh;
-}
+}*/
 
 .menu {
 	display: flex;
