@@ -92,13 +92,17 @@ body {
 	max-width: 49px;
 	content: url('images/logo.png');
 	object-fit: contain;
+	flex-basis: 10%;
 }
 
 .main-image {
 	height: 78.79vh;
+	flex-basis: 40%;
+	object-fit: contain;
 }
 
 .main-inscription {
+	flex-basis: 40%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -170,6 +174,7 @@ body {
 .pages {
 	font-weight: lighter;
 	text-align: right;
+	flex-basis: 10%;
 
 	background: linear-gradient(to right, #f78e6a, #fc66a2);
 	-webkit-background-clip: text;
@@ -199,6 +204,7 @@ body {
 	font-family: 'Montserrat';
 	font-size: 10px;
 	text-transform: uppercase;
+	flex-basis: 50%;
 }
 
 .social__vk,
@@ -215,6 +221,7 @@ body {
 .scroll-down {
 	display: flex;
 	align-items: center;
+	flex-basis: 50%;
 }
 
 .scroll-down__arrow {
