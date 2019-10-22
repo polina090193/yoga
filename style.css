@@ -17,6 +17,20 @@ body {
 	font-weight: normal;
 }
 
+@media (max-width: 1024px) {
+	.menu {
+		order: -2;
+	}
+
+	.logo-left {
+		order: -1;
+	}
+
+	.welcome {
+		display: none;
+	}
+  }
+
 .fullscreen-slide-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -117,6 +131,10 @@ body {
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 	transform: rotate(180deg);
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
 	white-space: nowrap;
 }
