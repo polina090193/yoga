@@ -60,6 +60,7 @@ body {
 	display: flex;
 	align-items: center;
 	align-self: flex-start;
+	justify-content: center;
 	flex-basis: 70%;
 }
 
@@ -114,6 +115,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: auto;
 }
 
 .center-yoga {
@@ -156,6 +158,7 @@ body {
 
 .try {
 	display: flex;
+	margin-bottom: auto;
 }
 
 .try__plus {
@@ -175,6 +178,7 @@ body {
 	font-weight: lighter;
 	text-align: right;
 	flex-basis: 10%;
+	margin: auto 0;
 
 	background: linear-gradient(to right, #f78e6a, #fc66a2);
 	-webkit-background-clip: text;
