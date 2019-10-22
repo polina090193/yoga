@@ -224,8 +224,9 @@ body {
 
 .scroll-down {
 	display: flex;
-	align-items: center;
+	/*align-items: center;*/
 	flex-basis: 50%;
+	justify-content: flex-end;
 }
 
 .scroll-down__arrow {
