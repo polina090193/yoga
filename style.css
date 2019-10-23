@@ -91,7 +91,7 @@ body {
 }*/
 
 .logo-left {
-	max-width: 4.63vh;
+	max-width: 49px;
 	content: url('images/logo.png');
 	object-fit: contain;
 	flex-basis: 10%;
@@ -242,8 +242,7 @@ body {
 	margin-right: 0.625em;
 }
 
-@media screen and (max-width: 1085px),
-screen and (max-height: 685px) {
+@media screen and (max-width: 1085px), screen and (max-height: 685px) {
 	.menu {
 		color: red;
 		order: -2;
@@ -253,7 +252,6 @@ screen and (max-height: 685px) {
 		order: -1;
 		align-self: flex-start;
 		flex-basis: 70%;
-		max-width: none;
 	}
 
 	.welcome {
