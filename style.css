@@ -241,20 +241,3 @@ body {
 .scroll-down__text {
 	margin-right: 0.625em;
 }
-
-@media screen and (max-width: 1085px), screen and (max-height: 685px) {
-	.menu {
-		color: red;
-		order: -2;
-	}
-
-	.logo-left {
-		order: -1;
-		align-self: flex-start;
-		flex-basis: 70%;
-	}
-
-	.welcome {
-		display: none;
-	}
-}

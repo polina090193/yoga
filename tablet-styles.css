@@ -1,15 +1,69 @@
+.welcome,
+.scroll-down__text {
+	display: none;
+}
+
+.fullscreen-slide-wrapper {
+	padding: 3.90vw 2.05vh;
+}
+
 .menu {
 	color: red;
-	order: -2;
+	order: -3;
 }
 
 .logo-left {
-	order: -1;
+	order: -2;
 	align-self: flex-start;
 	flex-basis: 70%;
 	max-width: none;
 }
 
-.welcome {
-	display: none;
+.phone__number {
+	order: -1;
+}
+
+.main-inscription {
+	order: 0;
+	align-self: center;
+	flex-basis: 60%;
+	/*height: 57.61vh;*/
+	/*margin-top: 30vh;*/
+	width: 52.08vw;
+	height: 19.04vh;
+	/*flex-basis: 0 1 20%;*/
+}
+
+.main-image {
+	width: 47.92vw;
+	/*margin-top: 30vh;*/
+	/*flex: 1 0 80%;*/
+	order: 1;
+	flex-basis: 40%;
+	height: 57.61vh;
+	transform: scale(-1, 1);
+	/*position: relative;
+	margin-right: -200px;
+	overflow: hidden;*/
+}
+
+.scroll-down {
+	order: 2;
+	flex-basis: 15%;
+	justify-content: flex-start;
+	align-self: flex-end;
+	/*margin-bottom: 2.05vh;*/
+}
+
+.social {
+	order: 3;
+	flex-basis: 70%;
+	justify-content: center;
+	align-self: flex-end;
+	/*margin-bottom: 2.93vh;*/
+}
+
+.pages {
+	order: 4;
+	flex-basis: 15%;
 }
