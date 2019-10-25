@@ -1,6 +1,12 @@
 @import url('fonts.css');
 @import url('menu-opened.css');
 
+@media screen and (max-width: 1085px) and (max-height: 732px) {
+	.pages {
+		display: none;
+	}
+}
+
 html {
 	height: 100%;
 	margin: 0;
@@ -99,6 +105,7 @@ body {
 
 .main-image {
 	height: 78.79vh;
+	width: 29.64vh;
 	flex-basis: 40%;
 	object-fit: contain;
 }
@@ -236,6 +243,10 @@ body {
 	max-width: 30px;
 	content: url('images/ellipse-arrow.png');
 	object-fit: contain;
+}
+
+.scroll-down__arrow:active {
+	content: url('images/arrow-active.png');
 }
 
 .scroll-down__text {
