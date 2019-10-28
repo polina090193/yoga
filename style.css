@@ -233,20 +233,22 @@ body {
 
 .scroll-down {
 	display: flex;
-	/*align-items: center;*/
+	align-items: center;
 	flex-basis: 50%;
 	justify-content: flex-end;
 	align-self: center;
+	margin-right: auto;
 }
 
 .scroll-down__arrow {
-	max-width: 30px;
-	content: url('images/ellipse-arrow.png');
+	background: url('images/ellipse-arrow.png') no-repeat;
 	object-fit: contain;
+	width: 2em;
+	height: 2em;
 }
 
-.scroll-down__arrow:active {
-	content: url('images/arrow-active.png');
+.scroll-down__arrow:hover {
+	background: url('images/arrow-active.png');
 }
 
 .scroll-down__text {
