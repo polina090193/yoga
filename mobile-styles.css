@@ -1,11 +1,24 @@
 .phone,
-.menu,
-.logo-left {
+.menu__header {
 	display: none;
 }
 
+.menu {
+    flex-basis: unset;
+}
+
+.menu__icon {
+    width: 6.4vw;
+}
+
+.logo-left {
+    justify-content: flex-end;
+    flex-basis: unset;
+    height: 3.08vh;
+}
+
 .fullscreen-slide-wrapper {
-	padding: 5.33vw 2.46vh;
+    padding: 20px;
 }
 
 .main-image {
@@ -17,29 +30,56 @@
 
 .main-inscription {
     order: 0;
-    flex-basis: 100%;
     width: 89.33vw;
+    height: auto;
     margin: 0 auto;
+    justify-content: center;
+    flex-basis: 100%;
+}
+
+.center-yoga {
+    font-size: 2.2vh;
+}
+
+.lotos {
+    font-size: 16vh;
+}
+
+.try__inscription {
+	font-size: 1.97vh;
+	line-height: 3.08vh;
+	width: 55vw;
 }
 
 .pages {
     order: 1;
-    flex-basis: 50%;
-    text-align: unset;
-    justify-content: flex-end;
+    text-align: right;
+    margin: 0;
+    flex-basis: unset;
+}
+
+.pages__top {
+    padding-top: 0;
+    font-size: 3.69vh;
+    line-height: 2.96vh;
+}
+
+.pages__bottom {
+    font-size: 1.72vh;
+    line-height: 2.96vh;
 }
 
 .social {
 	order: 2;
-	flex-basis: 20%;
-	/*justify-content: center;
-	align-self: flex-end;*/
+    justify-content: center;
+    font-size: 10px;
+    margin: 0;
+    flex-basis: unset;
 }
 
 .scroll-down {
 	order: 3;
-	flex-basis: 20%;
-	/*justify-content: flex-start;
-	align-self: flex-end;
-	margin-left: 3.9vh;*/
+	justify-content: flex-end;
+    margin: 0;
+    flex-basis: unset;
 }
