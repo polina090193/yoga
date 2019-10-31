@@ -1,0 +1,30 @@
+.try__inscription {
+    max-width: unset;
+}
+
+.try__inscription,
+.top-center-text,
+.phone__number {
+    font-size: 4.27vh;
+    line-height: 6.67vh;
+}
+
+.menu,
+.welcome,
+.phone {
+	flex-basis: 33.33%;
+}
+
+.phone {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-image {
+    height: 50.66vh;
+}
+
+.menu__header,
+.scroll-down__text {
+    display: none;
+}

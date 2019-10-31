@@ -34,7 +34,7 @@
     height: auto;
     margin: 0 auto;
     justify-content: center;
-    flex-basis: 100%;
+    flex-basis: 100vw;
 }
 
 .center-yoga {
@@ -53,9 +53,9 @@
 
 .pages {
     order: 1;
-    text-align: right;
+    text-align: unset;
     margin: 0;
-    flex-basis: unset;
+    flex-basis: 40%;
 }
 
 .pages__top {
@@ -74,12 +74,10 @@
     justify-content: center;
     font-size: 10px;
     margin: 0;
-    flex-basis: unset;
 }
 
 .scroll-down {
 	order: 3;
 	justify-content: flex-end;
     margin: 0;
-    flex-basis: unset;
 }
