@@ -9,17 +9,24 @@
 
 .menu {
 	order: -3;
+	flex-basis: 33%;
 }
 
 .logo-left {
 	order: -2;
 	align-self: flex-start;
-	flex-basis: 70%;
+	flex-basis: 33%;
 	max-width: none;
+}
+
+.phone {
+	flex-basis: 33%;
+	text-align: end;
 }
 
 .phone__number {
 	order: -1;
+	
 }
 
 .main-inscription {
@@ -56,4 +63,5 @@
 .pages {
 	order: 4;
 	flex-basis: 30%;
+	margin: unset;
 }
