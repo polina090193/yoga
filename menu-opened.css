@@ -1,10 +1,11 @@
-/*.cross {
+.cross {
+    display: inline-block;
     content: url('./images/x.png');
     width: 2.13vh;
     margin-right: 2.31vh;
     object-fit: contain;
     align-self: flex-start;
-}*/
+}
 
 .menu__icon,
 .menu__header,
@@ -20,12 +21,11 @@
     position: absolute;
     opacity: 0;
     transform: scaleY(0);
-    /*transform-origin: 0 0;*/
 }
 
 .menu-opened {
     margin: 0;
-    padding: 0 10vh 10vh 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,6 +52,10 @@
     line-height: 3.33vh;
     opacity: 0.5;
     margin-top: 0.5em;
+}
+
+.menu-opened__item_selected {
+    margin-top: 0;
 }
 
 .menu-opened__item a {
