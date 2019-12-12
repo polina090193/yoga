@@ -1,21 +1,13 @@
-.cross {
-    display: inline-block;
-    content: url('./images/x.png');
-    width: 2.13vh;
-    margin-right: 2.31vh;
-    object-fit: contain;
-    align-self: flex-start;
-}
-
 .menu__icon,
 .menu__header,
 .menu-block,
-.menu:hover .menu-block {
-    transition: .5s ease-in-out;
+.menu:hover {
+    transition: .5s ease-in-out all;
 }
 
 .menu-block {
-    display: flex;
+    display: block;
+    float: right;
     justify-content: space-between;
     align-items: flex-start;
     position: absolute;
@@ -30,6 +22,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
+    top: -1.5em;
 }
 
 .menu:hover .menu-block {
@@ -42,8 +35,8 @@
     opacity: 1;
 }
 
-.menu:hover .menu__icon,
-.menu:hover .menu__header {
+.menu:hover .menu__header,
+.menu:hover .menu__icon {
     opacity: 0;
 }
 
@@ -52,10 +45,6 @@
     line-height: 3.33vh;
     opacity: 0.5;
     margin-top: 0.5em;
-}
-
-.menu-opened__item_selected {
-    margin-top: 0;
 }
 
 .menu-opened__item a {
