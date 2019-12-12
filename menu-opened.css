@@ -51,6 +51,7 @@
     list-style: none;
     line-height: 3.33vh;
     opacity: 0.5;
+    margin-top: 0.5em;
 }
 
 .menu-opened__item a {
