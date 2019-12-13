@@ -16,7 +16,7 @@ body {
 	font-weight: normal;
 }
 
-.fullscreen-slide-wrapper {
+.main {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: space-between;

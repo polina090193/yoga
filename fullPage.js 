@@ -1,5 +1,5 @@
-new fullpage('#fullpage', {
-	//options here
+new fullpage('.fullscreen-slide-wrapper', {
+	anchors:['firstPage', 'secondPage', 'thirdPage']
 	autoScrolling:true,
 	scrollHorizontally: true
 });
