@@ -21,12 +21,10 @@
 
 .phone {
 	flex-basis: 33%;
-	text-align: end;
 }
 
 .phone__number {
 	order: -1;
-	
 }
 
 .main-inscription {

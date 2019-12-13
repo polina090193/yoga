@@ -67,6 +67,8 @@ body {
 
 .phone {
 	flex-basis: 15%;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .phone__number {
