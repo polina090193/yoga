@@ -1,11 +1,11 @@
 .menu__icon,
 .menu__header,
 .menu-block,
-.menu:active {
+.menu:focus {
     transition: .5s ease-in-out all;
 }
 
-.menu:active {
+.menu:focus {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -30,7 +30,7 @@
     height: 100%;
 }
 
-.menu:active .menu-block {
+.menu:focus .menu-block {
     opacity: 1;
     transform: scaleY(1);
 }
@@ -40,8 +40,8 @@
     opacity: 1;
 }
 
-.menu:active .menu__header,
-.menu:active .menu__icon {
+.menu:focus .menu__header,
+.menu:focus .menu__icon {
     opacity: 0;
 }
 
@@ -58,7 +58,7 @@
     text-decoration: none;
 }
 
-.menu-opened__item:hover {
+.menu-opened__item:focus {
     opacity: 1;
 }
 
