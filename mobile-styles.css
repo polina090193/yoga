@@ -17,6 +17,7 @@
     justify-content: flex-end;
     flex-basis: unset;
     height: 3.08vh;
+    margin: 0 0 0 auto;
 }
 
 .slides {
