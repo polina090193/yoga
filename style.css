@@ -16,7 +16,7 @@ body {
 	font-weight: normal;
 }
 
-.main {
+.slides {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: space-between;
@@ -212,14 +212,17 @@ body {
 .scroll-down {
 	display: flex;
 	align-items: center;
-	flex-basis: 50%;
 	justify-content: flex-end;
 	align-self: center;
+	flex-basis: 50%;
 	margin-right: auto;
+	text-decoration: none;
+	color: inherit;
 }
 
 .scroll-down__arrow {
 	background: url('images/ellipse-arrow.png') no-repeat;
+	background-position: center;
 	object-fit: contain;
 	width: 2em;
 	height: 2em;
@@ -231,4 +234,5 @@ body {
 
 .scroll-down__text {
 	margin-right: 0.625em;
+	align-self: flex-start;
 }
