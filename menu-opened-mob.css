@@ -5,9 +5,25 @@
     transition: .5s ease-in-out all;
 }*/
 
+.menu:hover,
+.menu:hover .menu__header,
+.menu:hover .menu__icon,
+.menu:hover .menu-block,
+.menu__icon,
+.menu__header,
+.menu-block {
+    transition: none;
+    opacity: 1;
+    transform: none;
+}
+
 .menu {
-    
     position: absolute;
+}
+
+.menu__mobile {
+    width: 100vw;
+    height: 100vh;
 }
 
 .menu-block {

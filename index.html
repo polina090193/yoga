@@ -209,13 +209,16 @@
 		and (max-height: 1024px)
 		and (orientation: landscape)`).matches) {
 			
-			let mobileMenu = document.querySelectorAll('.menu');
+			let mobileMenu = document.querySelectorAll(':hover');
+			let menuIcon = document.querySelectorAll('.menu__icon');
 
-			mobileMenu.style.cssText=`
-			width: 100%;
-			height: 100%;`
+			mobileMenu.style.cssText = '';
+
+			// menuIcon.addEventListener( "click" , () => {
+			// 	mobileMenu.classList.add('menu__mobile')
+			// });
 			
-			// let menuIcon = document.querySelectorAll('.menu__icon');
+			// 
 			// menuIcon.addEventListener( "click" , () => alert('Спасибо!'));
 			
 			//document.body.style.backgroundColor = 'pink';
