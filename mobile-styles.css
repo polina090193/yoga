@@ -1,3 +1,5 @@
+@import url('menu-opened-mob.css');
+
 .phone,
 .menu__header {
 	display: none;
