@@ -31,13 +31,6 @@
     opacity: 1;
 }
 
-.menu-opened__item {
-    list-style: none;
-    line-height: 3.33vh;
-    opacity: 0.5;
-    margin-top: 0.5em;
-}
-
 .menu-opened__item a {
     color: inherit;
     text-decoration: none;
@@ -49,12 +42,27 @@
 
 .menu__mobile {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
     background-color: pink;
-    margin: -20px;
+}
+
+.menu-opened {
+    top: 25%;
+    right: 0;
+    left: 0;
+    bottom: 50%;
+}
+
+.menu-opened__item {
+    list-style: none;
+    font-size: 1.5em;
+    line-height: 2em;
+    opacity: 0.5;
+    margin-top: 0.5em;
 }

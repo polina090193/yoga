@@ -210,47 +210,51 @@
 		and (orientation: landscape)`).matches) {
 			
 			let buttons = document.querySelectorAll('.menu__icon'),
-				index, button;
+				i, button;
 
-			for (index = 0; index < buttons.length; index++) {
-				button = buttons[index];
+			for (i = 0; i < buttons.length; i++) {
+				button = buttons[i];
 				button.addEventListener('click', clickHandler);
 			}
 
 			function clickHandler() {
-				//document.body.classList.toggle("pink");
 
-				let menu = document.querySelector('.menu-block').parentNode;
-				menu.remove();
+				let menuIcons = document.querySelectorAll('.menu__icon'),
+				j, icon;
 
-				// let mobileMenu = document.createElement('nav');
-				// mobileMenu.className = "menu__mobile";
-				// mobileMenu.innerHTML = `
-				// 	<ul class="menu-opened">
-				// 		<li class="menu-opened__item menu-opened__item_selected">
-				// 			<a href="#main">Главная</a>
-				// 		</li>
-				// 		<li class="menu-opened__item">
-				// 			<a href="#classes">Направления</a>
-				// 		</li>
-				// 		<li class="menu-opened__item">
-				// 			<a href="#teachers">Преподаватели</a>
-				// 		</li>
-				// 		<li class="menu-opened__item">
-				// 			<a href="#prices">Абонементы</a>
-				// 		</li>
-				// 		<li class="menu-opened__item">
-				// 			<a href="#schedule">Расписание</a>
-				// 		</li>
-				// 		<li class="menu-opened__item">
-				// 			<a href="#reviews">Отзывы</a>
-				// 		</li>
-				// 		<li class="menu-opened__item">
-				// 			<a href="#contacts">Контакты</a>
-				// 		</li>
-				// 	</ul>`;
+				for (j = 0; j < menuIcons.length; j++) {
+					icon = menuIcons[j];
+					icon.remove();
+				}
+							
+				let mobileMenu = document.createElement('nav');
+				mobileMenu.className = "menu__mobile";
+				mobileMenu.innerHTML = `
+					<ul class="menu-opened">
+						<li class="menu-opened__item menu-opened__item_selected">
+							<a href="#main">Главная</a>
+						</li>
+						<li class="menu-opened__item">
+							<a href="#classes">Направления</a>
+						</li>
+						<li class="menu-opened__item">
+							<a href="#teachers">Преподаватели</a>
+						</li>
+						<li class="menu-opened__item">
+							<a href="#prices">Абонементы</a>
+						</li>
+						<li class="menu-opened__item">
+							<a href="#schedule">Расписание</a>
+						</li>
+						<li class="menu-opened__item">
+							<a href="#reviews">Отзывы</a>
+						</li>
+						<li class="menu-opened__item">
+							<a href="#contacts">Контакты</a>
+						</li>
+					</ul>`;
 
-				// document.querySelector('.slides').append(mobileMenu);
+				document.querySelector('.menu').append(mobileMenu);
 			}
 	};
 
