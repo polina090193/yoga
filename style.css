@@ -32,7 +32,13 @@ body {
 .social,
 .scroll-down {
 	cursor: pointer;
- }
+}
+
+.cross {
+	padding: 20px;
+	z-index: 20;
+	float: left;
+}
 
 .menu {
 	display: flex;

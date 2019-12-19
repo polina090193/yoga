@@ -13,10 +13,6 @@
     height: 3.07vh;
 }
 
-.cross {
-    content: url('images/x.png')
-}
-
 .logo-left {
     justify-content: flex-end;
     flex-basis: unset;
