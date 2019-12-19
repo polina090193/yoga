@@ -3,14 +3,39 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="fullpage.css" />
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" media="only screen and (min-width: 881px) and (max-width: 1110px) and (orientation: landscape), only screen and (max-width: 1200px) and (orientation: portrait)" href="tablet-styles.css">
 	<link rel="stylesheet" media="only screen and (max-width: 880px) and (orientation: portrait), only screen and (width: 1024px) and (height: 1366px)" href="mobile-styles.css">
 	<link rel="stylesheet" media="only screen and (max-width: 880px) and (max-height: 1024px) and (orientation: landscape)" href="landscape-styles.css"> <!-- and (min-height: 733px)-->
-	<link rel="stylesheet" type="text/css" href="fullpage.css" />
 	<title>Центр йоги Lotos</title>
 </head>
 <body>
+	<nav class="menu__mobile">
+		<ul class="menu-opened">
+			<li class="menu-opened__item menu-opened__item_selected">
+				<a href="#main">Главная</a>
+			</li>
+			<li class="menu-opened__item">
+				<a href="#classes">Направления</a>
+			</li>
+			<li class="menu-opened__item">
+				<a href="#teachers">Преподаватели</a>
+			</li>
+			<li class="menu-opened__item">
+				<a href="#prices">Абонементы</a>
+			</li>
+			<li class="menu-opened__item">
+				<a href="#schedule">Расписание</a>
+			</li>
+			<li class="menu-opened__item">
+				<a href="#reviews">Отзывы</a>
+			</li>
+			<li class="menu-opened__item">
+				<a href="#contacts">Контакты</a>
+			</li>
+		</ul>
+	</nav>
 	<div class="fullscreen-slide-wrapper">
 		<div class="section" data-anchor="main">
 			<section class="slides">
@@ -183,81 +208,6 @@
 
 <script type="text/javascript" src="fullpage.js"> </script>
 <script type="text/javascript" src="fullpageOptions.js"> </script>
-
-<script>
-	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-	let vh = window.innerHeight * 0.01;
-
-	// Then we set the value in the --vh custom property to the root of the document
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    // When changes orientation by mobile devices
-	window.addEventListener('resize', () => {
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
-
-	//Open menu for mobile devices
-	if (window.matchMedia
-		(`only screen and (max-width: 880px)
-		and (orientation: portrait),
-
-		only screen and (width: 1024px)
-		and (height: 1366px),
-
-		only screen and (max-width: 880px)
-		and (max-height: 1024px)
-		and (orientation: landscape)`).matches) {
-			
-			let buttons = document.querySelectorAll('.menu__icon'),
-				i, button;
-
-			for (i = 0; i < buttons.length; i++) {
-				button = buttons[i];
-				button.addEventListener('click', clickHandler);
-			}
-
-			function clickHandler() {
-
-				let menuIcons = document.querySelectorAll('.menu__icon'),
-				j, icon;
-
-				for (j = 0; j < menuIcons.length; j++) {
-					icon = menuIcons[j];
-					icon.remove();
-				}
-							
-				let mobileMenu = document.createElement('nav');
-				mobileMenu.className = "menu__mobile";
-				mobileMenu.innerHTML = `
-					<ul class="menu-opened">
-						<li class="menu-opened__item menu-opened__item_selected">
-							<a href="#main">Главная</a>
-						</li>
-						<li class="menu-opened__item">
-							<a href="#classes">Направления</a>
-						</li>
-						<li class="menu-opened__item">
-							<a href="#teachers">Преподаватели</a>
-						</li>
-						<li class="menu-opened__item">
-							<a href="#prices">Абонементы</a>
-						</li>
-						<li class="menu-opened__item">
-							<a href="#schedule">Расписание</a>
-						</li>
-						<li class="menu-opened__item">
-							<a href="#reviews">Отзывы</a>
-						</li>
-						<li class="menu-opened__item">
-							<a href="#contacts">Контакты</a>
-						</li>
-					</ul>`;
-
-				document.querySelector('.menu').append(mobileMenu);
-			}
-	};
-
-</script>
+<script type="text/javascript" src="mobile.js"> </script>
 
 </html>
