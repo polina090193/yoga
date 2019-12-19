@@ -44,25 +44,25 @@
     position: fixed;
     z-index: 10;
     text-align: center;
-    /* top: 0;
+    top: 0;
     right: 0;
     left: 0;
-    bottom: 0; */
+    bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: pink;
+    background-color:rgb(251, 245, 244, 0.9);
 }
 
-/* .menu-opened {
-    top: 5em;
+.menu-opened {
+    top: 0;
     right: 0;
     left: 0;
-    bottom: 50%;
-} */
+    bottom: 0;
+    margin: 22.17vh auto;
+}
 
 .menu-opened__item {
     list-style: none;
     font-size: 1.5em;
-    line-height: 2.5em;
     opacity: 0.5;
 }

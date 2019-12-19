@@ -3,6 +3,7 @@ new fullpage('.fullscreen-slide-wrapper', {
     autoScrolling: true,
     scrollHorizontally: true,
     fixedElements: '.menu__mobile',
+    css3: false,
 });
 
 //methods

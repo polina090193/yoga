@@ -16,10 +16,6 @@ body {
 	font-weight: normal;
 }
 
-.pink {
-	background-color: pink;
-}
-
 .slides {
 	display: flex;
 	flex-wrap: wrap;

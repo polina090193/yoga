@@ -21,7 +21,7 @@ if (window.matchMedia
     only screen and (max-width: 880px)
     and (max-height: 1024px)
     and (orientation: landscape)`).matches) {
-        document.body.style.backgroundColor = pink;
+        // document.body.style.backgroundColor = pink;
         
         let buttons = document.querySelectorAll('.menu__icon'),
             i, button;
@@ -40,37 +40,37 @@ if (window.matchMedia
                 icon = menuIcons[j];
                 icon.remove();
             }
-            document.querySelector('.menu').remove();
-            document.querySelector('.menu__mobile').style.opacity = 1;
+            // document.querySelector('.menu').remove();
+            // document.querySelector('.menu__mobile').style.opacity = 1;
             
                         
-            // let mobileMenu = document.createElement('nav');
-            // mobileMenu.className = "menu__mobile";
-            // mobileMenu.innerHTML = `
-            // 	<ul class="menu-opened">
-            // 		<li class="menu-opened__item menu-opened__item_selected">
-            // 			<a href="#main">Главная</a>
-            // 		</li>
-            // 		<li class="menu-opened__item">
-            // 			<a href="#classes">Направления</a>
-            // 		</li>
-            // 		<li class="menu-opened__item">
-            // 			<a href="#teachers">Преподаватели</a>
-            // 		</li>
-            // 		<li class="menu-opened__item">
-            // 			<a href="#prices">Абонементы</a>
-            // 		</li>
-            // 		<li class="menu-opened__item">
-            // 			<a href="#schedule">Расписание</a>
-            // 		</li>
-            // 		<li class="menu-opened__item">
-            // 			<a href="#reviews">Отзывы</a>
-            // 		</li>
-            // 		<li class="menu-opened__item">
-            // 			<a href="#contacts">Контакты</a>
-            // 		</li>
-            // 	</ul>`;
+            let mobileMenu = document.createElement('nav');
+            mobileMenu.className = "menu__mobile";
+            mobileMenu.innerHTML = `
+            	<ul class="menu-opened">
+            		<li class="menu-opened__item menu-opened__item_selected">
+            			<a href="#main">Главная</a>
+            		</li>
+            		<li class="menu-opened__item">
+            			<a href="#classes">Направления</a>
+            		</li>
+            		<li class="menu-opened__item">
+            			<a href="#teachers">Преподаватели</a>
+            		</li>
+            		<li class="menu-opened__item">
+            			<a href="#prices">Абонементы</a>
+            		</li>
+            		<li class="menu-opened__item">
+            			<a href="#schedule">Расписание</a>
+            		</li>
+            		<li class="menu-opened__item">
+            			<a href="#reviews">Отзывы</a>
+            		</li>
+            		<li class="menu-opened__item">
+            			<a href="#contacts">Контакты</a>
+            		</li>
+            	</ul>`;
 
-            // document.querySelector('.menu').append(mobileMenu);
+            document.querySelector('.menu').append(mobileMenu);
         }
 };
