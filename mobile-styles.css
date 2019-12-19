@@ -13,6 +13,10 @@
     height: 3.07vh;
 }
 
+.cross {
+    content: url('images/x.png')
+}
+
 .logo-left {
     justify-content: flex-end;
     flex-basis: unset;
@@ -50,7 +54,8 @@
 
 .try__inscription {
 	font-size: 1.97vh;
-	line-height: 3.08vh;
+    line-height: 3.08vh;
+    /* opacity: 1; */
 }
 
 .pages {

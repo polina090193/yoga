@@ -21,7 +21,6 @@ if (window.matchMedia
     only screen and (max-width: 880px)
     and (max-height: 1024px)
     and (orientation: landscape)`).matches) {
-        // document.body.style.backgroundColor = pink;
         
         let buttons = document.querySelectorAll('.menu__icon'),
             i, button;
@@ -40,9 +39,6 @@ if (window.matchMedia
                 icon = menuIcons[j];
                 icon.remove();
             }
-            // document.querySelector('.menu').remove();
-            // document.querySelector('.menu__mobile').style.opacity = 1;
-            
                         
             let mobileMenu = document.createElement('nav');
             mobileMenu.className = "menu__mobile";
@@ -72,5 +68,7 @@ if (window.matchMedia
             	</ul>`;
 
             document.querySelector('.menu').append(mobileMenu);
+
+            document.querySelector('.menu__icon').toggle("cross")
         }
 };

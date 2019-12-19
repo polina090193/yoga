@@ -9,7 +9,6 @@
 }
 
 .menu-block {
-    /* position: relative; */
     display: none;
     width: 100vw;
     height: 100vh;
@@ -18,13 +17,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    /* margin: -20px; */
 }
-
-/* .menu-opened {
-    align-items: center;
-    justify-content: center;
-} */
 
 .menu__icon:hover,
 .menu__header {
@@ -54,15 +47,16 @@
 }
 
 .menu-opened {
+    justify-content: space-around;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    margin: 22.17vh auto;
+    /* padding-top: 22.17vh; */
 }
 
 .menu-opened__item {
-    list-style: none;
     font-size: 1.5em;
     opacity: 0.5;
+    /* padding-top: 6vh; */
 }
