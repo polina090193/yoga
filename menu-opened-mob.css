@@ -47,16 +47,16 @@
 }
 
 .menu-opened {
-    justify-content: space-around;
+    display: block;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    /* padding-top: 22.17vh; */
+    padding-top: 10vh;
 }
 
 .menu-opened__item {
     font-size: 1.5em;
     opacity: 0.5;
-    /* padding-top: 6vh; */
+    padding-top: 6vh;
 }
