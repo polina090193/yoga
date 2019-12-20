@@ -22,21 +22,17 @@ if (window.matchMedia
     and (max-height: 1024px)
     and (orientation: landscape)`).matches) {
         
-        let buttons = document.querySelectorAll('.menu__icon'),
-            i, button;
+        let buttons = document.querySelectorAll('.menu__icon'), button;
 
-        for (i = 0; i < buttons.length; i++) {
-            button = buttons[i];
+        for (button of buttons) {
             button.addEventListener('click', clickHandlerMenu);
         }
 
         function clickHandlerMenu() {
 
-            let menuIcons = document.querySelectorAll('.menu__icon'),
-            j, icon;
+            let menuIcons = document.querySelectorAll('.menu__icon'), icon;
 
-            for (j = 0; j < menuIcons.length; j++) {
-                icon = menuIcons[j];
+            for (icon of menuIcons) {
                 icon.style.display = 'none';
             }
                         
@@ -76,13 +72,14 @@ if (window.matchMedia
             document.querySelector('.menu__mobile').prepend(cross);
 
             cross.addEventListener('click', clickHandlerCloseMenu);
-            document.querySelector('.menu-opened__item').addEventListener('click', clickHandlerCloseMenu);
+            let menuLinks = document.querySelectorAll('.menu-opened__item');
+
+            menuLink.addEventListener('click', clickHandlerCloseMenu);
             
             function clickHandlerCloseMenu() {
                 mobileMenu.remove();
 
-                for (j = 0; j < menuIcons.length; j++) {
-                    icon = menuIcons[j];
+                for (icon of menuIcons) {
                     icon.style.display = 'block';
                 }
             }
