@@ -171,6 +171,46 @@ body {
 	max-width: 35vh;
 }
 
+.classes-text {
+	flex-basis: 40%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	max-width: 51.48vh;
+	max-height: 37vh;
+	margin-top: 13vh;
+}
+
+.yoga {
+	display: block;
+	font-size: 48px;
+	font-weight: normal;
+	line-height: 60px;
+	margin: 0;
+
+	background: linear-gradient(to bottom, #f78e6a, #fc66a2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.classes-head {
+	display: block;
+	flex-basis: 100%;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 36px;
+	margin: 0;
+}
+
+.classes-description {
+	font-size: 18px;
+	flex-basis: 100%;
+	font-weight: lighter;
+	line-height: 35px;
+}
+
 .pages {
 	font-weight: lighter;
 	text-align: right;
