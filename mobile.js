@@ -37,7 +37,7 @@ if (window.matchMedia
 
             for (j = 0; j < menuIcons.length; j++) {
                 icon = menuIcons[j];
-                icon.remove();
+                icon.style.display = 'none';
             }
                         
             let mobileMenu = document.createElement('nav');
@@ -76,11 +76,15 @@ if (window.matchMedia
             document.querySelector('.menu__mobile').prepend(cross);
 
             cross.addEventListener('click', clickHandlerCloseMenu);
+            document.querySelector('.menu-opened__item').addEventListener('click', clickHandlerCloseMenu);
             
             function clickHandlerCloseMenu() {
                 mobileMenu.remove();
 
-            
+                for (j = 0; j < menuIcons.length; j++) {
+                    icon = menuIcons[j];
+                    icon.style.display = 'block';
+                }
             }
         }
 
