@@ -73,12 +73,15 @@ if (window.matchMedia
                 cross.className = "cross";
                 cross.setAttribute('src', "images/x.png")
 
-            document.querySelector('.menu__mobile').append(cross);
-        }
+            document.querySelector('.menu__mobile').prepend(cross);
 
-        document.querySelector('.cross').addEventListener('click', clickHandlerCloseMenu);
-
-        function clickHandlerCloseMenu() {
+            cross.addEventListener('click', clickHandlerCloseMenu);
             
+            function clickHandlerCloseMenu() {
+                mobileMenu.remove();
+
+            
+            }
         }
+
 };
