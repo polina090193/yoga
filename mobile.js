@@ -73,8 +73,9 @@ if (window.matchMedia
 
             cross.addEventListener('click', clickHandlerCloseMenu);
             let menuLinks = document.querySelectorAll('.menu-opened__item');
-
-            menuLink.addEventListener('click', clickHandlerCloseMenu);
+            for (let menuLink of menuLinks) {
+                menuLink.addEventListener('click', clickHandlerCloseMenu);
+            }
             
             function clickHandlerCloseMenu() {
                 mobileMenu.remove();
