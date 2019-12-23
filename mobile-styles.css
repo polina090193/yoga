@@ -58,11 +58,11 @@
     flex-basis: 100%;
     margin-top: 0;
     flex-direction: row;
-    /* max-height: 74vh; */
 }
 
 .yoga {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    font-size: 6vh;
 }
 
 .classes-description {
