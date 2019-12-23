@@ -58,7 +58,11 @@
     flex-basis: 100%;
     margin-top: 0;
     flex-direction: row;
-    max-height: 74vh;
+    /* max-height: 74vh; */
+}
+
+.yoga {
+    margin-bottom: 1em;
 }
 
 .classes-description {
@@ -69,6 +73,7 @@
 .switch-classes-arrows {
     margin-right: 0;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .switch-classes-back {
@@ -108,6 +113,10 @@
 
 .classes-image {
 	display: none;
+}
+
+.fp-tableCell {
+    vertical-align: top;
 }
 
 .pages {

@@ -86,4 +86,14 @@ if (window.matchMedia
             }
         }
 
+        document.querySelector('.switch-classes-forward')
+            .addEventListener('click', function(){
+                fullpage_api.moveSlideRight();
+            });
+
+        document.querySelector('.switch-classes-back')
+            .addEventListener('click', function(){
+                fullpage_api.moveSlideLeft();
+        });
+
 };
