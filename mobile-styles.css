@@ -85,6 +85,16 @@
     transform: rotate(275deg);
 }
 
+.switch-classes-back:active {
+    content: url('images/arrow-active.png');
+    transform: rotate(90deg);
+}
+
+.switch-classes-forward:active {
+    content: url('images/arrow-active.png');
+    transform: rotate(275deg);
+}
+
 .button-sign-up {
     background: url('images/plus.png') no-repeat #f78e6a;
     border: none;
