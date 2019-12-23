@@ -78,6 +78,22 @@
     transform: rotate(275deg);
 }
 
+.button-sign-up {
+    background: url('images/plus.png') no-repeat #f78e6a;
+    border-radius: 2em;
+    min-width: 285px;
+    min-height: 60px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15%;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
 .classes-image {
 	display: none;
 }
