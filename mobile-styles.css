@@ -84,6 +84,7 @@
     background: url('images/plus.png') no-repeat #f78e6a;
     border: none;
     cursor: pointer;
+    outline: none;
 
     border-radius: 2em;
     min-width: 285px;
