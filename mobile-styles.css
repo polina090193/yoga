@@ -68,6 +68,14 @@
     margin-left: auto;
 }
 
+.switch-classes-back {
+    transform: rotate(90deg);
+}
+
+.switch-classes-forward {
+    transform: rotate(275deg);
+}
+
 .classes-image {
 	display: none;
 }
