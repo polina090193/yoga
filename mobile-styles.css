@@ -80,7 +80,7 @@
 
 .button-sign-up {
     background: url('images/plus.png') no-repeat #f78e6a;
-    border: 0;
+    border: none;
     border-radius: 2em;
     min-width: 285px;
     min-height: 60px;
