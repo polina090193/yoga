@@ -51,7 +51,25 @@
 .try__inscription {
 	font-size: 1.97vh;
     line-height: 3.08vh;
-    /* opacity: 1; */
+}
+
+.classes-text {
+    flex-basis: 100%;
+    margin-top: 0;
+    flex-direction: row;
+}
+
+.yoga {
+    flex-basis: 40%;
+}
+
+.switch-classes-arrows {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.classes-image {
+	display: none;
 }
 
 .pages {

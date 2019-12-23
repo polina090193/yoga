@@ -182,6 +182,13 @@ body {
 	margin-top: 13vh;
 }
 
+.classes-image {
+	height: 78.79vh;
+	width: 29.64vh;
+	flex-basis: 40%;
+	object-fit: contain;
+}
+
 .yoga {
 	display: block;
 	font-size: 48px;
