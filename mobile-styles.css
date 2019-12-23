@@ -69,7 +69,7 @@
     font-size: 2vh;
     color: black;
     max-height: 30vh;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .switch-classes-arrows {
