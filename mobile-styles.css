@@ -59,8 +59,8 @@
     flex-direction: row;
 }
 
-.yoga {
-    flex-basis: 40%;
+.classes-description {
+    font-size: 16px;
 }
 
 .switch-classes-arrows {
