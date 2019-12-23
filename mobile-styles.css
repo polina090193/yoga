@@ -83,7 +83,6 @@
 .button-sign-up {
     background: url('images/plus.png') no-repeat #f78e6a;
     border: none;
-    outline: none;
     cursor: pointer;
 
     border-radius: 2em;
@@ -103,6 +102,7 @@
 .button-sign-up:active {
     background: url('images/plus.png') no-repeat white;
     color: #f78e6a;
+    outline: none;
 }
 
 .classes-image {
