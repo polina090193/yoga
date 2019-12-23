@@ -51,6 +51,7 @@
 .try__inscription {
 	font-size: 1.97vh;
     line-height: 3.08vh;
+    color: black;
 }
 
 .classes-text {
@@ -62,6 +63,7 @@
 
 .classes-description {
     font-size: 16px;
+    color: black;
 }
 
 .switch-classes-arrows {
