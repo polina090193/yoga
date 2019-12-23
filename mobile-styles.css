@@ -70,6 +70,7 @@
 
 .switch-classes-back {
     transform: rotate(90deg);
+    margin-right: 10px;
 }
 
 .switch-classes-forward {
