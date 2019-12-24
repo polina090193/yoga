@@ -12,6 +12,13 @@
 	flex-basis: 33%;
 }
 
+.menu-opened {
+	background-color: #fbf5f4;
+	box-shadow: 30px 30px 30px 30px #fbf5f4;
+    -moz-box-shadow: 10px 10px 10px #fbf5f4;
+    -webkit-box-shadow: 30px 30px 30px 30px #fbf5f4;
+}
+
 .logo-left {
 	order: -2;
 	align-self: flex-start;
@@ -56,6 +63,18 @@
 
 .fp-tableCell {
     vertical-align: top;
+}
+
+.fp-slides {
+	width: 50vw;
+}
+
+.classes-description {
+	font-size: 2vh;
+	
+	height: 27vh;
+	overflow-x: visible;
+    overflow-y: scroll;
 }
 
 .scroll-down {

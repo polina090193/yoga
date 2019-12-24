@@ -177,7 +177,6 @@ body {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	/* max-width: 51.48vh; */
 	max-height: 37vh;
 	margin-top: 13vh;
 }
