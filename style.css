@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Geometria', sans-serif;
-	font-size: 18px;
+	font-size: calc( (100vw - 480px)/(1280 - 480) * (18 - 12) + 12px);
 	font-weight: normal;
 }
 
@@ -103,8 +103,8 @@ body {
 }
 
 .main-image {
-	height: 78.79vh;
-	width: 29.64vh;
+	max-height: 78.79vh;
+	max-width: 28vw;
 	flex-basis: 40%;
 	object-fit: contain;
 }
@@ -174,9 +174,8 @@ body {
 }
 
 .try__inscription {
-	font-size: 20px;
 	font-weight: lighter;
-	line-height: 30px;
+	line-height: 1em;
 	max-width: 35vh;
 }
 
@@ -303,7 +302,7 @@ body {
 	min-width: 10.18vh;
 	display: flex;
 	font-family: 'Montserrat';
-	font-size: 10px;
+	font-size: 0.6em;
 	text-transform: uppercase;
 	flex-basis: 50%;
 	align-self: center;
@@ -335,8 +334,8 @@ body {
 	background: url('images/ellipse-arrow.png') no-repeat;
 	background-position: center;
 	object-fit: contain;
-	width: 2em;
-	height: 2em;
+	width: 3em;
+	height: 3em;
 }
 
 .scroll-down__arrow:hover {
