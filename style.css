@@ -27,6 +27,10 @@ body {
 	box-sizing: border-box;
 }
 
+.fp-tableCell {
+    vertical-align: top;
+}
+
 .menu,
 .try,
 .social,
@@ -62,7 +66,7 @@ body {
 	align-items: center;
 	align-self: flex-start;
 	justify-content: center;
-	flex-basis: 70%;
+	flex-basis: 50%;
 }
 
 .welcome__dot {
@@ -74,7 +78,7 @@ body {
 }
 
 .phone {
-	flex-basis: 15%;
+	flex-basis: 35%;
 	display: flex;
 	justify-content: flex-end;
 }
@@ -84,6 +88,7 @@ body {
 	text-decoration: none;
 	color: black;
 	line-height: 3.33vh;
+	white-space: nowrap;
 }
 
 .logo-left {
@@ -91,6 +96,10 @@ body {
 	content: url('images/logo.png');
 	object-fit: contain;
 	flex-basis: 10%;
+}
+
+.logo-page-classes {
+	flex-basis: 5%;
 }
 
 .main-image {
@@ -184,7 +193,7 @@ body {
 .classes-image {
 	height: 78.79vh;
 	width: 29.64vh;
-	flex-basis: 40%;
+	flex-basis: 25%;
 	object-fit: contain;
 }
 
@@ -201,6 +210,22 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
+.menu-classes {
+	display: flex;
+	justify-content: center;
+	flex-basis: 20%;
+}
+
+.yoga-menu {
+	font-size: 18px;
+	padding: 0;
+}
+
+.menu-classes-opened {
+	padding: 0;
+	margin: 0.5em 0 0 0.5em;
+}
+
 .classes-head {
 	display: block;
 	flex-basis: 100%;
@@ -215,6 +240,9 @@ body {
 	flex-basis: 100%;
 	font-weight: lighter;
 	line-height: 35px;
+	max-height: 30vh;
+	overflow-y: scroll;
+	
 }
 
 .button-sign-up {
@@ -230,7 +258,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 15%;
+	padding-left: 15%;
+	margin-top: 5vh;
 
     font-size: 16px;
     line-height: 24px;
@@ -243,10 +272,14 @@ body {
     outline: none;
 }
 
+.switch-classes-arrows {
+	display: none;
+}
+
 .pages {
 	font-weight: lighter;
 	text-align: right;
-	flex-basis: 10%;
+	/* flex-basis: 10%; */
 	margin: auto 0;
 	display: flex;
 	flex-direction: column;
@@ -260,12 +293,10 @@ body {
 
 .pages__top {
 	font-size: 6.67vh;
-	/* line-height: 2.22vh; */
 }
 
 .pages__bottom {
 	font-size: 2.77vh;
-	/* line-height: 2.22vh; */
 }
 
 .social {
@@ -309,10 +340,13 @@ body {
 }
 
 .scroll-down__arrow:hover {
-	background: url('images/arrow-active.png');
+	background: url('images/arrow-active.png') no-repeat;
 }
 
 .scroll-down__text {
 	margin-right: 0.625em;
 	align-self: flex-start;
 }
+
+
+
