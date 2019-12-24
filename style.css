@@ -218,6 +218,32 @@ body {
 	line-height: 35px;
 }
 
+.button-sign-up {
+    background: url('images/plus.png') no-repeat #f78e6a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    border-radius: 2em;
+    min-width: 285px;
+    min-height: 60px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15%;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+.button-sign-up:active {
+    background: url('images/plus.png') no-repeat white;
+    color: #f78e6a;
+    outline: none;
+}
+
 .pages {
 	font-weight: lighter;
 	text-align: right;

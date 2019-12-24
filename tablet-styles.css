@@ -43,6 +43,21 @@
 	transform: scale(-1, 1);
 }
 
+.classes-image {
+	order: 1;
+	flex-basis: 40%;
+	height: 56.64vh;
+	transform: scale(-1, 1);
+}
+
+.switch-classes-arrows {
+    display: none;
+}
+
+.fp-tableCell {
+    vertical-align: top;
+}
+
 .scroll-down {
 	order: 2;
 	flex-basis: 30%;
