@@ -271,7 +271,7 @@ body {
     outline: none;
 }
 
-@media (max-width: 654px) {
+@media (max-height: 480px) {
 	.classes-image {
 		display: none;
 	}
