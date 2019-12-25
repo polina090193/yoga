@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Geometria', sans-serif;
-	font-size: calc( (100vw - 480px)/(1280 - 480) * (18 - 12) + 12px);
+	font-size: calc( (100vmax - 480px)/(1280 - 480) * (18 - 12) + 12px);
 	font-weight: normal;
 }
 
@@ -196,12 +196,6 @@ body {
 	object-fit: contain;
 }
 
-@media (max-width: 654px) {
-	.classes-image {
-		display: none;
-	}
-}
-
 .yoga {
 	display: block;
 	font-size: 2em;
@@ -255,7 +249,6 @@ body {
 	background-size: auto 100%;
     border: none;
     cursor: pointer;
-    outline: none;
 
     border-radius: 3em;
 	width: 16em;
@@ -276,6 +269,25 @@ body {
 	background-size: auto 100%;
     color: #f78e6a;
     outline: none;
+}
+
+@media (max-width: 654px) {
+	.classes-image {
+		display: none;
+	}
+
+	.classes-text {
+		margin-top: 0;
+		flex-basis: 55%;
+	}
+
+	.fp-slides {
+		max-height: 25vh;
+	}
+
+	.button-sign-up {
+		margin-top: 2vh;
+	}
 }
 
 .switch-classes-arrows {
