@@ -250,9 +250,9 @@ body {
     border: none;
     cursor: pointer;
 
-    border-radius: 3em;
-	width: 16em;
-	height: 3.5em;
+    border-radius: 3rem;
+	width: 16rem;
+	height: 3.5rem;
     
     display: flex;
     align-items: center;
@@ -260,6 +260,7 @@ body {
 	padding-left: 15%;
 	margin-top: 5vh;
 
+	font-size: 1.4em;
     line-height: 1.5em;
     color: white;
 }
