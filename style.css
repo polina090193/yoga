@@ -365,6 +365,10 @@ body {
 		margin: auto;
 	}
 
+	.menu-classes {
+		margin-left: 3vw;
+	}
+
 	.try {
 		max-width: unset;
 	}
