@@ -13,8 +13,8 @@ window.addEventListener('resize', () => {
 //Open menu for mobile devices
 if (window.matchMedia
     (`only screen and (max-width: 880px)
-    and (orientation: portrait),`)
-    .matches) {
+    and (orientation: portrait),
+    `).matches) {
         
         let buttons = document.querySelectorAll('.menu__icon'), button;
 
