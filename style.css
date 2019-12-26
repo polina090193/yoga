@@ -343,6 +343,7 @@ body {
 
 .scroll-down__arrow:hover {
 	background: url('images/arrow-active.png') no-repeat;
+	background-position: center;
 }
 
 .scroll-down__text {
