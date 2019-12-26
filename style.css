@@ -272,25 +272,6 @@ body {
     outline: none;
 }
 
-@media (max-height: 480px) {
-	.classes-image {
-		display: none;
-	}
-
-	.classes-text {
-		margin-top: 0;
-		flex-basis: 55%;
-	}
-
-	.fp-slides {
-		max-height: 25vh;
-	}
-
-	.button-sign-up {
-		margin-top: 2vh;
-	}
-}
-
 .switch-classes-arrows {
 	display: none;
 }
@@ -372,5 +353,46 @@ body {
 	align-self: flex-start;
 }
 
+@media (max-height: 480px) {
+	.main-image,
+	.classes-image {
+		display: none;
+	}
 
+	.main-inscription,
+	.logo-left {
+		flex-basis: 30%;
+		margin: auto;
+	}
+
+	.try {
+		max-width: unset;
+	}
+
+	.pages {
+		flex-basis: 5%;
+	}
+
+	.classes-text {
+		margin-top: 0;
+		flex-basis: 55%;
+	}
+
+	.fp-slides {
+		max-height: 25vh;
+	}
+
+	.button-sign-up {
+		margin-top: 2vh;
+	}
+
+	.scroll-down {
+		flex-basis: 100%;
+	}
+
+	.social {
+		margin: auto;
+		flex-basis: unset;
+	}
+}
 
