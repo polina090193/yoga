@@ -4,7 +4,6 @@ new fullpage('.fullscreen-slide-wrapper', {
     fixedElements: '.menu__mobile',
     css3: false,
     controlArrows: false,
-    normalScrollElements: '.classes-description',
 });
 
 //methods

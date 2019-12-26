@@ -217,9 +217,8 @@ body {
 
 .yoga-menu {
 	padding: 0;
-	margin-top: 0.5em;
+	margin-top: 1em;
 	font-size: 1em;
-	line-height: 1em;
 }
 
 .menu-classes-opened {
@@ -239,8 +238,7 @@ body {
 .classes-description {
 	font-weight: lighter;
 	line-height: 1.5em;
-	max-height: 30vh;
-	overflow-y: scroll;
+	max-height: 35vh;
 	flex-basis: 30%;
 }
 
@@ -251,16 +249,15 @@ body {
     cursor: pointer;
 
     border-radius: 3rem;
-	width: 16rem;
-	height: 3.5rem;
+	min-width: 16rem;
+	min-height: 3.5rem;
     
     display: flex;
     align-items: center;
     justify-content: center;
-	padding-left: 15%;
-	margin-top: 5vh;
+	padding-left: 5rem;
 
-	font-size: 1.4em;
+	font-size: 1.3rem;
     line-height: 1.5em;
     color: white;
 }
@@ -351,58 +348,4 @@ body {
 .scroll-down__text {
 	margin-right: 0.625em;
 	align-self: flex-start;
-}
-
-@media (max-height: 480px) and (orientation: landscape) {
-	.main-image,
-	.classes-image {
-		display: none;
-	}
-
-	.main-inscription,
-	.logo-left {
-		flex-basis: 20%;
-		margin: auto;
-	}
-
-	.menu-classes {
-		margin-right: 3vw;
-	}
-
-	.try {
-		max-width: unset;
-	}
-
-	.pages {
-		flex-basis: 5%;
-	}
-
-	.classes-text {
-		margin-top: 0;
-		flex-basis: 55%;
-	}
-
-	.menu-block .menu-opened__item {
-		margin-top: 1.5em;
-	}
-
-	.fp-slides {
-		max-height: 25vh;
-	}
-
-	.button-sign-up {
-		margin-top: 6vh;
-		height: 25%;
-		width: 50%;
-	}
-
-	.scroll-down {
-		flex-basis: 100%;
-	}
-
-	.social {
-		display: none;
-		margin: auto;
-		flex-basis: unset;
-	}
 }

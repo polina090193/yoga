@@ -1,48 +1,53 @@
-.try__inscription {
-    max-width: unset;
-}
-
-.try__inscription,
-.top-center-text,
-.phone__number {
-    font-size: 4.27vh;
-    line-height: 1.5em;
-}
-
-.menu,
-.welcome,
-.phone,
-.pages,
-.scroll-down,
-.social,
 .main-image,
-.main-inscription,
-.logo-left {
-    flex-basis: 33.33%;
-    max-width: unset;
-    max-height: unset;
-}
-
-.logo-left {
-    max-width: 11.2vw;
-}
-
-.phone {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main-image {
-    height: 50.66vh;
-}
-
-.menu__header,
-.scroll-down__text {
+.classes-image {
     display: none;
 }
 
+.main-inscription,
+.logo-left {
+    flex-basis: 20%;
+    margin: auto;
+}
+
+.menu-classes {
+    margin-right: 3vw;
+}
+
+.yoga {
+    display: none;
+}
+
+.try {
+    max-width: unset;
+}
+
 .pages {
-    text-align: unset;
-    margin: 0;
-    flex-basis: 33.33%;
+    flex-basis: 5%;
+}
+
+.classes-text {
+    margin-top: 0;
+    flex-basis: 55%;
+}
+
+.menu-block .menu-opened__item {
+    margin-top: 1.5em;
+}
+
+.button-sign-up {
+    flex-basis: 80%;
+    align-self: flex-end;
+    height: 25%;
+    width: 50%;
+    font-size: 1rem;
+}
+
+.scroll-down {
+    flex-basis: 100%;
+}
+
+.social {
+    display: none;
+    margin: auto;
+    flex-basis: unset;
 }
