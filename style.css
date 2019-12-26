@@ -341,7 +341,8 @@ body {
 	height: 3em;
 }
 
-.scroll-down__arrow:hover {
+.scroll-down__arrow:hover,
+.scroll-down__arrow:active {
 	background: url('images/arrow-active.png') no-repeat;
 	background-position: center;
 }
