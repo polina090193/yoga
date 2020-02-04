@@ -1,3 +1,33 @@
+mixin slide(slideName, class)
+	.section(data-anchor=class)
+		section.slides
+			.menu
+				.menu__icon
+				.menu__header= 'Меню'
+				nav.menu-block
+					ul.menu-opened
+						each val, index in [
+							| ["#"+class, 'Главная'],
+							| ["#"+class, 'Направления'],
+							| ["#"+class, 'Преподаватели'],
+							| ["#"+class, 'Абонементы'],
+							| ["#"+class, 'Расписание'],
+							| ["#"+class, 'Отзывы'],
+							| ["#"+class, 'Контакты'],
+							| ]
+							li.menu-opened__item
+								a(class=val[0])= val[1]
+					// selected???!!!
+			.welcome
+				.welcome__dot
+				.top-center-text= slideName
+			.phone
+				a.phone__number(href="tel:+78123455697")= '+7 (812) 345-56-97'
+			.logo-left
+			block
+			
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,48 +44,6 @@
 	<div class="fullscreen-slide-wrapper">
 		<div class="section" data-anchor="main">
 			<section class="slides">
-				<div class="menu">
-					<div class="menu__icon">
-					</div>
-					<div class="menu__header">
-						Меню
-					</div>
-					<nav class="menu-block">
-						<ul class="menu-opened">
-							<li class="menu-opened__item menu-opened__item_selected">
-								<a href="#main">Главная</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#classes">Направления</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#teachers">Преподаватели</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#prices">Абонементы</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#schedule">Расписание</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#reviews">Отзывы</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#contacts">Контакты</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="welcome">
-					<div class="welcome__dot">
-					</div>
-					<div class="top-center-text">
-						Добро пожаловать
-					</div>
-				</div>
-				<div class="phone">
-					<a class="phone__number" href="tel:+78123455697">+7 (812) 345-56-97</a>
-				</div>
 				<div class="logo-left"></div>
 				<img src="images/image-main.png" class="main-image">
 				<div class="main-inscription">
@@ -97,49 +85,6 @@
 		</div>
 		<div class="section" data-anchor="classes">
 			<section class="slides">
-				<div class="menu">
-					<div class="menu__icon">
-					</div>
-					<div class="menu__header">
-						Меню
-					</div>
-					<nav class="menu-block">
-						<ul class="menu-opened">
-							<li class="menu-opened__item menu-opened__item_selected">
-								<a href="#main">Главная</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#classes">Направления</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#teachers">Преподаватели</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#prices">Абонементы</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#schedule">Расписание</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#reviews">Отзывы</a>
-							</li>
-							<li class="menu-opened__item">
-								<a href="#contacts">Контакты</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="welcome">
-					<div class="welcome__dot">
-					</div>
-					<div class="top-center-text">
-						Направления и классы
-					</div>
-				</div>
-				<div class="phone">
-					<a class="phone__number" href="tel:+78123455697">+7 (812) 345-56-97</a>
-				</div>
-				<div class="logo-left"></div>
 				<nav class="menu-classes">
 					<h2 class="yoga yoga-menu">
 						Yoga —

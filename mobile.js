@@ -4,13 +4,13 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-// When changes orientation by mobile devices
+// When orientation changes (for mobile devices)
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-//Open menu for mobile devices
+// Open menu (for mobile devices)
 if (window.matchMedia
     (`only screen and (max-width: 880px)
     and (orientation: portrait),
