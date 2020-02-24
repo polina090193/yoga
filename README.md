@@ -1,5 +1,5 @@
 ---
-permalink: build/index.html
+permalink: /build/index.html
 ---
 
 # yoga
