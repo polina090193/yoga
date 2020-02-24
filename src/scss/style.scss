@@ -1,0 +1,9 @@
+html, body {
+    height: 100%;
+}
+.test {
+    background: lightblue;
+    &.orange-test {
+        background: orange;
+    }
+}
