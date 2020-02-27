@@ -37,20 +37,19 @@
     }
     
     .button-sign-up {
-        flex-basis: 80%;
         align-self: flex-end;
         height: 25%;
-        width: 50%;
         font-size: 1rem;
+        padding: 0 0 0 5%;
     }
     
     .scroll-down {
-        flex-basis: 100%;
+        flex-basis: 30%;
     }
     
     .social {
-        display: none;
+        /* display: none; */
         margin: auto;
-        flex-basis: unset;
+        flex-basis: 70%;
     }
 }
