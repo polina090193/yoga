@@ -46,6 +46,10 @@
     .scroll-down {
         flex-basis: 30%;
     }
+
+    .scroll-down__text {
+        display: none;
+    }
     
     .social {
         /* display: none; */

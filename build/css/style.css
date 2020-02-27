@@ -515,7 +515,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-	padding-left: 5rem;
+	padding: 0 3rem 0 5rem;
 
 	font-size: 1.3rem;
     line-height: 1.5em;
@@ -934,6 +934,10 @@ body {
     
     .scroll-down {
         flex-basis: 30%;
+    }
+
+    .scroll-down__text {
+        display: none;
     }
     
     .social {
