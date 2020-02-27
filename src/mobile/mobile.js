@@ -70,6 +70,13 @@ if (window.matchMedia
             for (let menuLink of menuLinks) {
                 menuLink.addEventListener('click', clickHandlerCloseMenu);
             }
+
+            let menuSelector = document.querySelectorAll('.menu-opened__item'), page;
+            let currentPage = fullpage_api.getActiveSection();
+
+            for (page of menuSelector) {
+                menuSelector[currentPage.index].classList.add('.menu-opened__item_active')
+            }
             
             function clickHandlerCloseMenu() {
                 mobileMenu.remove();

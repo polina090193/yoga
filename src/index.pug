@@ -128,9 +128,11 @@ mixin slideClass(number)
                 </aside>
                 each num, index in classes
                     +slideClass(index)
-                <button class="button-sign-up">
-                    |Записаться онлайн
-                </button>
+                <form action='#test1'>
+                    <button class="button-sign-up">
+                        |Записаться онлайн
+                    </button>
+                </form>
             </div>
         +slide(2)
         +slide(3)
