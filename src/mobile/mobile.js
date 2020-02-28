@@ -71,11 +71,30 @@ if (window.matchMedia
                 menuLink.addEventListener('click', clickHandlerCloseMenu);
             }
 
-            let menuSelector = document.querySelectorAll('.menu-opened__item'), page;
-            let currentPage = fullpage_api.getActiveSection();
+            function switchSelectedMenuItem() {
+                let menuSelector = document.querySelectorAll('.menu-opened__item');
+                let currentPage = fullpage_api.getActiveSection();
 
-            for(page of menuSelector) {
-                menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
+                new fullpage('#fullpage', {
+                    onLeave: function(origin, destination, direction){
+                        menuSelector[currentPage.index - 1]
+                        .classList.remove('.menu-opened__item_selected');
+
+                        menuSelector[currentPage.index]
+                        .classList.add('.menu-opened__item_selected');
+                    }
+                });
+
+                /* let menuSelector = document.querySelectorAll('.menu-opened__item');
+                let currentPage = fullpage_api.getActiveSection();
+
+                onLeave: function switchSelectedItem(origin, destination, direction){
+                    menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
+                }
+                
+                for(item of menuSelector) {
+                    
+                } */
             }
             
             function clickHandlerCloseMenu() {
