@@ -1,0 +1,143 @@
+@media screen and (max-width: 1090px) and (max-aspect-ratio: 11/9) {
+    
+    .welcome,
+    .scroll-down__text,
+    .phone,
+    .menu__header,
+    .menu-classes {
+        display: none;
+    }
+    
+    .menu {
+        order: -3;
+    }
+    
+    .menu__icon {
+        height: 3.07vh;
+    }
+    
+    .button-sign-up {
+        min-width: 285px;
+        min-height: 60px;
+    }
+    
+    .logo-left {
+        justify-content: flex-end;
+        order: -2;
+        height: 3.08vh;
+        margin: 0 0 0 auto;
+    }
+    
+    .slides {
+        padding: 20px;
+    }
+    
+    .main-image {
+        order: -1;
+        flex-basis: 100%;
+        transform: none;
+        max-width: unset;
+        height: 36.95vh;
+    }
+    
+    .main-inscription {
+        order: 0;
+        max-width: 70vw;
+        height: auto;
+        margin: auto;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+    
+    .center-yoga {
+        font-size: 2.2vh;
+    }
+    
+    .lotos {
+        font-size: 16vh;
+        flex-basis: 100%;
+    }
+    
+    .try__inscription {
+        font-size: 1.97vh;
+        line-height: 3.08vh;
+        color: black;
+        flex-basis: 100%;
+    }
+    
+    .classes-text {
+        flex-basis: 100%;
+        margin-top: 0;
+        flex-direction: row;
+    }
+    
+    .yoga {
+        margin-bottom: 0.5em;
+        font-size: 6vh;
+    }
+    
+    .switch-classes-arrows {
+        display: inline;
+        margin-right: 0;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    
+    .switch-classes-back {
+        transform: rotate(90deg);
+        margin-right: 10px;
+    }
+    
+    .switch-classes-forward {
+        transform: rotate(275deg);
+    }
+    
+    .switch-classes-back:active {
+        content: url('../images/arrow-active.png');
+        transform: rotate(90deg);
+    }
+    
+    .switch-classes-forward:active {
+        content: url('../images/arrow-active.png');
+        transform: rotate(275deg);
+    }
+    
+    .classes-image {
+        display: none;
+    }
+    
+    .pages {
+        order: 1;
+        text-align: unset;
+        margin: 0;
+        flex-basis: 33.33%;
+    }
+    
+    .pages__top {
+        padding-top: 0;
+        font-size: 3.69vh;
+        line-height: 2.96vh;
+    }
+    
+    .pages__bottom {
+        font-size: 1.72vh;
+        line-height: 2.96vh;
+    }
+    
+    .social {
+        order: 2;
+        justify-content: center;
+        font-size: 10px;
+        margin: 0;
+        flex-basis: 33.33%;
+        align-self: flex-end;
+    }
+    
+    .scroll-down {
+        order: 3;
+        justify-content: flex-end;
+        align-self: flex-end;
+        margin: 0;
+        flex-basis: 33.33%;
+    }
+}
