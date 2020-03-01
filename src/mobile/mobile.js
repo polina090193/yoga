@@ -58,12 +58,24 @@ if (window.matchMedia
                     </ul>`;
 
             document.querySelector('.menu').append(mobileMenu);
-                
+            
+            
             let cross = document.createElement('img');
-                cross.className = "cross";
-                cross.setAttribute('src', "images/x.png")
-
+            cross.className = "cross";
+            cross.setAttribute('src', "images/x.png")
+            
             document.querySelector('.menu__mobile').prepend(cross);
+            
+            let menuSelector = document.querySelectorAll('.menu-opened__item'), item;
+            let currentPage = fullpage_api.getActiveSection();
+
+            for(item of menuSelector) {
+                menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
+                if (fullpage_api.moveSectionUp() || fullpage_api.moveSectionDown()) {
+                    menuSelector[currentPage.index].classList.remove('.menu-opened__item_selected');
+                    
+                }
+            }
 
             cross.addEventListener('click', clickHandlerCloseMenu);
             let menuLinks = document.querySelectorAll('.menu-opened__item');
@@ -71,13 +83,6 @@ if (window.matchMedia
                 menuLink.addEventListener('click', clickHandlerCloseMenu);
             }
 
-            let menuSelector = document.querySelectorAll('.menu-opened__item'), page;
-            let currentPage = fullpage_api.getActiveSection();
-
-            for(page of menuSelector) {
-                menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
-            }
-            
             function clickHandlerCloseMenu() {
                 mobileMenu.remove();
 
