@@ -60,5 +60,6 @@
     
     .menu-opened__item_selected {
         opacity: 1;
+        color: black;
     }
 }

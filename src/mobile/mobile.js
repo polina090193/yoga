@@ -34,7 +34,7 @@ if (window.matchMedia
                 mobileMenu.className = "menu__mobile";
                 mobileMenu.innerHTML = `
                     <ul class="menu-opened">
-                        <li class="menu-opened__item menu-opened__item_selected">
+                        <li class="menu-opened__item">
                             <a href="#main">Главная</a>
                         </li>
                         <li class="menu-opened__item">
@@ -58,14 +58,35 @@ if (window.matchMedia
                     </ul>`;
 
             document.querySelector('.menu').append(mobileMenu);
-            
+
+            let menuSelector = mobileMenu.querySelectorAll('.menu-opened__item');
+            let currentPage = fullpage_api.getActiveSection();
+
+            console.log(menuSelector[currentPage.index]);
+    
+            mobileMenu.onload = menuSelector[currentPage.index].classList.add('menu-opened__item_selected');
             
             let cross = document.createElement('img');
             cross.className = "cross";
             cross.setAttribute('src', "images/x.png")
             
             document.querySelector('.menu__mobile').prepend(cross);
-
+            
+            
+           /* let menuSelector = document.querySelectorAll('.menu-opened__item'), page;
+            let currentPage = fullpage_api.getActiveSection();
+            menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
+            
+            
+             let menuSelector = document.querySelectorAll('.menu-opened__item');
+                    let currentPage = fullpage_api.getActiveSection();
+                    onLeave: function switchSelectedItem(origin, destination, direction){
+                        menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
+                    }
+                    
+                    for(item of menuSelector) {
+                        
+                    } */
             cross.addEventListener('click', clickHandlerCloseMenu);
             let menuLinks = document.querySelectorAll('.menu-opened__item');
             for (let menuLink of menuLinks) {
@@ -80,6 +101,7 @@ if (window.matchMedia
                 }
             }
         }
+
 
         document.querySelector('.switch-classes-forward')
             .addEventListener('click', function(){
