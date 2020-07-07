@@ -1,0 +1,111 @@
+.classes {
+	&-text {
+		flex-basis: 40%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+
+		max-height: 37vh;
+		margin-top: 13vh;
+	}
+
+	&-image {
+		flex-basis: 25%;
+		object-fit: contain;
+
+		width: 29.64vh;
+		height: 78.79vh;
+	}
+
+	&-head {
+		flex-basis: 100%;
+		display: block;
+		
+		margin: 0;
+		font: {
+			size: 1em;
+			weight: normal;
+		}
+
+		line-height: 1.5em;
+	}
+
+	&-description {
+		flex-basis: 30%;
+		max-height: 35vh;
+
+		font-weight: lighter;
+		line-height: 1.5em;
+	}
+}
+
+.yoga {
+	display: block;
+	margin: 0;
+
+	font: {
+		size: 2em;
+		weight: normal;
+	}
+	
+	line-height: 1.5em;
+
+	background: linear-gradient(to bottom, #f78e6a, #fc66a2);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.menu-classes {
+	flex-basis: 20%;
+	display: flex;
+	justify-content: center;
+}
+
+.yoga-menu {
+	padding: 0;
+	margin-top: 1em;
+
+	font-size: 1em;
+}
+
+.menu-classes-opened {
+	padding: 0;
+	margin: 0.5em 0 0 0.5em;
+}
+
+.button-sign-up {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	cursor: pointer;
+	background: url('../images/plus.png') no-repeat {
+		color: #f78e6a;
+		size: auto 100%;
+	}
+	
+	border: none;
+	border-radius: 3rem;
+	
+	min-width: 16rem;
+	min-height: 3.5rem;
+    
+	padding: 0 3rem 0 5rem;
+
+	font-size: 1.3rem;
+    line-height: 1.5em;
+	color: white;
+	
+	&:active {
+
+		background-color: white;
+		outline: none;
+		color: #f78e6a;
+	}
+}
+
+.switch-classes-arrows {
+	display: none;
+}

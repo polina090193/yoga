@@ -1,9 +1,9 @@
 @media screen and (max-width: 1090px) and (max-aspect-ratio: 11/9) {
     
     .welcome,
-    .scroll-down__text,
+    .scroll-down-text,
     .phone,
-    .menu__header,
+    .menu-header,
     .menu-classes {
         display: none;
     }
@@ -12,7 +12,7 @@
         order: -3;
     }
     
-    .menu__icon {
+    .menu-icon {
         height: 3.07vh;
     }
     
@@ -58,7 +58,7 @@
         flex-basis: 100%;
     }
     
-    .try__inscription {
+    .try-inscription {
         font-size: 1.97vh;
         line-height: 3.08vh;
         color: black;
@@ -113,13 +113,13 @@
         flex-basis: 33.33%;
     }
     
-    .pages__top {
+    .pages-top {
         padding-top: 0;
         font-size: 3.69vh;
         line-height: 2.96vh;
     }
     
-    .pages__bottom {
+    .pages-bottom {
         font-size: 1.72vh;
         line-height: 2.96vh;
     }

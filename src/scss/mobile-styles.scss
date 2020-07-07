@@ -1,0 +1,161 @@
+@media screen and (max-width: 1090px) and (max-aspect-ratio: 11/9) {
+    
+    .welcome,
+    .scroll-down-text,
+    .phone,
+    .menu-header,
+    .menu-classes {
+        display: none;
+    }
+    
+    .menu {
+        order: -3;
+
+        &-icon {
+            height: 3.07vh;
+        }
+    }
+    
+    .logo-left {
+        justify-content: flex-end;
+        order: -2;
+        
+        height: 3.08vh;
+        margin: 0 0 0 auto;
+    }
+    
+    .slides {
+        padding: 20px;
+    }
+    
+    .pages {
+        flex-basis: 33.33%;
+        order: 1;
+
+        text-align: unset;
+        margin: 0;
+
+        &-top {
+            padding-top: 0;
+            font-size: 3.69vh;
+            line-height: 2.96vh;
+        }
+
+        &-bottom {
+            font-size: 1.72vh;
+            line-height: 2.96vh;
+        }
+    }
+    
+    .social {
+        flex-basis: 33.33%;
+        order: 2;
+
+        align-self: flex-end;
+        justify-content: center;
+
+        font-size: 10px;
+        margin: 0;
+    }
+    
+    .scroll-down {
+        flex-basis: 33.33%;
+        order: 3;
+        justify-content: flex-end;
+        align-self: flex-end;
+        margin: 0;
+    }
+
+    // First slide
+
+    .main-image {
+        flex-basis: 100%;
+        order: -1;
+
+        transform: none;
+
+        max-width: unset;
+        height: 36.95vh;
+    }
+    
+    .main-inscription {
+        flex-basis: 100%;
+        order: 0;
+        justify-content: center;
+
+        max-width: 70vw;
+        height: auto;
+
+        margin: auto;
+    }
+    
+    .center-yoga {
+        font-size: 2.2vh;
+    }
+    
+    .lotos {
+        flex-basis: 100%;
+
+        font-size: 16vh;
+    }
+    
+    .try-inscription {
+        flex-basis: 100%;
+
+        font-size: 1.97vh;
+        line-height: 3.08vh;
+        color: black;
+    }
+
+    // Classes's 'slide
+    
+    .classes-image {
+        display: none;
+    }
+
+    .classes-text {
+        flex-basis: 100%;
+        flex-direction: row;
+
+        margin-top: 0;
+    }
+    
+    .yoga {
+        margin-bottom: 0.5em;
+        font-size: 6vh;
+    }
+    
+    .button-sign-up {
+        min-width: 285px;
+        min-height: 60px;
+    }
+
+    .switch-classes {
+        &-arrows {
+            display: inline;
+            cursor: pointer;
+
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        &-back {
+            margin-right: 10px;
+            transform: rotate(90deg);
+
+            &:active {
+                content: url('../images/arrow-active.png');
+                transform: rotate(90deg);
+            }
+        }
+
+        &-forward {
+            transform: rotate(275deg);
+
+            &:active {
+                content: url('../images/arrow-active.png');
+                transform: rotate(275deg);
+            }
+        }
+    }
+}

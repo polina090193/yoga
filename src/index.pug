@@ -38,42 +38,42 @@ mixin slide(number)
     .section(data-anchor = pages[number][0])
         section.slides
             .menu
-                .menu__icon
-                .menu__header= 'Меню'
+                .menu-icon
+                .menu-header= 'Меню'
                 nav.menu-block
                     ul.menu-opened
                         each val, index in pages
                             if val[2]
                                 if val[0] == pages[number][0]
-                                    li.menu-opened__item(class= 'menu-opened__item_selected')
+                                    li.menu-opened-item.menu-opened__item_selected
                                         a( href = '#' + val[0] )= val[2]
                                 else
-                                    li.menu-opened__item
+                                    li.menu-opened-item
                                         a( href = '#' + val[0] )= val[2]
                     //- selected???!!!
-            .welcome
-                .welcome__dot
+            .top-center
+                .top-center-dot
                 .top-center-text= pages[number][1]
             .phone
-                a.phone__number(href="tel:+78123455697")= '+7 (812) 345-56-97'
+                a.phone-number(href="tel:+78123455697")= '+7 (812) 345-56-97'
             .logo-left
             block
             .pages
-                .pages__top= '0' + number
-                .pages__bottom= '-09'
+                .pages-top= '0' + (number + 1)
+                .pages-bottom= '-09'
             .social
-                p.social__vk= 'Vk'
-                p.social__fb= 'Fb'
-                p.social__inst= 'Inst'
+                p.social-vk= 'Vk'
+                p.social-fb= 'Fb'
+                p.social-inst= 'Inst'
             if number == pages.length
                 a.scroll-down(href='#' + pages[0][0])
-                    p.scroll-down__text= 'В начало'
-                    .scroll-down__arrow_up
+                    p.scroll-down-text= 'В начало'
+                    .scroll-down-arrow-up
             else
                 //-- let nextNumber = ${number + 1}
                 a.scroll-down(href='#' + pages[number][0])
-                    p.scroll-down__text= pages[number][1]
-                    .scroll-down__arrow
+                    p.scroll-down-text= pages[number][1]
+                    .scroll-down-arrow
 
 mixin slideClass(number)
     article.slide
@@ -103,8 +103,8 @@ mixin slideClass(number)
                     </div>
                     <section class="try">
                         <a class="try" href='#test1'>
-                            <img class="try__plus" src='images/plus.png'>
-                            <p class="try__inscription">
+                            <img class="try-plus" src='images/plus.png'>
+                            <p class="try-inscription">
                                 |Приглашаем вас и ваших друзей на бесплатное пробное занятие
                             </p>
                         </a>
@@ -115,8 +115,17 @@ mixin slideClass(number)
                 h2.yoga(class= 'yoga-menu')= 'Yoga —'
                 ul.menu-classes-opened
                     each val, index in classes
-                        li.menu-opened__item
+                        li.menu-opened-item
                             a(href= '#classes/' + index)= val[0]
+                            //- ul.menu-opened
+                    //-     each val, index in pages
+                    //-         if val[2]
+                    //-             if val[0] == pages[number][0]
+                    //-                 li.menu-opened-item.menu-opened__item_selected
+                    //-                     a( href = '#' + val[0] )= val[2]
+                    //-             else
+                    //-                 li.menu-opened-item
+                    //-                     a( href = '#' + val[0] )= val[2]
             <img src="images/classes-image.png" class="classes-image">
             <div class="classes-text">
                 <h2 class="yoga">

@@ -11,3 +11,7 @@ node_modules
 images/.DS_Store
 .DS_Store
 .DS_Store
+.vs/yoga/v16/.suo
+.vs/VSWorkspaceState.json
+.vs/ProjectSettings.json
+.vs/slnx.sqlite

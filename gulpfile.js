@@ -1,18 +1,18 @@
+'use strict';
+
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const pug = require('gulp-pug');
+const sass = require('gulp-sass');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-const cssFiles = [
-  './src/fonts/fonts.css',
+sass.compiler = require('node-sass');
+
+const scssFiles = [
   './src/fullpage-library/fullpage.css',
-  './src/style.css',
-  './src/components/menu-opened.css',
-  './src/mobile/mobile-styles.css',
-  './src/mobile/menu-opened-mob.css',
-  './src/mobile/landscape-styles.css',
+  './src/scss/*.scss'
 ]
 
 const jsFiles = [
@@ -21,7 +21,8 @@ const jsFiles = [
   './src/mobile/mobile.js',
 ]
 
-function pugToHtml() {
+gulp.task('pug',
+function () {
   return gulp.src('./src/*.pug')
 
   .pipe(pug({
@@ -30,62 +31,60 @@ function pugToHtml() {
   
   .pipe(gulp.dest('./build'))
   .pipe(browserSync.stream());
-}
+});
 
-function styles() {
-    return gulp.src(cssFiles)
+gulp.task('styles', function () {
+  return gulp.src(scssFiles)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(autoprefixer({
+    cascade: false
+  }))
+  .pipe(concat('style.scss'))
+  .pipe(sass({outputStyle: 'compressed'}))  
 
-    .pipe(concat('style.css'))
-    
-    .pipe(autoprefixer({
-      cascade: false
-    }))
-    
-    .pipe(gulp.dest('./build/css'))
-    .pipe(browserSync.stream());
-}
+  .pipe(gulp.dest('./build/css'))
+  .pipe(browserSync.stream());
+});
 
-function scripts() {
+gulp.task('scripts', 
+function () {
   return gulp.src(jsFiles)
 
   .pipe(concat('index.js'))
 
   .pipe(gulp.dest('./build/js'))
   .pipe(browserSync.stream());
-}
+});
 
-function images() {
+gulp.task('images', 
+function () {
   return gulp.src('./src/images/*')
       .pipe(gulp.dest('./build/images'));
-}
+});
 
-function fonts() {
+gulp.task('fonts', 
+function () {
   return gulp.src(['./src/fonts/*', '!./src/fonts/fonts.css'])
       .pipe(gulp.dest('./build/fonts'));
-}
+});
 
-function clean() {
+gulp.task('del', 
+function () {
   return del(['build/*'])
-}
+});
 
-function watch() {
+gulp.task('watch',
+function () {
   browserSync.init({
     server: "build"
   });
-  gulp.watch('./src/**/*.css', styles);
-  gulp.watch('./src/*.css', styles);
-  gulp.watch('./src/**/*.js', scripts);
-  gulp.watch('./src/*.pug', pugToHtml);
+  gulp.watch('./src/**/*.scss', gulp.series('styles'));
+  gulp.watch('./src/*.scss',  gulp.series('styles'));
+  gulp.watch('./src/**/*.js',  gulp.series('scripts'));
+  gulp.watch('./src/*.pug', gulp.series('pug'));
   gulp.watch("./build/*.html").on('change', browserSync.reload);
-}
+});
   
-gulp.task('pug', pugToHtml);
-gulp.task('styles', styles);
-gulp.task('scripts', scripts);
-gulp.task('fonts', fonts);
-gulp.task('images', images);
-gulp.task('del', clean);
-gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, fonts, images,
-                   gulp.parallel(pugToHtml, styles, scripts)));
-gulp.task('dev', gulp.series('build', 'watch'))
+gulp.task('build', gulp.series('del', 'fonts', 'images',
+                   /* gulp.parallel( */'pug', 'styles', 'scripts'));
+gulp.task('dev', gulp.series('build', 'watch'));

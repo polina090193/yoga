@@ -28,8 +28,8 @@
     }
     
     .classes-text {
-        margin-top: 0;
         flex-basis: 55%;
+        margin-top: 0;
     }
     
     .menu-block .menu-opened-item {
@@ -38,22 +38,24 @@
     
     .button-sign-up {
         align-self: flex-end;
-        height: 25%;
-        font-size: 1rem;
+
         padding: 0 0 0 5%;
+        height: 25%;
+        
+        font-size: 1rem;
     }
     
     .scroll-down {
         flex-basis: 30%;
+
+        &-text {
+            display: none;
+        }
     }
 
-    .scroll-down-text {
-        display: none;
-    }
-    
     .social {
         /* display: none; */
-        margin: auto;
         flex-basis: 70%;
+        margin: auto;
     }
 }
