@@ -7,6 +7,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
 
 sass.compiler = require('node-sass');
 
@@ -88,3 +89,8 @@ function () {
 gulp.task('build', gulp.series('del', 'fonts', 'images',
                    /* gulp.parallel( */'pug', 'styles', 'scripts'));
 gulp.task('dev', gulp.series('build', 'watch'));
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
