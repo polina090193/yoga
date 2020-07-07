@@ -55,7 +55,7 @@ mixin slide(number)
                 .top-center-dot
                 .top-center-text= pages[number][1]
             .phone
-                a.phone-number(href="tel:+78123455697")= '+7 (812) 345-56-97'
+                a.phone-number(href="tel:+78121234567")= '+7 (812) 123-45-67'
             .logo-left
             block
             .pages
@@ -115,17 +115,10 @@ mixin slideClass(number)
                 h2.yoga(class= 'yoga-menu')= 'Yoga —'
                 ul.menu-classes-opened
                     each val, index in classes
+                        - 
+                            let selectedClassIndex = val + 1
                         li.menu-opened-item
-                            a(href= '#classes/' + index)= val[0]
-                            //- ul.menu-opened
-                    //-     each val, index in pages
-                    //-         if val[2]
-                    //-             if val[0] == pages[number][0]
-                    //-                 li.menu-opened-item.menu-opened__item_selected
-                    //-                     a( href = '#' + val[0] )= val[2]
-                    //-             else
-                    //-                 li.menu-opened-item
-                    //-                     a( href = '#' + val[0] )= val[2]
+                            a(href= '#classes/' + index)= selectedClassIndex[0]
             <img src="images/classes-image.png" class="classes-image">
             <div class="classes-text">
                 <h2 class="yoga">
