@@ -116,9 +116,9 @@ mixin slideClass(number)
                 ul.menu-classes-opened
                     each val, index in classes
                         - 
-                            let selectedClassIndex = val + 1
+                            let selectedClassIndex = index + 1
                         li.menu-opened-item
-                            a(href= '#classes/' + index)= selectedClassIndex[0]
+                            a(href= '#classes/' + index)= val[0]
             <img src="images/classes-image.png" class="classes-image">
             <div class="classes-text">
                 <h2 class="yoga">

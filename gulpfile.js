@@ -13,7 +13,13 @@ sass.compiler = require('node-sass');
 
 const scssFiles = [
   './src/fullpage-library/fullpage.css',
-  './src/scss/*.scss'
+  './src/scss/main-styles.scss',
+  './src/scss/slide-first.scss',
+  './src/scss/slide-classes.scss',
+  './src/scss/menu-desktop-opened.scss',
+  './src/scss/mobile-styles.scss',
+  './src/scss/menu-opened-mob.scss',
+  './src/scss/landscape-styles.scss',
 ]
 
 const jsFiles = [

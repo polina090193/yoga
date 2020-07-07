@@ -4,7 +4,8 @@
     .scroll-down-text,
     .phone,
     .menu-header,
-    .menu-classes {
+    .menu-classes,
+    .top-center {
         display: none;
     }
     
@@ -71,8 +72,6 @@
     .main-image {
         flex-basis: 100%;
         order: -1;
-
-        transform: none;
 
         max-width: unset;
         height: 36.95vh;
