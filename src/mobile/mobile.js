@@ -16,7 +16,7 @@ if (window.matchMedia
     and (orientation: portrait),
     `).matches) {
         
-        let buttons = document.querySelectorAll('.menu__icon'), button;
+        let buttons = document.querySelectorAll('.menu-icon'), button;
 
         for (button of buttons) {
             button.addEventListener('click', clickHandlerMenu);
@@ -24,53 +24,53 @@ if (window.matchMedia
 
         function clickHandlerMenu() {
 
-            let menuIcons = document.querySelectorAll('.menu__icon'), icon;
+            let menuIcons = document.querySelectorAll('.menu-icon'), icon;
 
             for (icon of menuIcons) {
                 icon.style.display = 'none';
             }
                         
             let mobileMenu = document.createElement('nav');
-                mobileMenu.className = "menu__mobile";
+                mobileMenu.className = "menu-mobile";
                 mobileMenu.innerHTML = `
                     <ul class="menu-opened">
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#main">Главная</a>
                         </li>
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#classes">Направления</a>
                         </li>
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#teachers">Преподаватели</a>
                         </li>
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#prices">Абонементы</a>
                         </li>
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#schedule">Расписание</a>
                         </li>
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#reviews">Отзывы</a>
                         </li>
-                        <li class="menu-opened__item">
+                        <li class="menu-opened-item">
                             <a href="#contacts">Контакты</a>
                         </li>
                     </ul>`;
 
             document.querySelector('.menu').append(mobileMenu);
 
-            let menuSelector = mobileMenu.querySelectorAll('.menu-opened__item');
+            let menuSelector = mobileMenu.querySelectorAll('.menu-opened-item');
             let currentPage = fullpage_api.getActiveSection();
 
             console.log(menuSelector[currentPage.index]);
     
-            mobileMenu.onload = menuSelector[currentPage.index].classList.add('menu-opened__item_selected');
+            mobileMenu.onload = menuSelector[currentPage.index].classList.add('menu-opened-item-selected');
             
             let cross = document.createElement('img');
             cross.className = "cross";
             cross.setAttribute('src', "images/x.png")
             
-            document.querySelector('.menu__mobile').prepend(cross);
+            document.querySelector('.menu-mobile').prepend(cross);
             
             
            /* let menuSelector = document.querySelectorAll('.menu-opened__item'), page;
@@ -88,7 +88,7 @@ if (window.matchMedia
                         
                     } */
             cross.addEventListener('click', clickHandlerCloseMenu);
-            let menuLinks = document.querySelectorAll('.menu-opened__item');
+            let menuLinks = document.querySelectorAll('.menu-opened-item');
             for (let menuLink of menuLinks) {
                 menuLink.addEventListener('click', clickHandlerCloseMenu);
             }
