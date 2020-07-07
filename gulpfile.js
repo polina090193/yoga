@@ -1,14 +1,14 @@
 'use strict';
 
 const gulp = require('gulp');
+const path = require('path');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const del = require('del');
 const browserSync = require('browser-sync').create();
-const ghPages = require('gulp-gh-pages');
-
+const ghPages = require('gh-pages');
 sass.compiler = require('node-sass');
 
 const scssFiles = [
@@ -90,7 +90,12 @@ gulp.task('build', gulp.series('del', 'fonts', 'images',
                    /* gulp.parallel( */'pug', 'styles', 'scripts'));
 gulp.task('dev', gulp.series('build', 'watch'));
 
-gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
-});
+// gulp.task('deploy', function() {
+//   return gulp.src('./build/**/*')
+//     .pipe(ghPages());
+// });
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
