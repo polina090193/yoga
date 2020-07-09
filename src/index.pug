@@ -52,7 +52,6 @@ mixin slide(number)
                                 else
                                     li.menu-opened-item
                                         a( href = '#' + val[0] )= val[2]
-                    //- selected???!!!
             .top-center
                 .top-center-dot
                 .top-center-text= pages[number][1]
@@ -138,6 +137,17 @@ mixin slideClass(number)
                 </form>
             </div>
         +slide(2)
+            <img src="images/form1-image.png" class="main-image">
+            <div class="form-wrapper">
+                <p class="test-header"><span class="discount">10%</span> скидка на абонемент</p>
+                <p class="test-description">Мы сделаем для вас 10% скидку на абонемент, купленный в день посещения вводного занятия</p>
+                <form action="">
+                    <input type="text"></input>
+                    <input type="phone"></input>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+                <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
+            </div>
         +slide(3)
         +slide(4)
         +slide(5)
