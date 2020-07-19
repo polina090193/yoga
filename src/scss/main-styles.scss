@@ -16,6 +16,15 @@ body {
 	}
 }
 
+::placeholder {
+	font: {
+		family: 'Geometria', sans-serif;
+		weight: lighter;
+		size: 1rem;
+	}
+	line-height: 2.186rem;
+}
+
 .slides {
 	display: flex;
 	flex-wrap: wrap;
