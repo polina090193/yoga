@@ -93,13 +93,8 @@ function () {
 });
   
 gulp.task('build', gulp.series('del', 'fonts', 'images',
-                   /* gulp.parallel( */'pug', 'styles', 'scripts'));
+                               'pug', 'styles', 'scripts'));
 gulp.task('dev', gulp.series('build', 'watch'));
-
-// gulp.task('deploy', function() {
-//   return gulp.src('./build/**/*')
-//     .pipe(ghPages());
-// });
 
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
