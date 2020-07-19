@@ -16,7 +16,8 @@
 -
     let classes = [
         ['Для начинающих',
-        'Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался и требует обучения. Такой программный комплекс существует и в нашем центре.'],
+        'Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался и требует обучения. Такой программный комплекс существует и в нашем центре.',
+        'Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так много людей занимаются йогой и придерживаются здорового образа жизни.'],
 
         ['Аштанга Виньяса',
         'Аштанга Виньяса йога представляет собой динамичную практику, которая включает в себя определенную последовательность асан, связанных между собой виньясами (системой движения).'],
@@ -78,7 +79,11 @@ mixin slide(number)
 mixin slideClass(number)
     article.slide
         h3.classes-head= classes[number][0]
-        p.classes-description= classes[number][1]
+        if classes[number].length === 2
+            p.classes-description= classes[number][1]
+        else
+            - for(var i = 1; i < classes[number].length; i++)
+              p.classes-description= classes[number][i]
 
 <!DOCTYPE html>
 <html>
@@ -121,7 +126,7 @@ mixin slideClass(number)
                             a(href= '#classes/' + index)= val[0]
             <img src="images/classes-image.png" class="classes-image">
             <div class="classes-text">
-                <h2 class="yoga">
+                <h2 class="yoga yoga-classes-header">
                     |Yoga —
                 </h2>
                 <aside class="switch-classes-arrows">
