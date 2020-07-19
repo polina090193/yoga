@@ -1,0 +1,42 @@
+.test-03-image {
+    height: 55.56vh;
+    padding: 11.615vh 0;
+}
+
+.form-03-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    height: 53.06vh;
+    width: 23.23vw;
+}
+
+.discount {
+    font: {
+        weight: lighter;
+        size: 5rem;
+    }
+
+	background: linear-gradient(to right, #f78e6a, #fc66a2);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.test-03-header {
+    font: {
+        size: 3rem;
+        weight: lighter;
+    }
+    line-height: 3.4rem;
+
+    margin-top: 0;
+    margin-bottom: 5.56%;
+}
+
+.test-03-description {
+    font-size: 1.125rem;
+}
+
+.after-form-attention {
+    font-family: 'Geometria Extra Light';
+}

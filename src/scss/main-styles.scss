@@ -38,13 +38,6 @@ body {
 	cursor: pointer;
 }
 
-/* .cross {
-	padding: 20px;
-	position: relative;
-	z-index: 20;
-	float: left;
-} */
-
 .menu {
 	display: flex;
 	align-items: center;
@@ -83,11 +76,9 @@ body {
 	flex-basis: 25%;
 
 	&-number {
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Montserrat Regular';
 		text-decoration: none;
 		color: black;
-		line-height: 3.33vh;
-		white-space: nowrap;
 	}
 }
 
