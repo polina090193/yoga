@@ -17,6 +17,7 @@ const scssFiles = [
   './src/scss/slide-first.scss',
   './src/scss/slide-classes.scss',
   './src/scss/slide-try-03.scss',
+  './src/scss/slide-trainers.scss',
   './src/scss/menu-desktop-opened.scss',
   './src/scss/mobile-styles.scss',
   './src/scss/menu-opened-mob.scss',

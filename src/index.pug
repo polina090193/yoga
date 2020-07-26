@@ -4,7 +4,7 @@
         ['main', 'Добро пожаловать', 'Главная'],
         ['classes', 'Направления и классы', 'Направления'],
         ['test1', 'Пробное занятие'],
-        ['teachers', 'Преподаватели', 'Преподаватели'],
+        ['trainers', 'Преподаватели', 'Преподаватели'],
         ['prices', 'Абонементы', 'Абонементы'],
         ['schedule', 'Расписание', 'Расписание'],
         ['reviews', 'Отзывы', 'Отзывы'],
@@ -34,6 +34,20 @@
         ['Терапия',
         'Йога-терапия - это способ при помощи асан оказать воздействие не только на физическое тело (кости, мускулы и суставы), как другие упражнения, но и на физиологический уровень.'],
         ]
+
+//- Name, name form, imege, description
+-
+    let trainers = [
+        ['Максим Казаков', "Максиму", 'images/maksim.png',
+        'Занимается йогой Айенгара с 1990 года. Является преподавателем йоги Айенгара с 1997 года. Имеет международный сертификат Junior I. Проводит семинары, занятия разных уровней сложности.',
+        'В йогу привел интерес. Является одним из самых опытных преподавателей и опорой нашего центра. Все студенты любят Максима за отзывчивость и индивидуальный подход к каждому.'],
+
+        ['Настя Антипова', "Насте", 'images/classes-image.png',
+        'К Насте на практику приходят люди разного возраста с разными физическими данными и возможности. Чтобы все могли практиковать на своем уровне, она дает несколько вариантов сложности одной и той же асаны на уроке.'],
+    
+        ['Мария Жукова', "Марии", 'images/form2-image.png',
+        'Мария – опытный учитель, она посвятила свою жизнь исследованию того, как функционирует наше тело, и что она может сделать, чтобы помочь другим достичь позитивных изменений в физическом уровне.'],
+    ]
 
 mixin slide(number)
     -
@@ -81,9 +95,24 @@ mixin slideClass(number)
         h3.classes-head= classes[number][0]
         if classes[number].length === 2
             p.classes-description= classes[number][1]
-        else
+        else if classes[number].length > 2
             - for(var i = 1; i < classes[number].length; i++)
               p.classes-description= classes[number][i]
+
+mixin slideTrainer(number)
+    -
+        let buttonTrainerWords = "Записаться к "
+    article.slide.slide-trainers
+        div.trainers-item
+            img(src=trainers[number][2]).trainers-image
+            div.trainers-text
+                h2.trainers-head= trainers[number][0]
+                if trainers[number].length === 3
+                    p.trainers-description= trainers[number][2]
+                else if trainers[number].length > 3
+                    - for(var i = 3; i < trainers[number].length; i++)
+                      p.trainers-description= trainers[number][i]
+                button.button-sign-up= buttonTrainerWords + trainers[number][1]
 
 <!DOCTYPE html>
 <html>
@@ -154,6 +183,22 @@ mixin slideClass(number)
                 <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
             </div>
         +slide(3)
+            nav.trainers-menu
+                h2.trainers-menu-header= 'Тренер —'
+                ul.menu-trainers-opened
+                    each val, index in trainers
+                        -
+                            let selectedTrainerIndex = index + 1
+                        li.menu-opened-item
+                            a(href= '#trainers/' + index)= val[0]
+            //- <aside class="switch-classes-arrows">
+            //-     <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-back">
+            //-     <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-forward">
+            //- </aside>
+            each num, index in trainers
+                +slideTrainer(index)
+            form(action='#test1')
+
         +slide(4)
         +slide(5)
         +slide(6)

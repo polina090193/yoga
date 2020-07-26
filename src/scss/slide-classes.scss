@@ -7,7 +7,6 @@
 		align-items: center;
 
 		height: 44.07vh;
-		// margin-top: 13vh;
 
 	}
 
@@ -34,10 +33,13 @@
 	&-description {
 		max-height: 35vh;
 
-		font-weight: lighter;
+		font: {
+			weight: lighter;
+			size: 1.125rem;
+		}
+
 		line-height: 1.5em;
 
-		font-size: 1.125rem;
 		width: 27.08vw;
 		
 	}
