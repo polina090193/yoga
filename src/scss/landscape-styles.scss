@@ -54,8 +54,59 @@
     }
 
     .social {
-        /* display: none; */
         flex-basis: 70%;
         margin: auto;
     }
+
+    // Third slide
+    .test-03-form-wrapper {
+        flex-direction: row;
+        flex-basis: 91%;
+    }
+
+    .test-03 {
+        &-image {
+            display: none;
+        }
+
+        &-header {
+            display: none;
+        }
+
+        &-discount {
+            font-size: 3rem;
+        }
+
+        &-description {
+            display: none;
+        }
+    }
+
+    .submit {
+        font-size: 1.1rem;
+        height: 3rem;
+        width: 15rem;
+        padding-right: 1rem;
+        padding-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .test-form {
+        width: 50%;
+
+        & > input:last-of-type {
+            margin-top: 1rem;
+        }
+    }
+
+    .after-form-attention {
+        font-size: 0.7rem;
+        width: 30%;
+    }
+
+    .thanks {
+        font-size: 3.5rem;
+    }
+
+    
 }
