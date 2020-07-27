@@ -30,6 +30,11 @@
 
 	}
 
+	.classes-descriptions {
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
 	&-description {
 		max-height: 35vh;
 
@@ -46,7 +51,7 @@
 }
 
 .menu-classes {
-	width: 25%;
+	flex-basis: 25%;
 	display: flex;
 	justify-content: center;
 	
@@ -54,7 +59,7 @@
 
 .yoga-menu {
 	padding: 0;
-	width: 25%;
+	width: 20%;
 
 	font: {
 		size: 1.125em;

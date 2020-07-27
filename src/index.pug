@@ -45,7 +45,7 @@
         ['Настя Антипова', "Насте", 'images/classes-image.png',
         'К Насте на практику приходят люди разного возраста с разными физическими данными и возможности. Чтобы все могли практиковать на своем уровне, она дает несколько вариантов сложности одной и той же асаны на уроке.'],
     
-        ['Мария Жукова', "Марии", 'images/form2-image.png',
+        ['Мария Жукова', "Марии", 'images/abonements-image.png',
         'Мария – опытный учитель, она посвятила свою жизнь исследованию того, как функционирует наше тело, и что она может сделать, чтобы помочь другим достичь позитивных изменений в физическом уровне.'],
     ]
 
@@ -93,11 +93,12 @@ mixin slide(number)
 mixin slideClass(number)
     article.slide
         h3.classes-head= classes[number][0]
-        if classes[number].length === 2
-            p.classes-description= classes[number][1]
-        else if classes[number].length > 2
-            - for(var i = 1; i < classes[number].length; i++)
-              p.classes-description= classes[number][i]
+        div.classes-descriptions
+            if classes[number].length === 2
+                p.classes-description= classes[number][1]
+            else if classes[number].length > 2
+                - for(var i = 1; i < classes[number].length; i++)
+                  p.classes-description= classes[number][i]
 
 mixin slideTrainer(number)
     -

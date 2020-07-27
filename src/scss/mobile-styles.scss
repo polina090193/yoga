@@ -119,32 +119,41 @@
         margin-top: 0;
     }
     
+    .classes-descriptions {
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .classes-description {
+        width: 100%;
+    }
+    
     .yoga {
         margin-bottom: 0.5em;
         font-size: 6vh;
+        margin-top: 0;
     }
     
     .button-sign-up {
         min-width: 285px;
         min-height: 60px;
+        margin-top: 10px;
     }
 
     .switch-classes {
         &-arrows {
             display: inline;
-            cursor: pointer;
 
             margin-right: 0;
             margin-left: auto;
         }
-
+        
         &-back {
             margin-right: 10px;
             transform: rotate(90deg);
 
             &:active {
                 content: url('../images/arrow-active.png');
-                transform: rotate(90deg);
             }
         }
 
@@ -153,7 +162,6 @@
 
             &:active {
                 content: url('../images/arrow-active.png');
-                transform: rotate(275deg);
             }
         }
     }
