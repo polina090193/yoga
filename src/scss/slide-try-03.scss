@@ -39,14 +39,15 @@
         font-size: 1.125rem;
     }
 
-    &-form input {
-        border: 0;
-        border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
-        background-color: transparent;
+}
 
-        height: 6.94vh;
-        width: 100%;
-    }
+.test-form input {
+    border: 0;
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+    background-color: transparent;
+
+    height: 6.94vh;
+    width: 100%;
 }
 
 .after-form-attention {
@@ -82,4 +83,23 @@
 		outline: none;
 		color: #f78e6a;
 	}
+}
+
+.thanks {
+    display: block;
+
+    font: {
+        size: 4.5rem;
+    }
+    // line-height: 2.1875rem;
+    
+    background: linear-gradient(to bottom, #f78e6a, #fc66a2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.connect {
+    font-size: 1.125rem;
+    // line-height: 2.1875rem;
 }

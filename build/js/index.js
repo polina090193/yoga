@@ -4210,6 +4210,16 @@ new fullpage('.fullscreen-slide-wrapper', {
 
 //methods
 fullpage_api.setAllowScrolling(true);
+let buttonSubmit = document.querySelector('.submit');
+let tryForm = document.querySelector('.test-03-form-wrapper');
+
+buttonSubmit.addEventListener('click', sendForm);
+
+function sendForm(){
+    tryForm.innerHTML = "<div class='thanks'>Спасибо!</div><p class='connect'>Мы свяжемся с вами в течение 15 минут!</p>";
+    tryForm.style.display = 'block';
+}
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 

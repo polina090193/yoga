@@ -27,7 +27,8 @@ const scssFiles = [
 const jsFiles = [
   './src/fullpage-library/fullpage.js',
   './src/fullpage-library/fullpageOptions.js',
-  './src/mobile/mobile.js',
+  './src/js/main.js',
+  './src/js/mobile.js'
 ]
 
 gulp.task('pug',

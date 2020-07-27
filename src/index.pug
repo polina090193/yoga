@@ -113,7 +113,8 @@ mixin slideTrainer(number)
                 else if trainers[number].length > 3
                     - for(var i = 3; i < trainers[number].length; i++)
                       p.trainers-description= trainers[number][i]
-                button.button-sign-up= buttonTrainerWords + trainers[number][1]
+                form(action='#test1')
+                    button.button-sign-up= buttonTrainerWords + trainers[number][1]
 
 <!DOCTYPE html>
 <html>
@@ -176,7 +177,7 @@ mixin slideTrainer(number)
             <div class="test-03-form-wrapper">
                 <p class="test-03-header"><span class="test-03-discount">10%</span> скидка на абонемент</p>
                 <p class="test-03-description">Мы сделаем для вас 10% скидку на абонемент, купленный в день посещения вводного занятия.</p>
-                <form class="test-03-form" action="">
+                <form class="test-form">
                     <input type="text" placeholder="Ваше имя"><br>
                     <input type="phone" placeholder="Ваш телефон"><br>
                     <button class="submit">Отправить заявку</button>
