@@ -105,7 +105,11 @@ mixin slideTrainer(number)
         let buttonTrainerWords = "Записаться к "
     article.slide.slide-trainers
         div.trainers-item
+            nav.switch-trainers-arrows
+                <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-back">
             img(src=trainers[number][2]).trainers-image
+            nav.switch-trainers-arrows
+                <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-forward">
             div.trainers-text
                 h2.trainers-head= trainers[number][0]
                 if trainers[number].length === 3
@@ -160,10 +164,10 @@ mixin slideTrainer(number)
                 <h2 class="yoga yoga-classes-header">
                     |Yoga —
                 </h2>
-                <aside class="switch-classes-arrows">
+                <nav class="switch-classes-arrows">
                     <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-back">
                     <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-forward">
-                </aside>
+                </nav>
                 each num, index in classes
                     +slideClass(index)
                 <form action='#test1'>
@@ -198,10 +202,6 @@ mixin slideTrainer(number)
                             let selectedTrainerIndex = index + 1
                         li.menu-opened-item
                             a(href= '#trainers/' + index)= val[0]
-            //- <aside class="switch-classes-arrows">
-            //-     <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-back">
-            //-     <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-forward">
-            //- </aside>
             each num, index in trainers
                 +slideTrainer(index)
             form(action='#test1')

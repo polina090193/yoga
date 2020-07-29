@@ -203,4 +203,69 @@
     .thanks {
         font-size: 3.5rem;
     }
+
+    // Trainers slide (04)
+    .trainers {
+        &-menu {
+            display: none;
+            & + div {
+                flex-basis: 100%;
+                // max-height: none;
+            }
+        }
+
+        &-image {
+            height: 44.91%;
+            margin-top: 0;
+        }
+
+        &-item {
+            flex: {
+                direction: column;
+            }
+        }
+
+        &-text {
+            flex-basis: 100%;
+            flex-direction: row;
+    
+            margin-top: 0;
+        }
+
+        &-description {
+            width: 100%;
+            font-size: 0.85rem;
+        }
+
+        &-arrows {
+            display: inline;
+
+            margin-right: 0;
+            margin-left: auto;
+        }
+        
+        &-back {
+            margin-right: 10px;
+            transform: rotate(90deg);
+
+            &:active {
+                content: url('../images/arrow-active.png');
+            }
+        }
+
+        &-forward {
+            transform: rotate(275deg);
+
+            &:active {
+                content: url('../images/arrow-active.png');
+            }
+        }
+    }
+
+    .button-sign-up {
+        min-width: 285px;
+        min-height: 60px;
+        margin-top: 10px;
+    }
+
 }
