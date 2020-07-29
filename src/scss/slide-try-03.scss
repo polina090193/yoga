@@ -41,13 +41,35 @@
 
 }
 
-.test-form input {
-    border: 0;
-    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
-    background-color: transparent;
+.test-form {
+    font: {
+        family: 'Geometria', sans-serif;
+        size: 1rem;
+    }
+    
+    line-height: 2.186rem;
 
-    height: 6.94vh;
-    width: 100%;
+    & input {
+        border: 0;
+        border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+        background-color: transparent;
+
+        height: 3vh;
+        width: 100%;
+
+        &:invalid:not(:focus):not(:placeholder-shown) {
+            // Покажем напоминание
+            color: red;
+        }
+
+        font: {
+            family: 'Geometria', sans-serif;
+            size: 1rem;
+        }
+        
+        line-height: 2.186rem;
+    }
+
 }
 
 .after-form-attention {

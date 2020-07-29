@@ -178,9 +178,14 @@ mixin slideTrainer(number)
                 <p class="test-03-header"><span class="test-03-discount">10%</span> скидка на абонемент</p>
                 <p class="test-03-description">Мы сделаем для вас 10% скидку на абонемент, купленный в день посещения вводного занятия.</p>
                 <form class="test-form">
-                    <input type="text" placeholder="Ваше имя"><br>
-                    <input type="phone" placeholder="Ваш телефон"><br>
-                    <button class="submit">Отправить заявку</button>
+                    <label>Имя:<input type="text" placeholder="Ваше имя" required></label><br>
+                        
+                    <label>Телефон:<input id="online_phone" name="phone" type="tel" required
+                                | value="+7(___)___-__-__"
+                                | pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                | placeholder="+7(___)___-__-__"></label><br>
+                        
+                    <button type="submit" class="submit">Отправить заявку</button>
                 </form>
                 <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
             </div>
@@ -202,6 +207,9 @@ mixin slideTrainer(number)
             form(action='#test1')
 
         +slide(4)
+            <form>
+                
+            </form>
         +slide(5)
         +slide(6)
         +slide(7)

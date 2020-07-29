@@ -16,15 +16,6 @@ body {
 	}
 }
 
-::placeholder {
-	font: {
-		family: 'Geometria', sans-serif;
-		weight: lighter;
-		size: 1rem;
-	}
-	line-height: 2.186rem;
-}
-
 .slides {
 	display: flex;
 	flex-wrap: wrap;
@@ -45,6 +36,14 @@ body {
 .social,
 .scroll-down {
 	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+input:focus {
+	outline: #f78e6a solid 2px;
 }
 
 .menu {
