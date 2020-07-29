@@ -281,6 +281,10 @@
         &-forward {
             transform: rotate(275deg);
 
+            position: absolute;
+            right: -40vw;
+            bottom: -10vh;
+
             &:active {
                 content: url('../images/arrow-active.png');
             }
