@@ -260,18 +260,17 @@
 
     .switch-trainers-arrows {
         display: inline;
-
-        margin-right: 0;
-        margin-left: auto;
         position: absolute;
+        z-index: 2;
+
         
         &-back {
             margin-right: 10px;
             transform: rotate(90deg);
 
             position: absolute;
-            right: 200vw;
-            bottom: -10vh;
+            right: -15vw;
+            bottom: -20vh;
 
             &:active {
                 content: url('../images/arrow-active.png');
@@ -282,8 +281,8 @@
             transform: rotate(275deg);
 
             position: absolute;
-            right: -40vw;
-            bottom: -10vh;
+            right: -85vw;
+            bottom: -20vh;
 
             &:active {
                 content: url('../images/arrow-active.png');

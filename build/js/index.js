@@ -4358,14 +4358,21 @@ if (window.matchMedia
         }
 
 
-        document.querySelector('.switch-classes-forward')
-            .addEventListener('click', function(){
+        addEventForForwardArrow(document.querySelector('.switch-classes-forward'))
+        addEventForBackArrow(document.querySelector('.switch-classes-back'))
+
+        addEventForForwardArrow(document.querySelector('.switch-trainers-arrows-forward'))
+        addEventForBackArrow(document.querySelector('.switch-trainers-arrows-back'))
+
+        function addEventForForwardArrow (selector) {
+            selector.addEventListener('click', function(){
                 fullpage_api.moveSlideRight();
             });
-
-        document.querySelector('.switch-classes-back')
-            .addEventListener('click', function(){
+        }
+        
+        function addEventForBackArrow (selector) {
+            selector.addEventListener('click', function(){
                 fullpage_api.moveSlideLeft();
-        });
-
-};
+            })
+        }
+}

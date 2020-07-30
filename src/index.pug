@@ -105,11 +105,7 @@ mixin slideTrainer(number)
         let buttonTrainerWords = "Записаться к "
     article.slide.slide-trainers
         div.trainers-item
-            nav.switch-trainers-arrows
-                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-back">
             img(src=trainers[number][2]).trainers-image
-            nav.switch-trainers-arrows
-                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-forward">
             div.trainers-text
                 h2.trainers-head= trainers[number][0]
                 if trainers[number].length === 3
@@ -126,6 +122,7 @@ mixin slideTrainer(number)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/ellipse-plus.png" type="image/png">
     <title>Центр йоги Lotos</title>
 </head>
 <body>
@@ -202,6 +199,9 @@ mixin slideTrainer(number)
                             let selectedTrainerIndex = index + 1
                         li.menu-opened-item
                             a(href= '#trainers/' + index)= val[0]
+            nav.switch-trainers-arrows
+                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-back">
+                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-forward">
             each num, index in trainers
                 +slideTrainer(index)
             form(action='#test1')
