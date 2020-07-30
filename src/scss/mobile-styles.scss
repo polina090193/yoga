@@ -208,7 +208,10 @@
     .trainers {
         &-menu {
             display: none;
-            
+            & + div {
+                flex-basis: 100%;
+                height: 85%;
+            }
         }
 
         &-image {
@@ -295,11 +298,6 @@
             &:active {
                 content: url('../images/arrow-active.png');
             }
-        }
-
-        & + div {
-            flex-basis: 100%;
-            height: 85%;
         }
     }
 }

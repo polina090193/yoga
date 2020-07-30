@@ -191,6 +191,9 @@ mixin slideTrainer(number)
                 <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
             </div>
         +slide(3)
+            nav.switch-trainers-arrows
+                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-back">
+                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-forward">
             nav.trainers-menu
                 h2.trainers-menu-header= 'Тренер —'
                 ul.menu-trainers-opened
@@ -199,9 +202,6 @@ mixin slideTrainer(number)
                             let selectedTrainerIndex = index + 1
                         li.menu-opened-item
                             a(href= '#trainers/' + index)= val[0]
-            nav.switch-trainers-arrows
-                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-back">
-                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-forward">
             each num, index in trainers
                 +slideTrainer(index)
 
