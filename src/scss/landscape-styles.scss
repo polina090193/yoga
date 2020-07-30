@@ -161,4 +161,10 @@
         min-width: unset;
         width: 100%;
     }
+
+    .pages {
+        @media (min-width: 670px) {
+            display: none;
+        }
+    }
 }
