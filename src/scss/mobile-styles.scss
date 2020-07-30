@@ -208,9 +208,7 @@
     .trainers {
         &-menu {
             display: none;
-            & + div {
-                flex-basis: 100%;
-            }
+            
         }
 
         &-image {
@@ -238,7 +236,7 @@
         }
 
         &-head {
-            font-size: 1rem;
+            font-size: 3vh;
         }
 
 
@@ -246,23 +244,29 @@
             width: 100%;
             font-size: 1.95vh;
         }
+
+        &-button {
+            width: 80%;
+            height: 40%;
+            
+        }
     }
 
     .button-sign-up {
         max-height: 8vh;
-        margin-top: 10px;
-        font-size: 1rem;
+        margin-top: 2vh;
+        font-size: 2.5vh;
         min-width: unset;
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
+        height: 8vh;
     }
 
     .switch-trainers-arrows {
         display: inline;
         position: absolute;
         z-index: 2;
-
         
         &-back {
             margin-right: 10px;
@@ -271,6 +275,8 @@
             position: absolute;
             right: -15vw;
             bottom: -20vh;
+
+            width: 5vh;
 
             &:active {
                 content: url('../images/arrow-active.png');
@@ -284,9 +290,16 @@
             right: -85vw;
             bottom: -20vh;
 
+            width: 5vh;
+
             &:active {
                 content: url('../images/arrow-active.png');
             }
+        }
+
+        & + div {
+            flex-basis: 100%;
+            height: 85%;
         }
     }
 }

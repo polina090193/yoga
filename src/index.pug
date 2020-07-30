@@ -113,7 +113,7 @@ mixin slideTrainer(number)
                 else if trainers[number].length > 3
                     - for(var i = 3; i < trainers[number].length; i++)
                       p.trainers-description= trainers[number][i]
-                form(action='#test1')
+                form.trainers-button(action='#test1')
                     button.button-sign-up= buttonTrainerWords + trainers[number][1]
 
 <!DOCTYPE html>
@@ -204,7 +204,6 @@ mixin slideTrainer(number)
                 <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-forward">
             each num, index in trainers
                 +slideTrainer(index)
-            form(action='#test1')
 
         +slide(4)
             <form>
