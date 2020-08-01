@@ -31,7 +31,8 @@
 
         &-mobile {
             position: fixed;
-            z-index: 10;
+            display: flex;
+            z-index: 3;
             top: 0;
             right: 0;
             left: 0;
@@ -68,5 +69,12 @@
                 }
             }
         }
+    }
+
+    .cross {
+        align-self: flex-start;
+        opacity: 1;
+        z-index: 4;
+        margin: 5vh 5vh 0 auto;
     }
 }

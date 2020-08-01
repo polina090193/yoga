@@ -41,7 +41,7 @@ if (window.matchMedia
                             <a href="#classes">Направления</a>
                         </li>
                         <li class="menu-opened-item">
-                            <a href="#teachers">Преподаватели</a>
+                            <a href="#trainers">Преподаватели</a>
                         </li>
                         <li class="menu-opened-item">
                             <a href="#prices">Абонементы</a>
@@ -62,31 +62,23 @@ if (window.matchMedia
             let menuSelector = mobileMenu.querySelectorAll('.menu-opened-item');
             let currentPage = fullpage_api.getActiveSection();
 
-            console.log(menuSelector[currentPage.index]);
-    
-            mobileMenu.onload = menuSelector[currentPage.index].classList.add('menu-opened-item-selected');
+            if (currentPage.index < 2) {
+                mobileMenu.onload = menuSelector[currentPage.index]
+                                    .classList.add('menu-opened-item-selected');
+            } else if (currentPage.index > 2 && currentPage.index < 7) {
+                mobileMenu.onload = menuSelector[currentPage.index - 1]
+                                    .classList.add('menu-opened-item-selected');
+            } else if (currentPage.index > 7) {
+                mobileMenu.onload = menuSelector[currentPage.index - 2]
+                                    .classList.add('menu-opened-item-selected');
+            }
             
             let cross = document.createElement('img');
             cross.className = "cross";
             cross.setAttribute('src', "images/x.png")
             
-            document.querySelector('.menu-mobile').prepend(cross);
+            document.querySelector('.menu-mobile').append(cross);
             
-            
-           /* let menuSelector = document.querySelectorAll('.menu-opened__item'), page;
-            let currentPage = fullpage_api.getActiveSection();
-            menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
-            
-            
-             let menuSelector = document.querySelectorAll('.menu-opened__item');
-                    let currentPage = fullpage_api.getActiveSection();
-                    onLeave: function switchSelectedItem(origin, destination, direction){
-                        menuSelector[currentPage.index].classList.add('.menu-opened__item_selected');
-                    }
-                    
-                    for(item of menuSelector) {
-                        
-                    } */
             cross.addEventListener('click', clickHandlerCloseMenu);
             let menuLinks = document.querySelectorAll('.menu-opened-item');
             for (let menuLink of menuLinks) {
