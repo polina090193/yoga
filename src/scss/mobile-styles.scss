@@ -115,6 +115,7 @@
     .classes-text {
         flex-basis: 100%;
         flex-direction: row;
+		justify-content: center;
 
         margin-top: 0;
     }
@@ -194,6 +195,7 @@
 
     .submit {
         font-size: 1.1rem;
+        width: 100%;
     }
 
     .after-form-attention {
