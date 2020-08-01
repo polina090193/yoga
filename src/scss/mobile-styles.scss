@@ -246,24 +246,18 @@
         &-description {
             width: 100%;
             font-size: 1.95vh;
-        }
-
-        &-button {
-            width: 80%;
-            height: 40%;
-            
+            margin-bottom: 0;
         }
     }
 
     .button-sign-up {
-        max-height: 8vh;
         margin-top: 2vh;
-        font-size: 2.5vh;
+        font-size: 2.4vh;
         min-width: unset;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        height: 8vh;
+        height: 7vh;
     }
 
     .switch-trainers-arrows {
@@ -290,7 +284,7 @@
             transform: rotate(275deg);
 
             position: absolute;
-            right: -85vw;
+            right: -87vw;
             bottom: -20vh;
 
             width: 5vh;
