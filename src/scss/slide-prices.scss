@@ -1,5 +1,51 @@
 .prices {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
     &-image {
 		height: 78.79vh;
+    }
+
+    &-table {
+        width: 29.375vmax;
+        height: 39.63vmin;
+        border: solid transparent 2px;
+        border-collapse: collapse;
+        margin-top: 12.96vmin;
+        margin-bottom: 5.56vmin;
+
+        &-tr {
+            background-color: #fff;
+        }
+
+        &-td {
+            border: solid #fbf5f4 4px;
+            background-color: #fff;
+            width: 14.58vmax;
+            height: 12.96vmin;
+            font-weight: lighter;
+            line-height: 1.25rem;
+    
+        }
+    }
+
+    &-price {
+        display: flex;
+    }
+
+    &-sum {
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: linear-gradient(to right, #f78e6a, #fc66a2);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-right: 5px;
+    }
+
+    .rub {
+        font-size: 1.125rem;
+        color: black;
     }
 }

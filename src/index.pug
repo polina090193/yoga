@@ -49,6 +49,17 @@
         'Мария – опытный учитель, она посвятила свою жизнь исследованию того, как функционирует наше тело, и что она может сделать, чтобы помочь другим достичь позитивных изменений в физическом уровне.'],
     ]
 
+//- Title of abonement, price
+-   
+    let prices = [
+        ['Разовое занятие', 300],
+        ['Месяц занятий', 2000],
+        ['2 месяца занятий', 3500],
+        ['3 месяца занятий', 4500],
+        ['Полгода занятий', 8000],
+        ['Год занятий', 14000],
+    ]
+
 mixin slide(number)
     -
         let nextPage = (number + 1)
@@ -115,6 +126,13 @@ mixin slideTrainer(number)
                       p.trainers-description= trainers[number][i]
                 form.trainers-button(action='#test1')
                     button.button-sign-up= buttonTrainerWords + trainers[number][1]
+
+mixin priceCell(number)
+    td.prices-table-td
+        p.prices-head= prices[number][0]
+        div.prices-price
+            .prices-sum= prices[number][1]
+            .prices-rub= ' руб.'
 
 <!DOCTYPE html>
 <html>
@@ -207,11 +225,22 @@ mixin slideTrainer(number)
 
         +slide(4)
             <img src="images/abonements-image.png" class="prices-image">
-            <form action='#test1'>
-                <button class="button-sign-up">
-                    |Заказать абонемент
-                </button>
-            </form>
+            div.prices-wrapper
+                table.prices-table
+                    tr.prices-table-tr
+                        +priceCell(0)
+                        +priceCell(1)
+                    tr.prices-table-tr
+                        +priceCell(2)
+                        +priceCell(3)
+                    tr.prices-table-tr
+                        +priceCell(4)
+                        +priceCell(5)
+                <form action='#test1'>
+                    <button class="button-sign-up">
+                        |Заказать абонемент
+                    </button>
+                </form>
         +slide(5)
         +slide(6)
         +slide(7)
