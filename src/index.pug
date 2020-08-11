@@ -52,12 +52,12 @@
 //- Title of abonement, price
 -   
     let prices = [
-        ['Разовое занятие', 300],
-        ['Месяц занятий', 2000],
-        ['2 месяца занятий', 3500],
-        ['3 месяца занятий', 4500],
-        ['Полгода занятий', 8000],
-        ['Год занятий', 14000],
+        ['Разовое занятие', '300'],
+        ['Месяц занятий', '2 000'],
+        ['2 месяца занятий', '3 500'],
+        ['3 месяца занятий', '4 500'],
+        ['Полгода занятий', '8 000'],
+        ['Год занятий', '14 000'],
     ]
 
 mixin slide(number)
@@ -129,10 +129,14 @@ mixin slideTrainer(number)
 
 mixin priceCell(number)
     td.prices-table-td
-        p.prices-head= prices[number][0]
-        div.prices-price
-            .prices-sum= prices[number][1]
-            .prices-rub= ' руб.'
+        div.prices-td-wrapper
+            div.prices-head
+                p.prices-title= prices[number][0]
+                div.prices-price
+                    .prices-sum= prices[number][1]
+                    .prices-rub= ' руб.'
+            a.try.prices-try(href='#test1')
+                img.try-plus(src='images/plus.png')
 
 <!DOCTYPE html>
 <html>

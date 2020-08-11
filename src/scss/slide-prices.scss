@@ -23,20 +23,43 @@
         &-td {
             border: solid #fbf5f4 4px;
             background-color: #fff;
-            width: 14.58vmax;
-            height: 12.96vmin;
-            font-weight: lighter;
+            font-weight: 400;
             line-height: 1.25rem;
-    
         }
+    }
+
+    &-td-wrapper {
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: 53.6% 25%;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20%;
+        padding-left: 7%;
+    }
+
+    &-head {
+        padding-right: 10.71%;
+    }
+
+    &-try {
+        justify-self: center;
+        margin: 0;
+    }
+
+    &-title {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        margin-top: 0;
     }
 
     &-price {
         display: flex;
+
     }
 
     &-sum {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
         background: linear-gradient(to right, #f78e6a, #fc66a2);
         background-clip: text;
@@ -44,8 +67,9 @@
         margin-right: 5px;
     }
 
-    .rub {
-        font-size: 1.125rem;
+    &-rub {
+        font-size: 0.9rem;
         color: black;
     }
+
 }
