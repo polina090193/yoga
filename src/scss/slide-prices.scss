@@ -9,8 +9,6 @@
     }
 
     &-table {
-        width: 29.375vmax;
-        height: 39.63vmin;
         border: solid transparent 2px;
         border-collapse: collapse;
         margin-top: 12.96vmin;
@@ -31,11 +29,11 @@
     &-td-wrapper {
         display: grid;
         grid-template-rows: 1;
-        grid-template-columns: 53.6% 25%;
+        grid-template-columns: 60% 25%;
         align-items: center;
         justify-content: space-between;
         column-gap: 20%;
-        padding-left: 7%;
+        padding: 7.22% 3.5% 7.22% 7%;
     }
 
     &-head {
