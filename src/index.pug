@@ -246,6 +246,17 @@ mixin priceCell(number)
                     </button>
                 </form>
         +slide(5)
+            div.schedule-wrapper
+                    table.schedule-table
+                        tr.schedule-table-tr
+                            +priceCell(0)
+                            +priceCell(1)
+                        tr.schedule-table-tr
+                            +priceCell(2)
+                            +priceCell(3)
+                        tr.schedule-table-tr
+                            +priceCell(4)
+                            +priceCell(5)
         +slide(6)
         +slide(7)
         +slide(8)
