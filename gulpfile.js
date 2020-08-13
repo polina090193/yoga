@@ -23,6 +23,7 @@ const scssFiles = [
   './src/scss/menu-opened-mob.scss',
   './src/scss/landscape-styles.scss',
   './src/scss/slide-prices.scss',
+  './src/scss/slide-schedule.scss',
 ]
 
 const jsFiles = [
