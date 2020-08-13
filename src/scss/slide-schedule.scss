@@ -1,15 +1,43 @@
 .schedule {
     &-table {
-        width: 73.96%;
+        min-width: 73.96%;
+        max-width: 85%;
         height: 57.6%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    &-tr {
+        &:first-child {
+            color: #f78e6a;
+            font-weight: bold;
+            & .schedule-td:first-child {
+                color: black;
+                font-weight: normal;
+                &:before {
+                    content: url('../images/download-arrow.jpg');
+                    float: left;
+                    padding-top: 15%;
+                    padding-right: 5%;
+                }
+            }
+        }
     }
     
     &-td {
-        width: 14.08%;
+        min-width: 14.08%;
         background-color: #fff;
         padding-left: 1.76%;
         padding-right: 1.55%;
+        text-align: center;
+
+        &:first-child {
+            @extend .schedule-tr:first-child;
+        }
+
     }
+
+    
     
     &-title {
         font-size: 0.875rem;
