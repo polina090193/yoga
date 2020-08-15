@@ -1,0 +1,90 @@
+.reviews {
+    &-image {
+        height: 66.2vh;
+        position: absolute;
+        left: 10%;
+        top: 20%;
+    }
+
+    &-wrapper {
+        width: 30%;
+        margin-top: 7%;
+        margin-left: -5%;
+        height: 48vh;
+        margin-bottom: 8.5%;
+    }
+
+    &-menu {
+        display: flex;
+        position: relative;
+        right: 15%;
+        z-index: 1;
+
+        &-header {
+            padding-right: 0.5rem;
+            margin-top: 1.7rem;
+
+
+            font: {
+                size: 1.125em;
+                weight: medium;
+            }
+
+            background: linear-gradient(to top, #f78e6a, #fc66a2);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &-review-header {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &-photo {
+        margin-right: 7.69%;
+        width: 35%;
+    }
+
+    &-person {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &-name {
+        margin: 0;
+        margin-bottom: 11.11%;
+        font-size: 1.875rem;
+        font-weight: normal;
+        line-height: 1.5rem;
+    }
+
+    &-age {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: normal;
+        line-height: 1.5rem;
+    }
+
+    &-text {
+		font-weight: 300;
+        font-size: 1.125rem;
+        margin-top: 12.24%;
+    }
+
+    &-menu-opened {
+        padding-left: 0;
+    }
+
+    &-button {
+        margin-top: 0;
+    }
+}
+.switch-reviews-arrows {
+    display: none;
+    /* & + div {
+        flex-basis: 70%;
+        max-height: 78.79vh;;
+    } */
+}

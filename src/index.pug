@@ -73,6 +73,19 @@
         ['Воскресенье',          'Йога для начинающих', 'Универсальная йога',  'Йога Айенгара',        'Аштанга Виньяса йога', 'Йогатерапия',          'Кундалини йога'],
     ]
 
+//-
+- 
+    let reviews = [
+        ['Арина Наумова', 'images/photo-naumova.png', '34 года',
+        'Не знаю, как у других, но мне после занятий йогой хочется начать новую здоровую жизнь, хочется больше есть овощей и фруктов и поднять свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.'],
+        ['Имя Фамилия', 'images/photo-naumova.png', '34 года',
+        'Здесь еще один отзыв'],
+        ['Имя Фамилия', 'images/photo-naumova.png', '34 года',
+        'Здесь еще один отзыв'],
+        ['Имя Фамилия', 'images/photo-naumova.png', '34 года',
+        'Здесь еще один отзыв'],
+    ]
+
 mixin slide(number)
     -
         let nextPage = (number + 1)
@@ -154,8 +167,23 @@ mixin priceCell(number)
 mixin scheduleRow(number)
     tr.schedule-tr
         - for(var i = 0; i < schedule[number].length; i++)
-            td.schedule-td
-                p.schedule-title= schedule[number][i]
+            if(i == 0 && number == 0)
+                td.schedule-td.schedule-td-download
+                    a(href='https://spb.hh.ru/resume/1402d876ff0737d0ee0039ed1f6f5a32386355')
+                        p.schedule-title= schedule[number][i]
+            else
+                td.schedule-td
+                    p.schedule-title= schedule[number][i]
+
+mixin slideReview(number)
+    article.slide
+        .reviews-review-wrapper
+            .reviews-review-header
+                img.reviews-photo(src=reviews[number][1])
+                .reviews-person
+                    h1.reviews-name= (reviews[number][0])
+                    h2.reviews-age= (reviews[number][2])
+            p.reviews-text= (reviews[number][3])
 
 <!DOCTYPE html>
 <html>
@@ -269,6 +297,25 @@ mixin scheduleRow(number)
                 - for(var i = 0; i < schedule.length; i++)
                     +scheduleRow(i)
         +slide(6)
+            nav.reviews-menu
+                h2.reviews-menu-header= 'Client —'
+                ul.reviews-menu-opened
+                    each val, index in reviews
+                        -
+                            let selectedReviewIndex = index + 1
+                        li.menu-opened-item
+                            a(href= '#reviews/' + index)= val[0]
+            img(src="images/reviews-image.png").reviews-image
+            .reviews-wrapper
+                nav.switch-reviews-arrows
+                    img(src="images/ellipse-arrow.png").switch-reviews-arrow.switch-reviews-back
+                    img(src="images/ellipse-arrow.png").switch-reviews-arrow.switch-reviews-forward
+                each num, index in reviews
+                    +slideReview(index)
+                <form action='#test1'>
+                    button.button-sign-up.reviews-button
+                        |Записаться онлайн
+                </form>
         +slide(7)
         +slide(8)
     </div>

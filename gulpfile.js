@@ -24,6 +24,7 @@ const scssFiles = [
   './src/scss/landscape-styles.scss',
   './src/scss/slide-prices.scss',
   './src/scss/slide-schedule.scss',
+  './src/scss/slide-reviews.scss',
 ]
 
 const jsFiles = [

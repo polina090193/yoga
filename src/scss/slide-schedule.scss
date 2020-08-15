@@ -11,16 +11,7 @@
         &:first-child {
             color: #f78e6a;
             font-weight: bold;
-            & .schedule-td:first-child {
-                color: black;
-                font-weight: normal;
-                &:before {
-                    content: url('../images/download-arrow.jpg');
-                    float: left;
-                    padding-top: 15%;
-                    padding-right: 5%;
-                }
-            }
+            
         }
     }
     
@@ -31,8 +22,25 @@
         padding-right: 1.55%;
         text-align: center;
 
+        
+
         &:first-child {
             @extend .schedule-tr:first-child;
+        }
+
+        &-download a {
+            color: black;
+            font-weight: normal;
+            text-decoration: none;
+            &:before {
+                content: url('../images/download-arrow.jpg');
+                float: left;
+                padding-top: 12%;
+                padding-right: 5%;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
     }
