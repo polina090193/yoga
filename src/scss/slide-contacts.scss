@@ -1,0 +1,34 @@
+@import 'slide-schedule.scss';
+
+.contacts {
+    &-wrapper {
+        font-weight: 300;
+    }
+
+    &-header {
+        font-size: 0.875em;
+    }
+
+    &-address {
+        font-size: 1.125em;
+        margin-bottom: 10%;
+    }
+
+    &-email {
+        font-size: 1.125em;
+        & > p {
+            margin-bottom: 15%;
+        }
+    }
+
+    &-email,
+    &-see-map,
+    &-give-review {
+        @extend .schedule-td-download;
+    }
+
+
+    &-copyright {
+        margin-top: 15%;
+    }
+}

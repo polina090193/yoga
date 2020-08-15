@@ -335,6 +335,23 @@ mixin slideReview(number)
                 <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
             </div>
         +slide(8)
+            img.map(src="images/map.jpg")
+            .contacts-wrapper
+                p.contacts-header= 'Адрес:'
+                p.contacts-address= 'СПб, Невский проспект, 108'
+                p.contacts-header= 'Email:'
+                p.contacts-email
+                    a(href='')= 'Lotos-yoga@gmail.com'
+                p.contacts-see-map
+                    a(href='')= 'Смотреть на карте'
+                p.contacts-give-review
+                    a(href='')= 'Оставить отзыв'
+                p.contacts-copyright= '© 2018 — ООО “Центр йоги Лотос”'
+                <form action='#test1'>
+                    button.button-sign-up.reviews-button
+                        |Записаться онлайн
+                </form>
+            </div>
     </div>
 </body>
 

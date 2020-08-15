@@ -25,6 +25,7 @@ const scssFiles = [
   './src/scss/slide-prices.scss',
   './src/scss/slide-schedule.scss',
   './src/scss/slide-reviews.scss',
+  './src/scss/slide-contacts.scss',
 ]
 
 const jsFiles = [

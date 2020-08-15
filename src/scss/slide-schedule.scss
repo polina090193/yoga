@@ -28,20 +28,23 @@
             @extend .schedule-tr:first-child;
         }
 
-        &-download a {
-            color: black;
-            font-weight: normal;
-            text-decoration: none;
-            &:before {
-                content: url('../images/download-arrow.jpg');
-                float: left;
-                padding-top: 12%;
-                padding-right: 5%;
-            }
-            &:hover {
-                text-decoration: underline;
+        &-download {
+            & a {
+                color: black;
+                font-weight: normal;
+                text-decoration: none;
+                &:before {
+                    content: url('../images/download-arrow.jpg');
+                    float: left;
+                    padding-top: 12%;
+                    padding-right: 5%;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
+          
 
     }
 
