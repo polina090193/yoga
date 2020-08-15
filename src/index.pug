@@ -169,7 +169,8 @@ mixin scheduleRow(number)
         - for(var i = 0; i < schedule[number].length; i++)
             if(i == 0 && number == 0)
                 td.schedule-td.schedule-td-download
-                    a(href='https://spb.hh.ru/resume/1402d876ff0737d0ee0039ed1f6f5a32386355')
+                    //- (href='https://spb.hh.ru/resume/1402d876ff0737d0ee0039ed1f6f5a32386355')
+                    a
                         p.schedule-title= schedule[number][i]
             else
                 td.schedule-td
@@ -250,7 +251,7 @@ mixin slideReview(number)
                 <form class="test-form">
                     <label>Имя:<input type="text" placeholder="Ваше имя" required></label><br>
                         
-                    <label>Телефон:<input id="online_phone" name="phone" type="tel" required
+                    <label>Телефон:<input id="online_phone_1" name="phone" type="tel" required
                                 | value="+7(___)___-__-__"
                                 | pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
                                 | placeholder="+7(___)___-__-__"></label><br>
@@ -317,6 +318,22 @@ mixin slideReview(number)
                         |Записаться онлайн
                 </form>
         +slide(7)
+            <img src="images/form2-image.png" class="test-08-image">
+            <div class="test-08-form-wrapper">
+                <p class="test-03-header"><span class="test-03-discount">10%</span> скидка на абонемент</p>
+                <p class="test-03-description">Хотите скидку на абонемент? Приведите с собой друзей и получите -10% за каждого пришедшего</p>
+                <form class="test-form">
+                    <label>Имя:<input type="text" placeholder="Ваше имя" required></label><br>
+                        
+                    <label>Телефон:<input id="online_phone_2" name="phone" type="tel" required
+                                | value="+7(___)___-__-__"
+                                | pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                | placeholder="+7(___)___-__-__"></label><br>
+                        
+                    <button type="submit" class="submit">Отправить заявку</button>
+                </form>
+                <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
+            </div>
         +slide(8)
     </div>
 </body>

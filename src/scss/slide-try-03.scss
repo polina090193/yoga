@@ -122,3 +122,13 @@
 .connect {
     font-size: 1.125rem;
 }
+
+.test-08-image {
+    height: 70vh;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.test-08-form-wrapper {
+    @extend .test-03-form-wrapper
+}

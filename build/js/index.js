@@ -4212,15 +4212,16 @@ new fullpage('.fullscreen-slide-wrapper', {
 fullpage_api.setAllowScrolling(true);
 let tryForms = document.querySelectorAll('.test-form');
 
-let tryForm = document.querySelector('.test-03-form-wrapper');
+let tryForm3 = document.querySelector('.test-03-form-wrapper');
+let tryForm8 = document.querySelector('.test-08-form-wrapper');
 
-for(tryform in tryForms) {
-  tryForm.addEventListener('submit', sendForm);
-}
+tryForm3.addEventListener('submit', sendForm);
+tryForm8.addEventListener('submit', sendForm);
+
 
 function sendForm(){
-    tryForm.innerHTML = "<div class='thanks'>Спасибо!</div><p class='connect'>Мы свяжемся с вами в течение 15 минут!</p>";
-    tryForm.style.display = 'block';
+    this.innerHTML = "<div class='thanks'>Спасибо!</div><p class='connect'>Мы свяжемся с вами в течение 15 минут!</p>";
+    this.style.display = 'block';
 }
 
 function setCursorPosition(pos, e) {
@@ -4250,8 +4251,10 @@ function setCursorPosition(pos, e) {
     setCursorPosition(i, this)
   }
   window.addEventListener("DOMContentLoaded", function() {
-    var input = document.querySelector("#online_phone");
-    input.addEventListener("input", mask, false);
+    var input1 = document.querySelector("#online_phone_1");
+    var input2 = document.querySelector("#online_phone_2");
+    input1.addEventListener("input", mask, false);
+    input2.addEventListener("input", mask, false);
   });
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
