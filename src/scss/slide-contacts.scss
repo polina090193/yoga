@@ -1,6 +1,8 @@
-@import 'slide-schedule.scss';
-
 .contacts {
+    &-map {
+        height: 50vh;
+    }
+
     &-wrapper {
         font-weight: 300;
     }
@@ -21,12 +23,49 @@
         }
     }
 
-    &-email,
-    &-see-map,
-    &-give-review {
-        @extend .schedule-td-download;
+    &-see-map a,
+    &-give-review a,
+    &-copyright {
+        font-size: 0.875em;
     }
 
+    &-see-map a,
+    &-give-review a {
+        padding-left: 40px;
+        position: relative;
+    }
+
+    &-email a {
+        text-decoration: none;
+    }
+
+    &-email a,
+    &-see-map a,
+    &-give-review a {
+        color: black;
+    }
+
+    &-see-map a:before,
+    &-give-review a:before {
+        content: '';
+        background-size: cover;
+        position: absolute;
+        left: -5px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    &-see-map a:before {
+        background-image: url(../images/map-icon.png);
+    }
+
+    &-give-review a:before {
+        background-image: url(../images/mail-button.png);
+
+    }
+
+   
 
     &-copyright {
         margin-top: 15%;
