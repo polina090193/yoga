@@ -47,17 +47,24 @@ function setCursorPosition(pos, e) {
   });
 
 
-  let giveReviewButton = document.querySelector('.contacts-give-review'),
-      reviewClose = document.querySelector('.give-review-close-img'),
-      contactsWrapper = document.querySelector('.contacts-wrapper'),
-      reviewWrapper = document.querySelector('.give-review-wrapper');
+let giveReviewButton = document.querySelector('.contacts-give-review'),
+    reviewClose = document.querySelector('.give-review-close'),
+    contactsWrapper = document.querySelector('.contacts-wrapper'),
+    reviewWrapper = document.querySelector('.give-review-wrapper'),
+    reviewForm = document.querySelector('.give-review-form'),
+    reviewHeader = document.querySelector('.give-review-header');
 
-  giveReviewButton.addEventListener('click', () => {
-                                    contactsWrapper.style.display = 'none';
-                                    reviewWrapper.style.display = 'block'
-                                  })
+giveReviewButton.addEventListener('click', () => {
+  contactsWrapper.style.display = 'none';
+  reviewWrapper.style.display = 'block'
+})
 
-  reviewClose.addEventListener('click', () => {
-                                    contactsWrapper.style.display = 'block';
-                                    reviewWrapper.style.display = 'none'
-                                  })
+reviewClose.addEventListener('click', () => {
+  contactsWrapper.style.display = 'block';
+  reviewWrapper.style.display = 'none'
+})
+
+reviewForm.addEventListener('submit', () => {
+  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
+  reviewHeader.innerHTML = 'Спасибо!';
+});
