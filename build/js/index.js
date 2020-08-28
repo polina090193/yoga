@@ -4250,12 +4250,29 @@ function setCursorPosition(pos, e) {
     i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
     setCursorPosition(i, this)
   }
+
   window.addEventListener("DOMContentLoaded", function() {
     var input1 = document.querySelector("#online_phone_1");
     var input2 = document.querySelector("#online_phone_2");
     input1.addEventListener("input", mask, false);
     input2.addEventListener("input", mask, false);
   });
+
+
+  let giveReviewButton = document.querySelector('.contacts-give-review'),
+      reviewClose = document.querySelector('.give-review-close-img'),
+      contactsWrapper = document.querySelector('.contacts-wrapper'),
+      reviewWrapper = document.querySelector('.give-review-wrapper');
+
+  giveReviewButton.addEventListener('click', () => {
+                                    contactsWrapper.style.display = 'none';
+                                    reviewWrapper.style.display = 'block'
+                                  })
+
+  reviewClose.addEventListener('click', () => {
+                                    contactsWrapper.style.display = 'block';
+                                    reviewWrapper.style.display = 'none'
+                                  })
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 

@@ -1,6 +1,8 @@
 .contacts {
     &-map {
-        height: 50vh;
+        height: 57.4vh;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     &-wrapper {
@@ -24,15 +26,19 @@
     }
 
     &-see-map a,
-    &-give-review a,
+    &-give-review,
     &-copyright {
         font-size: 0.875em;
     }
 
     &-see-map a,
-    &-give-review a {
+    &-give-review {
         padding-left: 40px;
         position: relative;
+        text-decoration: underline;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
     }
 
     &-email a {
@@ -41,12 +47,12 @@
 
     &-email a,
     &-see-map a,
-    &-give-review a {
+    &-give-review {
         color: black;
     }
 
     &-see-map a:before,
-    &-give-review a:before {
+    &-give-review:before {
         content: '';
         background-size: cover;
         position: absolute;
@@ -60,14 +66,69 @@
         background-image: url(../images/map-icon.png);
     }
 
-    &-give-review a:before {
+    &-give-review:before {
         background-image: url(../images/mail-button.png);
 
     }
 
-   
-
     &-copyright {
         margin-top: 15%;
+    }
+}
+
+.give-review {
+    &-wrapper {
+        display: none;
+    }
+
+    &-header {
+        font-size: 3rem;
+        font-weight: 300;
+        &-wrapper {
+            display: flex;
+            align-items: start;
+        }
+    }
+
+    &-close {
+        border: 0;
+        background: transparent;
+        &-img {
+            width: 90%;
+            cursor: pointer;
+
+        }
+    }
+
+    &-form {
+        width: 22.66vmax;
+
+        & > input {
+            margin-bottom: 3.7vmin;
+            padding-bottom: 1.85vmin;
+        }
+
+        & > textarea {
+            border: 0;
+            border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+            
+            resize: none;
+            
+            width: 100%;
+            height: 12.96vmin;
+            background: transparent;
+
+            font: {
+                family: 'Geometria', sans-serif;
+                size: 1rem;
+            }
+
+            &:active {
+
+                background-color: white;
+                outline: none;
+                color: #f78e6a;
+            }
+        }
     }
 }

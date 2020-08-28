@@ -33,6 +33,7 @@
                 color: black;
                 font-weight: normal;
                 text-decoration: none;
+                cursor: pointer;
                 &:before {
                     content: url('../images/download-arrow.jpg');
                     float: left;

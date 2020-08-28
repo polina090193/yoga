@@ -42,7 +42,8 @@ button:focus {
 	outline: none;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
 	outline: #f78e6a solid 2px;
 }
 
@@ -169,6 +170,10 @@ input:focus {
 		object-fit: contain;
 		width: 3em;
 		height: 3em;
+
+		&-up {
+			transform: rotate(180deg);
+		}
 
 		&:hover,
 		&:active {

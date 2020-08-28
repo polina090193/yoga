@@ -121,7 +121,7 @@ mixin slide(number)
             if (number === pages.length - 1)
                 a.scroll-down(href='#' + pages[0][0])
                     p.scroll-down-text= 'В начало'
-                    .scroll-down-arrow-up
+                    .scroll-down-arrow.scroll-down-arrow-up
             else
                 a.scroll-down(href='#' + pages[nextPage][0])
                     p.scroll-down-text= pages[nextPage][1]
@@ -343,15 +343,28 @@ mixin slideReview(number)
                 p.contacts-email
                     a(href='')= 'Lotos-yoga@gmail.com'
                 p.contacts-see-map
-                    a(href='')= 'Смотреть на карте'
-                p.contacts-give-review
-                    a(href='')= 'Оставить отзыв'
-                p.contacts-copyright= '© 2018 — ООО “Центр йоги Лотос”'
+                    a(href='https://www.google.com/maps/place/%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+108,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191025/@59.931955,30.3553397,17z/data=!3m1!4b1!4m5!3m4!1s0x469631a4ed2d7173:0x3e6af3e9af92f6e5!8m2!3d59.931955!4d30.3575284' target="blank")= 'Смотреть на карте'
+                p.contacts-give-review= 'Оставить отзыв'
+                p.contacts-copyright= '© 2020 — ООО “Центр йоги Лотос”'
                 <form action='#test1'>
                     button.button-sign-up.reviews-button
                         |Записаться онлайн
                 </form>
-            </div>
+            .give-review-wrapper
+                .give-review-header-wrapper
+                    <h1 class="give-review-header">Для нас очень<br>важно ваше<br>мнение</h1>
+                    button.give-review-close
+                        img.give-review-close-img(src='images/x-review.png')
+                <form class="test-form give-review-form">
+                    <input type="text" placeholder="Ваше имя" required><br>
+                        
+                    <textarea placeholder="Ваш отзыв" required></textarea><br>
+                        
+                    button.submit(type="submit")
+                        |Отправить отзыв
+                    <p class="after-form-attention">Нажимая «Отправить отзыв, вы даете согласие на обработку своих персональных данных</p>
+
+                </form>
     </div>
 </body>
 
