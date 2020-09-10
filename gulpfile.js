@@ -19,13 +19,13 @@ const scssFiles = [
   './src/scss/slide-try-03.scss',
   './src/scss/slide-trainers.scss',
   './src/scss/menu-desktop-opened.scss',
-  './src/scss/mobile-styles.scss',
   './src/scss/menu-opened-mob.scss',
   './src/scss/landscape-styles.scss',
   './src/scss/slide-prices.scss',
   './src/scss/slide-schedule.scss',
   './src/scss/slide-reviews.scss',
   './src/scss/slide-contacts.scss',
+  './src/scss/mobile-styles.scss',
 ]
 
 const jsFiles = [

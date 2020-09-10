@@ -278,16 +278,17 @@ mixin slideReview(number)
         +slide(4)
             <img src="images/abonements-image.png" class="prices-image">
             .prices-wrapper
-                table.prices-table
-                    tr.prices-table-tr
-                        +priceCell(0)
-                        +priceCell(1)
-                    tr.prices-table-tr
-                        +priceCell(2)
-                        +priceCell(3)
-                    tr.prices-table-tr
-                        +priceCell(4)
-                        +priceCell(5)
+                .prices-table-wrapper
+                    table.prices-table
+                        tr.prices-table-tr
+                            +priceCell(0)
+                            +priceCell(1)
+                        tr.prices-table-tr
+                            +priceCell(2)
+                            +priceCell(3)
+                        tr.prices-table-tr
+                            +priceCell(4)
+                            +priceCell(5)
                 <form class="prices-button" action='#test1'>
                     <button class="button-sign-up">
                         |Заказать абонемент

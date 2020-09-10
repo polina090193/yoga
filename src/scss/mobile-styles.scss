@@ -301,7 +301,6 @@
 
     .prices {
         &-wrapper {
-            overflow-x: auto;
             padding: 0;
             margin: 0;
             width: fit-content;
@@ -312,8 +311,12 @@
         }
 
         &-table {
+            &-wrapper {
+                overflow-x: auto;
+            }
+            
             padding: 0;
-            margin: 0;
+            margin-top: 0;
             overflow-x: auto;
 
             &-td {
@@ -325,5 +328,22 @@
             margin-left: 5.7vw;
         }
         
+    }
+
+    // Schedule slide
+
+    .schedule {
+        &-table {
+            overflow-x: auto;
+            height: 76.6vh;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        &-td {
+            min-width: 50vw;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 }
