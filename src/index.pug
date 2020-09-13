@@ -348,14 +348,13 @@ mixin slideReview(number)
                 p.contacts-give-review= 'Оставить отзыв'
                 p.contacts-copyright= '© 2020 — ООО “Центр йоги Лотос”'
                 <form action='#test2'>
-                    button.button-sign-up.reviews-button
+                    button.button-sign-up.contacts-button
                         |Записаться онлайн
                 </form>
             .give-review-wrapper
                 .give-review-header-wrapper
                     <h1 class="give-review-header">Для нас очень<br>важно ваше<br>мнение</h1>
-                    button.give-review-close
-                        img.give-review-close-img(src='images/x-review.png')
+                    .give-review-close
                 <form class="test-form give-review-form">
                     <input type="text" placeholder="Ваше имя" required><br>
                         

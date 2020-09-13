@@ -82,8 +82,9 @@
     }
 
     &-header {
-        font-size: 3rem;
+        font-size: 2.5vmax;
         font-weight: 300;
+
         &-wrapper {
             display: flex;
             align-items: flex-start;
@@ -91,17 +92,20 @@
     }
 
     &-close {
-        border: 0;
-        background: transparent;
-        &-img {
-            width: 90%;
-            cursor: pointer;
+        min-width: 122px;
+        min-height: 122px;
 
-        }
+        background-image: url('../images/x-review.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+        /* position: absolute;
+        right: 10%; */
     }
 
     &-form {
-        width: 22.66vmax;
+        width: 20vmax;
 
         & > input {
             margin-bottom: 3.7vmin;

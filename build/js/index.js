@@ -4277,8 +4277,8 @@ reviewClose.addEventListener('click', () => {
 })
 
 reviewForm.addEventListener('submit', () => {
-  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
   reviewHeader.innerHTML = 'Спасибо!';
+  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
 });
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -4382,6 +4382,9 @@ if (window.matchMedia
 
         addEventForForwardArrow(document.querySelector('.switch-trainers-arrows-forward'))
         addEventForBackArrow(document.querySelector('.switch-trainers-arrows-back'))
+        
+        addEventForForwardArrow(document.querySelector('.switch-reviews-forward'))
+        addEventForBackArrow(document.querySelector('.switch-reviews-back'))
 
         function addEventForForwardArrow (selector) {
             selector.addEventListener('click', function(){

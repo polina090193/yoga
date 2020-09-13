@@ -65,6 +65,6 @@ reviewClose.addEventListener('click', () => {
 })
 
 reviewForm.addEventListener('submit', () => {
-  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
   reviewHeader.innerHTML = 'Спасибо!';
+  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
 });

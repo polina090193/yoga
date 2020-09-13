@@ -100,6 +100,9 @@ if (window.matchMedia
 
         addEventForForwardArrow(document.querySelector('.switch-trainers-arrows-forward'))
         addEventForBackArrow(document.querySelector('.switch-trainers-arrows-back'))
+        
+        addEventForForwardArrow(document.querySelector('.switch-reviews-forward'))
+        addEventForBackArrow(document.querySelector('.switch-reviews-back'))
 
         function addEventForForwardArrow (selector) {
             selector.addEventListener('click', function(){
