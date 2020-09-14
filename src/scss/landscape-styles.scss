@@ -25,6 +25,9 @@
     
     .pages {
         flex-basis: 5%;
+        @media (min-width: 670px) {
+            display: none;
+        }
     }
     
     .classes-text {
@@ -40,10 +43,15 @@
     .button-sign-up {
         align-self: flex-end;
 
-        padding: 0 0 0 5%;
+        font-size: 2.7vw;
+
+        margin-top: 3vh;
+        padding: 0 0 0 3rem;
+        
+        min-width: unset;
+        width: 100%;
         height: 25%;
         
-        font-size: 1rem;
     }
     
     .scroll-down {
@@ -95,6 +103,10 @@
     .test-form {
         width: 50%;
 
+        & > label > input {
+            padding-bottom: 10px;
+        }
+
         & > input:last-of-type {
             margin-top: 1rem;
         }
@@ -111,6 +123,11 @@
     }
 
     // Trainers slide (04)
+
+    div[data-anchor="trainers"] > section > .logo-left {
+        display: none;
+    }
+
     .trainers {
         &-menu-header {
             display: none;
@@ -118,9 +135,10 @@
 
         &-menu {
             flex-basis: content;
+
             & + div {
                 flex-basis: 70%;
-                height: 75%;
+                height: 70%;
             }
         }
 
@@ -135,8 +153,8 @@
         }
 
         &-text {
-            flex-basis: content;
             margin-top: 0;
+            height: 100%;
         }
 
         &-head {
@@ -151,17 +169,67 @@
             width: 100%;
         }
     }
-    .button-sign-up {
-        margin-top: 1vh;
-        font-size: 2.5vw;
-        min-width: unset;
-        width: 100%;
-        padding-left: 3rem;
+    
+
+    // Prices slide
+
+    div[data-anchor="prices"] > div > section > .logo-left {
+        display: none;
     }
 
-    .pages {
-        @media (min-width: 670px) {
+    .prices {
+        &-wrapper {
+            width: 100%;
+            align-items: center;
+            overflow: auto;
+
+        }
+        &-image {
             display: none;
         }
+        &-table {
+            width: 80vw;
+            margin-top: 3vh;
+            overflow: auto;
+            &-wrapper {
+            height: 50vh;
+
+                overflow: auto;
+
+            }
+        }
+        &-try > .try-plus {
+            width: 5vw;
+        }
+        &-button {
+            width: 50%;
+        }
+    }
+
+    // Schedule slide
+    div[data-anchor="schedule"] > div > section > .logo-left {
+        display: none;
+    }
+
+    .schedule {
+        
+        &-table {
+            min-width: unset;
+            max-width: unset;
+            overflow-x: auto;
+            font-size: 5vh;
+            margin: auto;
+        }
+        &-td{
+            padding: 0;
+            &-download a:before {
+                content: "";
+            }
+        }
+        &-title {
+            margin: 3%;
+            font-size: .5rem;
+        }
+        
     }
 }
