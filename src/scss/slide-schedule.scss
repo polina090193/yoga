@@ -1,5 +1,7 @@
 .schedule {
     &-table {
+        overflow: auto !important;
+
         min-width: 73.96%;
         max-width: 85%;
         height: 57.6%;
@@ -29,20 +31,25 @@
         }
 
         &-download {
+            position: relative;
+            padding-left: 50px;
+
+            &:before {
+                content: url('../images/download-arrow.jpg');
+                position: absolute;
+                top: 25%;
+                left: 5%;
+            }
+
             & a {
                 color: black;
                 font-weight: normal;
                 text-decoration: none;
                 cursor: pointer;
-                &:before {
-                    content: url('../images/download-arrow.jpg');
-                    float: left;
-                    padding-top: 12%;
-                    padding-right: 5%;
-                }
-                &:hover {
-                    text-decoration: underline;
-                }
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
             }
         }
           

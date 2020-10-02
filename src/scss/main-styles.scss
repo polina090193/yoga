@@ -21,6 +21,8 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	box-sizing: border-box;
+	overflow-y: hidden;
+	// overflow-x: auto;
 
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);

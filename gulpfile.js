@@ -29,6 +29,7 @@ const scssFiles = [
 ]
 
 const jsFiles = [
+  './src/fullpage-library/scrolloverflow.min.js',
   './src/fullpage-library/fullpage.js',
   './src/fullpage-library/fullpageOptions.js',
   './src/js/main.js',

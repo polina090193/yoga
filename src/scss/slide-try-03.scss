@@ -11,13 +11,13 @@
 
         justify-content: space-around;
         height: 53.06vh;
-        width: 23.23vw;
+        width: 30vw;
     }
 
     &-discount {
         font: {
             weight: lighter;
-            size: 5rem;
+            size: 1.7em;
         }
     
         background: linear-gradient(to right, #f78e6a, #fc66a2);
@@ -27,11 +27,9 @@
 
     &-header {
         font: {
-            size: 3rem;
+            size: 2em;
             weight: lighter;
         }
-        line-height: 3.4rem;
-    
         margin: 0;
     }
 

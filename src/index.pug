@@ -89,7 +89,7 @@
 mixin slide(number)
     -
         let nextPage = (number + 1)
-    .section(data-anchor = pages[number][0])
+    .section(data-anchor = pages[number][0]).fp-auto-height-responsive
         section.slides
             .menu
                 .menu-icon
@@ -316,7 +316,7 @@ mixin slideReview(number)
                     +slideReview(index)
                 <form action='#test1'>
                     button.button-sign-up.reviews-button
-                        |Записаться онлайн
+                        |Попробовать тоже
                 </form>
         +slide(7)
             <img src="images/form2-image.png" class="test-08-image">
@@ -353,16 +353,16 @@ mixin slideReview(number)
                 </form>
             .give-review-wrapper
                 .give-review-header-wrapper
-                    <h1 class="give-review-header">Для нас очень<br>важно ваше<br>мнение</h1>
+                    <h1 class="give-review-header">Для нас очень важно ваше мнение</h1>
                     .give-review-close
                 <form class="test-form give-review-form">
                     <input type="text" placeholder="Ваше имя" required><br>
                         
                     <textarea placeholder="Ваш отзыв" required></textarea><br>
                         
-                    button.submit(type="submit")
+                    button.submit.send-review(type="submit")
                         |Отправить отзыв
-                    <p class="after-form-attention">Нажимая «Отправить отзыв, вы даете согласие на обработку своих персональных данных</p>
+                    <p class="after-form-attention after-form-attention-review">Нажимая «Отправить отзыв, вы даете согласие на обработку своих персональных данных</p>
 
                 </form>
     </div>

@@ -335,8 +335,8 @@
 
     .schedule {
         &-table {
-            overflow-x: auto;
-            height: 76.6vh;
+            // overflow: auto;
+            height: 70vh;
             margin-top: 0;
             margin-bottom: 0;
         }
@@ -458,14 +458,16 @@
 
             position: absolute;
             height: 80vh;
+            width: 95%;
 
-            margin-top: 5vh;
+            margin-top: 10vh;
             
         }
 
         &-header {
-            font-size: 1.9rem;
+            font-size: 2em;
             text-align: center;
+            width: 75vmin;
             &-wrapper {
                 justify-content: space-around;
             }
@@ -480,7 +482,10 @@
         }
 
         &-form {
-            width: 90%;
+            width: 85%;
         }
+    }
+    .connect {
+        text-align: center;
     }
 }

@@ -5,10 +5,29 @@
         display: none;
     }
     
-    .main-inscription,
+    .main-inscription {
+        max-width: unset;
+        width: 100%;
+        flex-basis: 100%;
+       justify-content: space-around;
+       align-items: center;
+    }
+
+    .lotos-inscription {
+        margin-top: 0;
+    }
+    .try {
+        margin-bottom: 0;
+        font-size: 1rem;
+        &-inscription {
+            max-width: 40vw;
+        }
+        &-plus {
+            width: 5vw;
+        }
+    }
     .logo-left {
-        flex-basis: 20%;
-        margin: auto;
+        display: none;
     }
     
     .menu-classes {
@@ -124,10 +143,6 @@
 
     // Trainers slide (04)
 
-    div[data-anchor="trainers"] > section > .logo-left {
-        display: none;
-    }
-
     .trainers {
         &-menu-header {
             display: none;
@@ -173,10 +188,6 @@
 
     // Prices slide
 
-    div[data-anchor="prices"] > div > section > .logo-left {
-        display: none;
-    }
-
     .prices {
         &-wrapper {
             width: 100%;
@@ -207,9 +218,6 @@
     }
 
     // Schedule slide
-    div[data-anchor="schedule"] > div > section > .logo-left {
-        display: none;
-    }
 
     .schedule {
         
@@ -230,6 +238,134 @@
             margin: 3%;
             font-size: .5rem;
         }
-        
+    }
+
+    // Reviews slide
+
+    .reviews {
+        &-image {
+            display: none;
+        }
+        &-menu {
+            right: 0;
+            &-header {
+                display: none;
+            }
+        }
+        &-wrapper {
+            width: 70%;
+            height: 50vh;
+            
+            margin-top: 0;
+            margin-bottom: 5%;
+
+        }
+        &-photo {
+            width: 20%;
+        }
+        &-name {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    
+        &-age {
+
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+        }
+        &-text {
+            font-size: .7rem;
+            margin-top: 2%;
+        }
+        &-button {
+            width: 70%;
+            margin-top: 0;
+        }
+    }
+
+    // Try-08 slide
+    .test-08-form-wrapper {
+        flex-direction: row;
+        flex-basis: 91%;
+    }
+
+    .test-08 {
+        &-image {
+            display: none;
+        }
+
+        &-header {
+            display: none;
+        }
+
+        &-discount {
+            font-size: 3rem;
+        }
+
+        &-description {
+            display: none;
+        }
+    }
+
+    // Contacts slide
+
+    .contacts {
+        &-map {
+            height: 50vh;
+        }
+        &-wrapper {
+            width: 45%;
+        }
+        &-see-map a,
+        &-give-review {
+            padding-left: 0;
+        }
+        &-see-map a:before,
+        &-give-review:before {
+            background-image: none;
+        }
+        &-header {
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        &-address,
+        &-email {
+            margin: 0;
+        }
+        &-button {
+            display: none;
+        }
+    }
+
+    .give-review {
+        &-wrapper {
+            width: 50%;
+        }
+        &-close {
+            min-width: unset;
+            min-height: unset;
+            width: 10px;
+            height: 10px;
+            margin-top: 10px;
+        }
+        &-form {
+            width: 100%;
+           & > input {
+                    margin-bottom: 3.7vmin;
+                    padding-bottom: 1.85vmin;
+            }
+        }
+        &-header {
+            width: 90%;
+            margin-bottom: 0;
+        }
+    }
+    .after-form-attention-review {
+        font-size: .5rem;
+        width: 100%;
+        line-height: normal;
+    }
+    .send-review {
+        margin-top: 0;
     }
 }
