@@ -1,7 +1,5 @@
 .schedule {
     &-table {
-        overflow: auto !important;
-
         min-width: 73.96%;
         max-width: 85%;
         height: 57.6%;
@@ -38,7 +36,7 @@
                 content: url('../images/download-arrow.jpg');
                 position: absolute;
                 top: 25%;
-                left: 5%;
+                left: 10%;
             }
 
             & a {

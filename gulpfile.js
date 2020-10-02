@@ -91,7 +91,8 @@ function () {
 gulp.task('watch',
 function () {
   browserSync.init({
-    server: "build"
+    server: "build",
+    tunnel: "yoga"
   });
   gulp.watch('./src/**/*.scss', gulp.series('styles'));
   gulp.watch('./src/*.scss',  gulp.series('styles'));

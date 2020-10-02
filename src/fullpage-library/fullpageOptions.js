@@ -1,11 +1,16 @@
 new fullpage('.fullscreen-slide-wrapper', {
     //options here
-    // autoScrolling: true,
+    autoScrolling: true,
     fixedElements: '.menu__mobile',
     css3: false,
     controlArrows: false,
 
-    scrollOverflow: true,
+    // scrollOverflow: true,
+    /* scrollOverflowOptions: {
+        scrollX: true,
+        scrollY: false
+    } */
+    normalScrollElements: '.schedule-table, .prices-table'
 });
 
 //methods

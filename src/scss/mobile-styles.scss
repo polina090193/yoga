@@ -313,7 +313,7 @@
 
         &-table {
             &-wrapper {
-                overflow-x: auto;
+                // overflow-x: auto;
             }
             
             padding: 0;
@@ -335,13 +335,13 @@
 
     .schedule {
         &-table {
-            // overflow: auto;
             height: 70vh;
             margin-top: 0;
             margin-bottom: 0;
         }
         
         &-td {
+            overflow: auto;
             min-width: 50vw;
             padding-top: 0;
             padding-bottom: 0;
