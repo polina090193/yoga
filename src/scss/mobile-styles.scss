@@ -312,13 +312,8 @@
         }
 
         &-table {
-            &-wrapper {
-                // overflow-x: auto;
-            }
-            
             padding: 0;
             margin-top: 0;
-            overflow-x: auto;
 
             &-td {
                 height: 17.24vh;
@@ -341,7 +336,6 @@
         }
         
         &-td {
-            overflow: auto;
             min-width: 50vw;
             padding-top: 0;
             padding-bottom: 0;

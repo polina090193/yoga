@@ -5,11 +5,6 @@ new fullpage('.fullscreen-slide-wrapper', {
     css3: false,
     controlArrows: false,
 
-    // scrollOverflow: true,
-    /* scrollOverflowOptions: {
-        scrollX: true,
-        scrollY: false
-    } */
     normalScrollElements: '.schedule-table, .prices-table'
 });
 
