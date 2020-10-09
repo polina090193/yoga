@@ -3,7 +3,6 @@
         &-wrapper {
             width: 30%;
             margin-top: 7%;
-            margin-left: -5%;
             height: 48vh;
             margin-bottom: 8.5%;
         }
@@ -43,7 +42,7 @@
 
     &-photo {
         margin-right: 7.69%;
-        width: 35%;
+        width: 20%;
     }
 
     &-person {
@@ -52,19 +51,20 @@
         justify-content: flex-end;
     }
 
-    &-name {
+    &-name,
+    &-age {
         margin: 0;
-        margin-bottom: 11.11%;
-        font-size: 1.875rem;
         font-weight: normal;
         line-height: 1.5rem;
     }
 
+    &-name {
+        margin-bottom: 11.11%;
+        font-size: 1.875rem;
+    }
+
     &-age {
-        margin: 0;
         font-size: 1.125rem;
-        font-weight: normal;
-        line-height: 1.5rem;
     }
 
     &-text {

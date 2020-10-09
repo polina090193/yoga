@@ -62,6 +62,10 @@ textarea:focus {
 		content: url('../images/burger.png');
 		margin-right: 0.938em;
 	}
+
+	&-block {
+        z-index: 2;
+	}
 }
 
 .mobile-menu,
@@ -231,7 +235,7 @@ textarea:focus {
 	}
 }
 
-.button-sign-up {
+.button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -250,7 +254,8 @@ textarea:focus {
 	
 	min-width: 16rem;
 	min-height: 3.5rem;
-    
+	
+    margin-top: 4.63vmin;
 	padding: 0 3rem 0 5rem;
 
 	font-size: 1.3rem;
@@ -270,15 +275,11 @@ textarea:focus {
 	justify-content: center;
 	
 	cursor: pointer;
-	background: url('../images/mail-button.png') no-repeat {
-		color: #f78e6a;
-		size: auto 100%;
-	}
+	
 	
 	border: none;
 	border-radius: 3rem;
     
-    margin-top: 4.63vmin;
 	padding: 1rem 3rem 1rem 5rem;
 
 	font-size: 1em;

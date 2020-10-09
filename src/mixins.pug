@@ -1,7 +1,7 @@
 mixin slide(number)
     -
         let nextPage = (number + 1)
-    .section(data-anchor = pages[number][0]).fp-auto-height-responsive
+    .section(data-anchor = pages[number][0])
         section.slides
             .burger-menu.main-menu
                 .main-menu-icon
@@ -70,7 +70,7 @@ mixin slideTrainer(number)
                     - for(var i = 3; i < trainers[number].length; i++)
                       p.trainer-description= trainers[number][i]
                 form(action='#try-1')
-                    button.button-sign-up.trainers-button= buttonTrainerText + trainers[number][1]
+                    button.button.trainers-button= buttonTrainerText + trainers[number][1]
 
 mixin priceCell(number)
     td.prices-table-td
