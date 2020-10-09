@@ -1,0 +1,22 @@
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .schedule {
+        &-table {
+            min-width: unset;
+            max-width: unset;
+            overflow-x: auto;
+            font-size: 5vh;
+            margin: auto;
+        }
+        &-td{
+            padding: 0;
+            &-download a:before {
+                content: "";
+            }
+        }
+        &-title {
+            margin: 3%;
+            font-size: .5rem;
+        }
+    }
+}

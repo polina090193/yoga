@@ -1,0 +1,52 @@
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 11/9) {
+
+    .course {
+        &s {
+            &-image {
+                display: none;
+            }
+    
+            &-text {
+                flex-basis: 100%;
+                flex-direction: row;
+                justify-content: center;
+        
+                margin-top: 0;
+            }
+
+            &-header {
+                margin-bottom: 0.5em;
+                font-size: 6vh;
+                margin-top: 0;
+            }
+
+            &-arrow {
+                &s {
+                    display: inline;
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+
+                &-back {
+                    margin-right: 10px;
+                    transform: rotate(90deg);
+                }
+
+                &-forward {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+
+        &-description {
+            &-full {
+                width: 100%;
+                overflow-y: scroll;
+            }
+            &-paragraph {
+                width: 100%;
+                font-size: 0.85rem;
+            }
+        }
+    }
+}

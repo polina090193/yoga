@@ -1,190 +1,5 @@
-//- Class, name of top-center-text, name of menu item
--
-    let pages = [
-        ['main', 'Добро пожаловать', 'Главная'],
-        ['classes', 'Направления и классы', 'Направления'],
-        ['test1', 'Пробное занятие'],
-        ['trainers', 'Преподаватели', 'Преподаватели'],
-        ['prices', 'Абонементы', 'Абонементы'],
-        ['schedule', 'Расписание', 'Расписание'],
-        ['reviews', 'Отзывы', 'Отзывы'],
-        ['test2', 'Пробное занятие'],
-        ['contacts', 'Контакты', 'Контакты'],
-        ]
-
-//- Name, description
--
-    let classes = [
-        ['Для начинающих',
-        'Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался и требует обучения. Такой программный комплекс существует и в нашем центре.',
-        'Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так много людей занимаются йогой и придерживаются здорового образа жизни.'],
-
-        ['Аштанга Виньяса',
-        'Аштанга Виньяса йога представляет собой динамичную практику, которая включает в себя определенную последовательность асан, связанных между собой виньясами (системой движения).'],
-
-        ['Универсальная',
-        'Эта тренировочная система вобрала в себя всё лучшее из самых сильных и интересных школ йоги, таких как Аштанга Виньяса, Айенгар-йога, Тибетская Гималайская йога и другие.'],
-
-        ['Кундалини',
-        'Кундалини-йога - одно из направлений йоги, система упражнений, призванная поднять энергию кундалини из основания позвоночника.'],
-
-        ['Айенгара',
-        'Айенгар-йога - разновидность Хатха-йоги, основанная йогином Айенгаром. Характерной особенностью метода является статичное выполнение асан с необходимыми опорами.'],
-
-        ['Терапия',
-        'Йога-терапия - это способ при помощи асан оказать воздействие не только на физическое тело (кости, мускулы и суставы), как другие упражнения, но и на физиологический уровень.'],
-        ]
-
-//- Name, name form, imege, description
--
-    let trainers = [
-        ['Максим Казаков', "Максиму", 'images/maksim.png',
-        'Занимается йогой Айенгара с 1990 года. Является преподавателем йоги Айенгара с 1997 года. Имеет международный сертификат Junior I. Проводит семинары, занятия разных уровней сложности.',
-        'Является одним из самых опытных преподавателей.'],
-
-        ['Настя Антипова', "Насте", 'images/classes-image.png',
-        'К Насте на практику приходят люди разного возраста с разными физическими данными и возможности. Чтобы все могли практиковать на своем уровне, она дает несколько вариантов сложности одной и той же асаны на уроке.'],
-    
-        ['Мария Жукова', "Марии", 'images/abonements-image.png',
-        'Мария – опытный учитель, она посвятила свою жизнь исследованию того, как функционирует наше тело, и что она может сделать, чтобы помочь другим достичь позитивных изменений в физическом уровне.'],
-        ]
-
-//- Title of abonement, price
--   
-    let prices = [
-        ['Разовое занятие', '300'],
-        ['Месяц занятий', '2 000'],
-        ['2 месяца занятий', '3 500'],
-        ['3 месяца занятий', '4 500'],
-        ['Полгода занятий', '8 000'],
-        ['Год занятий', '14 000']
-        ]
-
-//- Tr - td
--   
-    let schedule = [
-        ['Скачать расписание',   '08:00 − 09:25',       '09:30 − 10:55',       '11:00 − 12:25',        '13:30 − 14:55',        '15:00 − 16:25',        '17:00 − 18:25'],
-        ['Понедельник',          'Йога для начинающих', 'Универсальная йога',  'Йога Айенгара',        'Аштанга Виньяса йога', 'Йогатерапия',          'Кундалини йога'],
-        ['Вторник',              'Кундалини йога',      'Йогатерапия',         'Аштанга Виньяса йога', 'Йога Айенгара',        'Универсальная йога',   'Йога для начинающих'],
-        ['Среда',                'Универсальная йога',  'Йога для начинающих', 'Аштанга Виньяса йога', 'Йога Айенгара',        'Кундалини йога',       'Йогатерапия'],
-        ['Четверг',              'Йога для начинающих', 'Универсальная йога',  'Йога Айенгара',        'Аштанга Виньяса йога', 'Йогатерапия',          'Кундалини йога'],
-        ['Пятница',              'Кундалини йога',      'Йогатерапия',         'Аштанга Виньяса йога', 'Йога Айенгара',        'Универсальная йога',   'Йога для начинающих'],
-        ['Суббота',              'Универсальная йога',  'Йога для начинающих', 'Аштанга Виньяса йога', 'Йога Айенгара',        'Кундалини йога',       'Йогатерапия'],
-        ['Воскресенье',          'Йога для начинающих', 'Универсальная йога',  'Йога Айенгара',        'Аштанга Виньяса йога', 'Йогатерапия',          'Кундалини йога'],
-        ]
-
-//-
-- 
-    let reviews = [
-        ['Арина Наумова', 'images/photo-naumova.png', '34 года',
-        'Не знаю, как у других, но мне после занятий йогой хочется начать новую здоровую жизнь, хочется больше есть овощей и фруктов и поднять свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.'],
-        ['Имя Фамилия', 'images/photo-naumova.png', '34 года',
-        'Здесь еще один отзыв'],
-        ['Имя Фамилия', 'images/photo-naumova.png', '34 года',
-        'Здесь еще один отзыв'],
-        ['Имя Фамилия', 'images/photo-naumova.png', '34 года',
-        'Здесь еще один отзыв']
-        ]
-
-mixin slide(number)
-    -
-        let nextPage = (number + 1)
-    .section(data-anchor = pages[number][0]).fp-auto-height-responsive
-        section.slides
-            .menu
-                .menu-icon
-                .menu-header= 'Меню'
-                nav.menu-block
-                    ul.menu-opened
-                        each val, index in pages
-                            if val[2]
-                                if val[0] === pages[number][0]
-                                    li.menu-opened-item.menu-opened__item_selected
-                                        a( href = '#' + val[0] )= val[2]
-                                else
-                                    li.menu-opened-item
-                                        a( href = '#' + val[0] )= val[2]
-            .top-center
-                .top-center-dot
-                .top-center-text= pages[number][1]
-            .phone
-                a.phone-number(href="tel:+78121234567")= '+7 (812) 123-45-67'
-            .logo-left
-            block
-            .pages
-                .pages-top= '0' + nextPage
-                .pages-bottom= '-09'
-            .social
-                p.social-vk= 'Vk'
-                p.social-fb= 'Fb'
-                p.social-inst= 'Inst'
-            if (number === pages.length - 1)
-                a.scroll-down(href='#' + pages[0][0])
-                    p.scroll-down-text= 'В начало'
-                    .scroll-down-arrow.scroll-down-arrow-up
-            else
-                a.scroll-down(href='#' + pages[nextPage][0])
-                    p.scroll-down-text= pages[nextPage][1]
-                    .scroll-down-arrow
-
-mixin slideClass(number)
-    article.slide
-        h3.classes-head= classes[number][0]
-        div.classes-descriptions
-            if classes[number].length === 2
-                p.classes-description= classes[number][1]
-            else if classes[number].length > 2
-                - for(var i = 1; i < classes[number].length; i++)
-                  p.classes-description= classes[number][i]
-
-mixin slideTrainer(number)
-    -
-        let buttonTrainerWords = "Записаться к "
-    article.slide.slide-trainers
-        div.trainers-item
-            img(src=trainers[number][2]).trainers-image
-            div.trainers-text
-                h2.trainers-head= trainers[number][0]
-                if trainers[number].length === 3
-                    p.trainers-description= trainers[number][2]
-                else if trainers[number].length > 3
-                    - for(var i = 3; i < trainers[number].length; i++)
-                      p.trainers-description= trainers[number][i]
-                form.trainers-button(action='#test1')
-                    button.button-sign-up= buttonTrainerWords + trainers[number][1]
-
-mixin priceCell(number)
-    td.prices-table-td
-        div.prices-td-wrapper
-            div.prices-head
-                p.prices-title= prices[number][0]
-                div.prices-price
-                    .prices-sum= prices[number][1]
-                    .prices-rub= ' руб.'
-            a.try.prices-try(href='#test1')
-                img.try-plus(src='images/plus.png')
-
-mixin scheduleRow(number)
-    tr.schedule-tr
-        - for(var i = 0; i < schedule[number].length; i++)
-            if(i == 0 && number == 0)
-                td.schedule-td.schedule-td-download
-                    //- (href='https://spb.hh.ru/resume/1402d876ff0737d0ee0039ed1f6f5a32386355')
-                    a
-                        p.schedule-title= schedule[number][i]
-            else
-                td.schedule-td
-                    p.schedule-title= schedule[number][i]
-
-mixin slideReview(number)
-    article.slide
-        .reviews-review-wrapper
-            .reviews-review-header
-                img.reviews-photo(src=reviews[number][1])
-                .reviews-person
-                    h1.reviews-name= (reviews[number][0])
-                    h2.reviews-age= (reviews[number][2])
-            p.reviews-text= (reviews[number][3])
+include info.pug
+include mixins.pug
 
 <!DOCTYPE html>
 <html>
@@ -195,88 +10,79 @@ mixin slideReview(number)
     <link rel="shortcut icon" href="images/ellipse-plus.png" type="image/png">
     <title>Центр йоги Lotos</title>
 </head>
-<body>
-    <div class="fullscreen-slide-wrapper">
+body
+    .fullscreen-slide-wrapper
+
+        //- First slide
         +slide(0)
-            <img src="images/image-main.png" class="main-image">
-                <div class="main-inscription">
-                    <div class="lotos-inscription">
-                        <p class="center-yoga">
-                            |Центр йоги
-                        </p>
-                        <p class="lotos">
-                            |Lotos
-                        </p>
-                    </div>
-                    <section class="try">
-                        <a class="try" href='#test1'>
-                            <img class="try-plus" src='images/plus.png'>
-                            <p class="try-inscription">
-                                |Приглашаем вас и ваших друзей на бесплатное пробное занятие
-                            </p>
-                        </a>
-                    </section>
-                </div>
+            img.first-slide-image(src="images/first-slide-image.png")
+            .first-slide-header
+                .clubname
+                    p.clubname-vertical= 'Центр йоги'
+                    p.clubname-header= 'Lotos'
+                a.first-slide-cta(href="#try-1")
+                    img.plus.first-slide-cta-plus(src="images/plus.png")
+                    p= 'Приглашаем вас и ваших друзей на бесплатное пробное занятие'
+
+        //- Courses
         +slide(1)
-            nav.menu-classes
-                h2.yoga(class= 'yoga-menu')= 'Yoga —'
-                ul.menu-classes-opened
-                    each val, index in classes
+            nav.courses-menu
+                h2.small-menu-header.courses-menu-header= 'Yoga —'
+                ul.courses-menu-opened
+                    each val, index in courses
                         -
                             let selectedClassIndex = index + 1
-                        li.menu-opened-item
-                            a(href= '#classes/' + index)= val[0]
-            <img src="images/classes-image.png" class="classes-image">
-            <div class="classes-text">
-                <h2 class="yoga yoga-classes-header">
-                    |Yoga —
-                </h2>
-                <nav class="switch-classes-arrows">
-                    <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-back">
-                    <img src="images/ellipse-arrow.png" class="switch-classes-arrow switch-classes-forward">
-                </nav>
-                each num, index in classes
-                    +slideClass(index)
-                <form action='#test1'>
-                    <button class="button-sign-up">
-                        |Записаться онлайн
-                    </button>
-                </form>
-            </div>
+                        li.burger-menu-opened-item.courses-menu-opened-item
+                            a(href= '#courses/' + index)= val[0]
+            img.courses-image(src="images/courses-image.png")
+            .courses-text
+                h2.courses-header.courses-header-slider= 'Yoga —'
+                nav.switch-arrows.courses-arrows
+                    img.switch-arrow.courses-arrow.switch-arrow-back.courses-arrow-back(src="images/ellipse-arrow.png")
+                    img.switch-arrow.courses-arrow.switch-arrow-forward.courses-arrow-forward(src="images/ellipse-arrow.png")
+                each num, index in courses
+                    +slideCourse(index)
+                form(action="#try-1")
+                    button.button-sign-up.classes-button= 'Записаться онлайн'
+
+        //- Try-1
         +slide(2)
-            <img src="images/form1-image.png" class="test-03-image">
-            <div class="test-03-form-wrapper">
-                <p class="test-03-header"><span class="test-03-discount">10%</span> скидка на абонемент</p>
-                <p class="test-03-description">Мы сделаем для вас 10% скидку на абонемент, купленный в день посещения вводного занятия.</p>
-                <form class="test-form">
-                    <label>Имя:<input type="text" placeholder="Ваше имя" required></label><br>
-                        
-                    <label>Телефон:<input id="online_phone_1" name="phone" type="tel" required
-                                | value="+7(___)___-__-__"
-                                | pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                                | placeholder="+7(___)___-__-__"></label><br>
-                        
-                    <button type="submit" class="submit">Отправить заявку</button>
-                </form>
-                <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
-            </div>
+            img.try-1-image(src="images/try-1-image.png")
+            .try-1-form-wrapper
+                p.try-header
+                    span.try-discount= '10%'
+                    | скидка на абонемент
+                p.try-description= 'Мы сделаем для вас 10% скидку на абонемент, купленный в день посещения вводного занятия.'
+                form.try-form.try-1-form
+                    label= 'Имя:'
+                        input(type="text" placeholder="Ваше имя" required)
+                    <br>
+                    label= 'Телефон:'
+                        input(id="online_phone_1" name="phone" type="tel" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__")
+                    <br>
+                    button.submit.try-1-submit(type="submit")= 'Отправить заявку'
+                p.after-form-attention.try-1-after-form-attention
+                    |Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных.
+
+        //- Trainers
         +slide(3)
-            nav.switch-trainers-arrows
-                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-back">
-                <img src="images/ellipse-arrow.png" class="switch-trainers-arrows-forward">
+            nav.switch-arrows.trainers-arrows
+                img.switch-arrow.trainers-arrow.switch-arrow-back.trainers-arrow-back(src="images/ellipse-arrow.png")
+                img.switch-arrow.trainers-arrow.switch-arrow-forward.trainers-arrow-forward(src="images/ellipse-arrow.png")
             nav.trainers-menu
-                h2.trainers-menu-header= 'Тренер —'
-                ul.menu-trainers-opened
+                h2.small-menu-header.trainers-menu-header= 'Тренер —'
+                ul.trainers-menu-opened
                     each val, index in trainers
                         -
                             let selectedTrainerIndex = index + 1
-                        li.menu-opened-item
+                        li.burger-menu-opened-item.trainers-menu-opened-item
                             a(href= '#trainers/' + index)= val[0]
             each num, index in trainers
                 +slideTrainer(index)
 
+        //- Prices
         +slide(4)
-            <img src="images/abonements-image.png" class="prices-image">
+            img.prices-image(src="images/abonements-image.png")
             .prices-wrapper
                 .prices-table-wrapper
                     table.prices-table
@@ -289,52 +95,56 @@ mixin slideReview(number)
                         tr.prices-table-tr
                             +priceCell(4)
                             +priceCell(5)
-                <form class="prices-button" action='#test1'>
-                    <button class="button-sign-up">
-                        |Заказать абонемент
-                    </button>
-                </form>
+                form(action="#try-1")
+                    button.button-sign-up.prices-button= 'Заказать абонемент'
+
+        //- Schedule
         +slide(5)
             table.schedule-table
                 - for(var i = 0; i < schedule.length; i++)
                     +scheduleRow(i)
+
+        //- Reviews
         +slide(6)
             nav.reviews-menu
-                h2.reviews-menu-header= 'Client —'
+                h2.small-menu-header.reviews-menu-header= 'Client —'
                 ul.reviews-menu-opened
                     each val, index in reviews
                         -
                             let selectedReviewIndex = index + 1
-                        li.menu-opened-item
+                        li.burger-menu-opened-item.reviews-menu-opened-item
                             a(href= '#reviews/' + index)= val[0]
             img(src="images/reviews-image.png").reviews-image
             .reviews-wrapper
-                nav.switch-reviews-arrows
-                    img(src="images/ellipse-arrow.png").switch-reviews-arrow.switch-reviews-back
-                    img(src="images/ellipse-arrow.png").switch-reviews-arrow.switch-reviews-forward
+                nav.switch-arrows.reviews-arrows
+                    img(src="images/ellipse-arrow.png").switch-arrow.reviews-arrow.switch-arrow-back.reviews-arrow-back
+                    img(src="images/ellipse-arrow.png").switch-arrow.reviews-arrow.switch-arrow-forward.reviews-arrow-forward
                 each num, index in reviews
                     +slideReview(index)
-                <form action='#test1'>
+                form(action="#try-1")
                     button.button-sign-up.reviews-button
                         |Попробовать тоже
-                </form>
+
+        //- Try-2
         +slide(7)
-            <img src="images/form2-image.png" class="test-08-image">
-            <div class="test-08-form-wrapper">
-                <p class="test-03-header"><span class="test-03-discount">10%</span> скидка на абонемент</p>
-                <p class="test-03-description">Хотите скидку на абонемент? Приведите с собой друзей и получите -10% за каждого пришедшего</p>
-                <form class="test-form">
-                    <label>Имя:<input type="text" placeholder="Ваше имя" required></label><br>
-                        
-                    <label>Телефон:<input id="online_phone_2" name="phone" type="tel" required
-                                | value="+7(___)___-__-__"
-                                | pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                                | placeholder="+7(___)___-__-__"></label><br>
-                        
-                    <button type="submit" class="submit">Отправить заявку</button>
-                </form>
-                <p class="after-form-attention">Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных</p>
-            </div>
+            img.try-2-image(src="images/try-2-image.png")
+            .try-2-form-wrapper
+                p.try-header
+                    span.try-discount= '10%'
+                    | скидка на абонемент
+                p.try-description= 'Хотите скидку на абонемент? Приведите с собой друзей и получите -10% за каждого пришедшего'
+                form.try-form
+                    label= 'Имя:'
+                        input(type="text" placeholder="Ваше имя" required)
+                    <br>
+                    label= 'Телефон:'
+                        input(id="online_phone_2" name="phone" type="tel" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__")
+                    <br>
+                    button.submit.try-2-submit(type="submit")= 'Отправить заявку'
+                p.after-form-attention.try-2-after-form-attention
+                    |Нажимая «Отправить заявку», вы даете согласие на обработку своих персональных данных.
+
+        //- Contacts and leave a review
         +slide(8)
             img.contacts-map(src="images/map.jpg")
             .contacts-wrapper
@@ -347,27 +157,21 @@ mixin slideReview(number)
                     a(href='https://www.google.com/maps/place/%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80.,+108,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191025/@59.931955,30.3553397,17z/data=!3m1!4b1!4m5!3m4!1s0x469631a4ed2d7173:0x3e6af3e9af92f6e5!8m2!3d59.931955!4d30.3575284' target="blank")= 'Смотреть на карте'
                 p.contacts-give-review= 'Оставить отзыв'
                 p.contacts-copyright= '© 2020 — ООО “Центр йоги Лотос”'
-                <form action='#test2'>
+                form(action='#try-2')
                     button.button-sign-up.contacts-button
                         |Записаться онлайн
-                </form>
             .give-review-wrapper
                 .give-review-header-wrapper
-                    <h1 class="give-review-header">Для нас очень важно ваше мнение</h1>
+                    h1.give-review-header= 'Для нас очень важно ваше мнение'
                     .give-review-close
-                <form class="test-form give-review-form">
-                    <input type="text" placeholder="Ваше имя" required><br>
-                        
-                    <textarea placeholder="Ваш отзыв" required></textarea><br>
-                        
-                    button.submit.send-review(type="submit")
-                        |Отправить отзыв
-                    <p class="after-form-attention after-form-attention-review">Нажимая «Отправить отзыв, вы даете согласие на обработку своих персональных данных</p>
-
-                </form>
-    </div>
-</body>
+                form.try-form.give-review-form
+                    input(type="text" placeholder="Ваше имя" required)
+                    <br>
+                    textarea(placeholder="Ваш отзыв" required)
+                    <br>
+                    button.submit.review-submit(type="submit")= 'Отправить отзыв'
+                    p.after-form-attention.after-form-attention-review
+                        |Нажимая "Отправить отзыв", вы даете согласие на обработку своих персональных данных.
 
 <script type="text/javascript" src="js/index.js"> </script>
-
 </html>

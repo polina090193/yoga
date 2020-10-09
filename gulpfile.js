@@ -15,17 +15,16 @@ const scssFiles = [
   './src/fullpage-library/fullpage.css',
   './src/scss/main-styles.scss',
   './src/scss/slide-first.scss',
-  './src/scss/slide-classes.scss',
-  './src/scss/slide-try-03.scss',
+  './src/scss/slide-courses.scss',
+  './src/scss/slide-try.scss',
   './src/scss/slide-trainers.scss',
-  './src/scss/menu-desktop-opened.scss',
-  './src/scss/menu-opened-mob.scss',
   './src/scss/slide-prices.scss',
   './src/scss/slide-schedule.scss',
   './src/scss/slide-reviews.scss',
   './src/scss/slide-contacts.scss',
-  './src/scss/mobile-styles.scss',
-  './src/scss/landscape-styles.scss',
+  './src/scss/menu-desktop-opened.scss',
+  './src/scss/mobile/mobile-styles.scss',
+  './src/scss/mobile/landscape-styles.scss',
 ]
 
 const jsFiles = [
@@ -94,7 +93,7 @@ function () {
     tunnel: "yoga"
   });
   gulp.watch('./src/**/*.scss', gulp.series('styles'));
-  gulp.watch('./src/*.scss',  gulp.series('styles'));
+  gulp.watch('./src/**/**/*.scss',  gulp.series('styles'));
   gulp.watch('./src/**/*.js',  gulp.series('scripts'));
   gulp.watch('./src/*.pug', gulp.series('pug'));
   gulp.watch("./build/*.html").on('change', browserSync.reload);

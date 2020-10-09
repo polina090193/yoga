@@ -1,7 +1,7 @@
 let tryForms = document.querySelectorAll('.test-form');
 
-let tryForm3 = document.querySelector('.test-03-form-wrapper');
-let tryForm8 = document.querySelector('.test-08-form-wrapper');
+let tryForm3 = document.querySelector('.try-1-form-wrapper');
+let tryForm8 = document.querySelector('.try-2-form-wrapper');
 
 tryForm3.addEventListener('submit', sendForm);
 tryForm8.addEventListener('submit', sendForm);

@@ -1,11 +1,9 @@
 new fullpage('.fullscreen-slide-wrapper', {
-    //options here
+    //options
     autoScrolling: true,
     fixedElements: '.menu__mobile',
     css3: false,
     controlArrows: false,
-
-    normalScrollElements: '.schedule-table, .prices-table'
 });
 
 //methods

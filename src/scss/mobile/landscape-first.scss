@@ -1,0 +1,34 @@
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .first-slide-image,
+    .courses-image {
+        display: none;
+    }
+    
+    .first-slide {
+        &-text {
+            max-width: unset;
+            width: 100%;
+            flex-basis: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        &-cta {
+            margin-bottom: 0;
+            font-size: 1rem;
+            max-width: unset;
+    
+            &-text {
+                max-width: 40vw;
+            }
+            &-plus {
+                width: 5vw;
+            }
+        }
+    }
+
+    .clubname {
+        margin-top: 0;
+    }
+}

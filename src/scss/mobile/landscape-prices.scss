@@ -1,0 +1,31 @@
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .prices {
+        &-wrapper {
+            width: 100%;
+            align-items: center;
+            overflow: auto;
+
+        }
+        &-image {
+            display: none;
+        }
+        &-table {
+            width: 80vw;
+            margin-top: 3vh;
+            overflow: auto;
+            &-wrapper {
+            height: 50vh;
+
+                overflow: auto;
+
+            }
+        }
+        &-try > .try-plus {
+            width: 5vw;
+        }
+        &-button {
+            width: 50%;
+        }
+    }
+}

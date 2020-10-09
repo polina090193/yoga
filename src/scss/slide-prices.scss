@@ -2,7 +2,6 @@
     &-wrapper {
         display: flex;
         flex-direction: column;
-        
     }
 
     &-image {
@@ -37,7 +36,7 @@
         padding: 7.22% 3.5% 7.22% 7%;
     }
 
-    &-head {
+    &-header {
         padding-right: 10.71%;
     }
 
@@ -48,13 +47,12 @@
 
     &-title {
         font-size: 0.9rem;
-        white-space: nowrap;
         margin-top: 0;
     }
 
     &-price {
         display: flex;
-
+        white-space: nowrap;
     }
 
     &-sum {
@@ -70,5 +68,4 @@
         font-size: 0.9rem;
         color: black;
     }
-
 }

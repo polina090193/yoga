@@ -1,20 +1,4 @@
-.menu {
-    &-icon,
-    &-header,
-    &-block,
-    &:hover {
-        transition: .5s ease-in-out all;
-    }
-
-    &-block {
-        display: block;
-        position: absolute;
-        float: right;
-
-        opacity: 0;
-        transform: scaleY(0);
-    }
-
+.burger-menu {
     &-opened {
         display: flex;
         flex-direction: column;
@@ -53,6 +37,24 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+.main-menu {
+    &-icon,
+    &-header,
+    &-block,
+    &:hover {
+        transition: .5s ease-in-out all;
+    }
+
+    &-block {
+        display: block;
+        position: absolute;
+        float: right;
+
+        opacity: 0;
+        transform: scaleY(0);
     }
 
     &:hover &-block {

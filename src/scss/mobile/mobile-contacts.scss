@@ -1,0 +1,79 @@
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 11/9) {
+
+    .contacts {
+        &-map {
+            width: 80vw;
+            height: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin: auto;
+        }
+
+        &-header {
+            margin: 0;
+        }
+
+        &-address {
+            margin-bottom: 3.32%;
+            margin-top: 3.32%;
+        }
+    
+        &-email {
+            margin-bottom: 3.32%;
+            margin-top: 3.32%;
+        }
+
+        &-see-map,
+        &-give-review {
+            margin-bottom: 8%;
+        }
+
+        &-copyright {
+            margin-top: 5%;
+        }
+
+        &-button {
+            min-height: unset;
+            height: 10vh;
+            width: 90vw;
+            font-size: 1.4em;
+        }
+    }
+
+    .give-review {
+        &-wrapper {
+            background-color: #fbf5f4;
+
+            position: absolute;
+            height: 80vh;
+            width: 95%;
+
+            margin-top: 10vh;
+            
+        }
+
+        &-header {
+            font-size: 2em;
+            text-align: center;
+            width: 75vmin;
+            &-wrapper {
+                justify-content: space-around;
+            }
+        }
+        
+        &-close {
+            min-width: 23px;
+            min-height: 23px;
+            
+
+            background-image: url('../images/x.png');
+        }
+
+        &-form {
+            width: 85%;
+        }
+    }
+    .connect {
+        text-align: center;
+    }
+}

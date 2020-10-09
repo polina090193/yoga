@@ -1,84 +1,73 @@
-.main-image {
-	flex-basis: 40%;
-	object-fit: contain;
-
-	max-width: 28vw;
-	max-height: 78.79vh;
-}
-
-.main-inscription {
-	flex-basis: 40%;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-
-	max-width: 51.48vh;
-}
-
-.lotos-inscription {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	margin-top: auto;
-}
-
-.center-yoga {
-	margin: 0;
-	padding: 0;
-	font-size: 2.5vh;
-	
-	color: #f78e6a;
-	
-	background: linear-gradient(to right, #f78e6a, #fc66a2);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	
-	transform: rotate(180deg);
-	writing-mode: vertical-rl;
-	white-space: nowrap;
-}
-
-.lotos {
-	display: block;
-
-	margin: 0 {
-		left: -1vh;
-	}
-	padding: 0;
-
-	font: {
-		size: 18.52vh;
-		weight: medium;
-	} 
-	line-height: 15.27vh;
-	color: #f78e6a;
-	
-	background: linear-gradient(to top, #f78e6a, #fc66a2);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.try {
-	display: flex;
-	margin-bottom: auto;
-	
-	text-decoration: none;
-	color: inherit;
-
-	&-plus {
+.first-slide {
+	&-image {
+		flex-basis: 40%;
 		object-fit: contain;
-
-		width: 5.55vh;
-		margin-right: 2.96vh;
+	
+		max-width: 28vw;
+		max-height: 78.79vh;
 	}
 
-	&-inscription {
+	&-header {
+		flex-basis: 40%;
+	
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+	
+		max-width: 51.48vh;
+	}
+
+	&-cta {
+		display: flex;
+		margin-bottom: auto;
 		max-width: 35vh;
 		
 		font-weight: lighter;
 		line-height: 1.5em;
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.clubname {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: auto;
+
+	&-vertical {
+		margin: 0;
+		padding: 0;
+		font-size: 2.5vh;
+		
+		color: #f78e6a;
+		
+		background: linear-gradient(to right, #f78e6a, #fc66a2);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		
+		transform: rotate(180deg);
+		writing-mode: vertical-rl;
+		white-space: nowrap;
+	}
+
+	&-header {
+		display: block;
+
+		margin: 0;
+		margin-left: -1vh;
+		padding: 0;
+
+		font: {
+			size: 18.52vh;
+			weight: medium;
+		} 
+		line-height: 15.27vh;
+
+		color: #f78e6a;
+		background: linear-gradient(to top, #f78e6a, #fc66a2);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }

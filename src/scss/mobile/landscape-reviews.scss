@@ -1,0 +1,43 @@
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .reviews {
+        &-image {
+            display: none;
+        }
+        &-menu {
+            right: 0;
+            &-header {
+                display: none;
+            }
+        }
+        &-wrapper {
+            width: 70%;
+            height: 50vh;
+            
+            margin-top: 0;
+            margin-bottom: 5%;
+
+        }
+        &-photo {
+            width: 20%;
+        }
+        &-name {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    
+        &-age {
+
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+        }
+        &-text {
+            font-size: .7rem;
+            margin-top: 2%;
+        }
+        &-button {
+            width: 70%;
+            margin-top: 0;
+        }
+    }
+}

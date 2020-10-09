@@ -1,0 +1,99 @@
+.try {
+    &-header {
+        font: {
+            size: 2em;
+            weight: lighter;
+        }
+        margin: 0;
+    }
+
+    &-discount {
+        font: {
+            weight: lighter;
+            size: 1.7em;
+        }
+    
+        background: linear-gradient(to right, #f78e6a, #fc66a2);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-description {
+        font-size: 1.125rem;
+    }
+
+    &-form {
+        font: {
+            family: 'Geometria', sans-serif;
+            size: 1rem;
+        }
+        
+        line-height: 2.186rem;
+    
+        & input {
+            border: 0;
+            border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+            background-color: transparent;
+    
+            height: 3vh;
+            width: 100%;
+    
+            &:invalid:not(:focus):not(:placeholder-shown) {
+                // Reminder
+                color: red;
+            }
+    
+            font: {
+                family: 'Geometria', sans-serif;
+                size: 1rem;
+            }
+            
+            line-height: 2.186rem;
+        }
+    
+    }
+
+    &-1 {
+        &-image {
+            height: 55.56vh;
+            padding: 11.615vh 0;
+        }
+    
+        &-form-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: auto 0;
+    
+            justify-content: space-around;
+            height: 53.06vh;
+            width: 30vw;
+        }
+    }
+    
+    &-2 {
+        &-image {
+            height: 70vh;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+        &-form-wrapper {
+            @extend .try-1-form-wrapper
+        }
+    }
+}
+
+.thanks {
+    display: block;
+
+    font: {
+        size: 4.5rem;
+    }
+    
+    background: linear-gradient(to bottom, #f78e6a, #fc66a2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.connect {
+    font-size: 1.125rem;
+}

@@ -1,0 +1,49 @@
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .try {
+        &-header {
+            display: none;
+        }
+
+        &-discount {
+            font-size: 3rem;
+        }
+
+        &-description {
+            display: none;
+        }
+
+        &-form {
+            width: 50%;
+    
+            & > label > input {
+                padding-bottom: 10px;
+            }
+    
+            & > input:last-of-type {
+                margin-top: 1rem;
+            }
+        }
+
+        &-1 {
+            &-image {
+                display: none;
+            }
+
+            &-form-wrapper {
+                flex-direction: row;
+                flex-basis: 91%;
+            }
+        }
+
+        &-2 {
+            &-form-wrapper {
+                flex-direction: row;
+                flex-basis: 91%;
+            }
+    
+            &-image {
+                display: none;
+            }
+        }
+    }
+}

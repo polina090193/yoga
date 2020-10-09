@@ -1,0 +1,42 @@
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 11/9) {
+
+    .try {
+        &-1 {
+            &-image {
+                display: none;
+            }
+
+            &-form-wrapper {
+                width: 100%;
+            }
+
+            &-header {
+                font-size: 2rem;
+                margin-top: 1rem;
+                line-height: normal;
+            }
+
+            &-discount {
+                font-size: 4rem;
+            }
+
+            &-description {
+                font-size: 1rem;
+            }
+        }
+
+        &-2 {
+            &-image {
+                display: none;
+            }
+    
+            &-form-wrapper {
+                width: 100%;
+            }
+        }
+    }
+
+    .thanks {
+        font-size: 3.5rem;
+    }
+}

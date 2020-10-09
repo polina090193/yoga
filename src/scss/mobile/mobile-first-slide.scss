@@ -1,0 +1,42 @@
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 11/9) {
+
+    .first-slide {
+        &-image {
+            flex-basis: 100%;
+            order: -1;
+
+            max-width: unset;
+            height: 36.95vh;
+        }
+
+        &-header {
+            flex-basis: 100%;
+            order: 0;
+            justify-content: center;
+    
+            max-width: 70vw;
+            height: auto;
+    
+            margin: auto;
+        }
+
+        &-cta {
+            flex-basis: 100%;
+
+            font-size: 1.97vh;
+            line-height: 3.08vh;
+            color: black;
+        }
+    }
+
+    .clubname {
+        &-vertical {
+            font-size: 2.2vh;
+        }
+
+        &-header {
+            flex-basis: 100%;
+            font-size: 16vh;
+        }
+    }
+}

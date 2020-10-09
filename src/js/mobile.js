@@ -16,21 +16,30 @@ if (window.matchMedia
     and (orientation: portrait),
     `).matches) {
         
-        let buttons = document.querySelectorAll('.menu-icon'), button;
+        let menuButtons = document.querySelectorAll('.mobile-menu-icon'), menuButton;
 
-        for (button of buttons) {
-            button.addEventListener('click', clickHandlerMenu);
+        for (menuButton of menuButtons) {
+            menuButton.style.display = 'block';
+            menuButton.addEventListener('click', clickHandlerMenu);
         }
 
         function clickHandlerMenu() {
 
-            let menuIcons = document.querySelectorAll('.menu-icon'), icon;
+            for (menuButton of menuButtons) {
+                menuButton.style.display = 'none';
+            }
+
+            let mobileMenu = document.querySelector('.mobile-menu');
+
+            /* let menuIcons = document.querySelectorAll('.menu-icon'), icon;
 
             for (icon of menuIcons) {
                 icon.style.display = 'none';
-            }
+            } */
+
+            mobileMenu.style.display = 'block';
                         
-            let mobileMenu = document.createElement('nav');
+            /* let mobileMenu = document.createElement('nav');
                 mobileMenu.className = "menu-mobile";
                 mobileMenu.innerHTML = `
                     <ul class="menu-opened">
@@ -38,7 +47,7 @@ if (window.matchMedia
                             <a href="#main">Главная</a>
                         </li>
                         <li class="menu-opened-item">
-                            <a href="#classes">Направления</a>
+                            <a href="#courses">Направления</a>
                         </li>
                         <li class="menu-opened-item">
                             <a href="#trainers">Преподаватели</a>
@@ -57,30 +66,30 @@ if (window.matchMedia
                         </li>
                     </ul>`;
 
-            document.querySelector('.menu').append(mobileMenu);
+            document.querySelector('.main-menu').append(mobileMenu); */
 
-            let menuSelector = mobileMenu.querySelectorAll('.menu-opened-item');
+            let menuSelector = mobileMenu.querySelectorAll('.mobile-menu-opened-item');
             let currentPage = fullpage_api.getActiveSection();
 
             if (currentPage.index < 2) {
                 mobileMenu.onload = menuSelector[currentPage.index]
-                                    .classList.add('menu-opened-item-selected');
+                                    .classList.add('mobile-menu-opened-item-selected');
             } else if (currentPage.index > 2 && currentPage.index < 7) {
                 mobileMenu.onload = menuSelector[currentPage.index - 1]
-                                    .classList.add('menu-opened-item-selected');
+                                    .classList.add('mobile-menu-opened-item-selected');
             } else if (currentPage.index > 7) {
                 mobileMenu.onload = menuSelector[currentPage.index - 2]
-                                    .classList.add('menu-opened-item-selected');
+                                    .classList.add('mobile-menu-opened-item-selected');
             }
             
             let cross = document.createElement('img');
-            cross.className = "cross";
-            cross.setAttribute('src', "images/x.png")
-            
-            document.querySelector('.menu-mobile').append(cross);
-            
-            cross.addEventListener('click', clickHandlerCloseMenu);
-            let menuLinks = document.querySelectorAll('.menu-opened-item');
+                cross.className = "mobile-menu-close-icon";
+                cross.setAttribute('src', "images/x.png");
+
+                document.querySelector('.mobile-menu-opened').append(cross);
+                cross.addEventListener('click', clickHandlerCloseMenu);
+
+            let menuLinks = document.querySelectorAll('.mobile-menu-opened-item');
             for (let menuLink of menuLinks) {
                 menuLink.addEventListener('click', clickHandlerCloseMenu);
             }
@@ -88,31 +97,20 @@ if (window.matchMedia
             function clickHandlerCloseMenu() {
                 mobileMenu.remove();
 
-                for (icon of menuIcons) {
-                    icon.style.display = 'block';
+                for (menuButton of menuButtons) {
+                    menuButton.style.display = 'block';
                 }
             }
         }
 
+        let forwardArrows = document.querySelectorAll('.switch-arrow-forward'), forwardArrow;
+        let backArrows = document.querySelectorAll('.switch-arrow-back'), backArrow;
 
-        addEventForForwardArrow(document.querySelector('.switch-classes-forward'))
-        addEventForBackArrow(document.querySelector('.switch-classes-back'))
-
-        addEventForForwardArrow(document.querySelector('.switch-trainers-arrows-forward'))
-        addEventForBackArrow(document.querySelector('.switch-trainers-arrows-back'))
-        
-        addEventForForwardArrow(document.querySelector('.switch-reviews-forward'))
-        addEventForBackArrow(document.querySelector('.switch-reviews-back'))
-
-        function addEventForForwardArrow (selector) {
-            selector.addEventListener('click', function(){
-                fullpage_api.moveSlideRight();
-            });
+        for (forwardArrow of forwardArrows) {
+            forwardArrow.addEventListener('click', () => fullpage_api.moveSlideRight());
         }
-        
-        function addEventForBackArrow (selector) {
-            selector.addEventListener('click', function(){
-                fullpage_api.moveSlideLeft();
-            })
+
+        for (backArrow of backArrows) {
+            backArrow.addEventListener('click', () => fullpage_api.moveSlideLeft());
         }
 }

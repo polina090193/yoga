@@ -1,0 +1,21 @@
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+    .course {
+        &s {
+            &-menu {
+                margin-right: 3vw;
+            }
+            &-header {
+                display: none;
+            }
+            &-text {
+                flex-basis: 55%;
+                margin-top: 0;
+            }
+        }
+        &-description-paragraph {
+            font-size: 0.6rem;
+            width: 100%;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+// General styles
+
 html {
 	height: 100%;
 	margin: 0;
@@ -32,13 +34,6 @@ body {
 	vertical-align: top;
 }
 
-.menu,
-.try,
-.social,
-.scroll-down {
-	cursor: pointer;
-}
-
 button:focus {
 	outline: none;
 }
@@ -48,7 +43,16 @@ textarea:focus {
 	outline: #f78e6a solid 2px;
 }
 
-.menu {
+// Slide outline
+
+.main-menu,
+.try,
+.social,
+.scroll-down {
+	cursor: pointer;
+}
+
+.main-menu {
 	display: flex;
 	align-items: center;
 	align-self: flex-start;
@@ -58,6 +62,11 @@ textarea:focus {
 		content: url('../images/burger.png');
 		margin-right: 0.938em;
 	}
+}
+
+.mobile-menu,
+.mobile-menu-icon {
+	display: none;
 }
 
 .top-center {
@@ -92,7 +101,7 @@ textarea:focus {
 	}
 }
 
-.logo-left {
+.main-logo {
 	flex-basis: 10%;
 
 	content: url('../images/logo.png');
@@ -176,8 +185,8 @@ textarea:focus {
 			transform: rotate(180deg);
 		}
 
-		&:hover,
-		&:active {
+		:hover,
+		:active {
 			background: url('../images/arrow-active.png') no-repeat;
 			background-position: center;
 		}
@@ -187,4 +196,105 @@ textarea:focus {
 		align-self: flex-start;
 		margin-right: 0.625em;
 	}
+}
+
+// Other elements
+
+.plus {
+	object-fit: contain;
+	
+	width: 5.55vh;
+	margin-right: 2.96vh;
+}
+
+.small-menu-header {
+	padding: 0;
+		
+	font: {
+		size: 1.125em;
+		weight: 600;
+	}
+
+	background: linear-gradient(to top, #f78e6a, #fc66a2);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.switch-arrow {
+	&s {
+		display: none;
+	}
+
+	&-back:active,
+	&-forward:active {
+		content: url('../images/arrow-active.png');
+	}
+}
+
+.button-sign-up {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	cursor: pointer;
+
+	background: {
+		image: url('../images/plus.png');
+		repeat: no-repeat;
+		color: #f78e6a;
+		size: auto 100%;
+	}
+	
+	border: none;
+	border-radius: 3rem;
+	
+	min-width: 16rem;
+	min-height: 3.5rem;
+    
+	padding: 0 3rem 0 5rem;
+
+	font-size: 1.3rem;
+    line-height: 1.5em;
+	color: white;
+	
+	&:active {
+		background-color: white;
+		outline: none;
+		color: #f78e6a;
+	}
+}
+
+.submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	cursor: pointer;
+	background: url('../images/mail-button.png') no-repeat {
+		color: #f78e6a;
+		size: auto 100%;
+	}
+	
+	border: none;
+	border-radius: 3rem;
+    
+    margin-top: 4.63vmin;
+	padding: 1rem 3rem 1rem 5rem;
+
+	font-size: 1em;
+    line-height: 1.5em;
+	color: white;
+	
+	&:active {
+
+		background-color: white;
+		outline: none;
+		color: #f78e6a;
+	}
+}
+
+.after-form-attention {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin-top: 2.77vmin;
 }

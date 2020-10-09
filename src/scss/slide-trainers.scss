@@ -1,33 +1,35 @@
-.trainers {
+.trainer {
 
-	&-menu {
-		display: flex;
-
-		&-header {
-			margin-bottom: 1.85vh;
-		
-			padding: 0;
-		
-			font: {
-				size: 1.125em;
-				weight: medium;
+	&s {
+		&-menu {
+			display: flex;
+	
+			&-header {
+				margin-bottom: 1.85vh;
 			}
-		
-			background: linear-gradient(to top, #f78e6a, #fc66a2);
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-
-		& + div {
-			flex-basis: 70%;
-			max-height: 78.79vh;;
+	
+			& + div {
+				flex-basis: 70%;
+				max-height: 78.79vh;;
+			}
+	
+			&-opened {
+				padding: 0;
+				margin: 0.5em 0 0 0.5em;
+			}
 		}
 	}
 
-	&-item {
-		display: flex;
-		flex-direction: row;
-		margin: 0;
+	// Trainer slide
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	
+	&-image {
+		object-fit: contain;
+		height: 74.07vh;
+		margin-top: 4.63vh;
+		max-width: 47.02vw;
 	}
 
 	&-text {
@@ -46,23 +48,14 @@
 		margin-left: 4.69vw;
 	}
 
-	&-image {
-		object-fit: contain;
-		height: 74.07vh;
-		margin-top: 4.63vh;
-		max-width: 47.02vw;
-	}
-
-	&-head {
+	&-header {
 		display: block;
-		
 		margin: 0;
 
 		font: {
 			size: 1.5rem;
 			weight: normal;
 		}
-
 	}
 
 	&-description {
@@ -73,44 +66,5 @@
 
 		font-size: 1.125rem;
 		width: auto;
-		
 	}
-}
-
-.menu-trainers-opened {
-	padding: 0;
-	margin: 0.5em 0 0 0.5em;
-}
-
-.button-sign-up {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-	cursor: pointer;
-	background: url('../images/plus.png') no-repeat {
-		color: #f78e6a;
-		size: auto 100%;
-	}
-	
-	border: none;
-	border-radius: 3rem;
-	
-	min-width: 16rem;
-    
-	padding: 0 3rem 0 5rem;
-
-	font-size: 1.3rem;
-    line-height: 1.5em;
-	color: white;
-	
-	&:active {
-		background-color: white;
-		outline: none;
-		color: #f78e6a;
-	}
-}
-
-.switch-trainers-arrows {
-	display: none;
 }
