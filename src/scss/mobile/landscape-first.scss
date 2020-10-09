@@ -6,22 +6,21 @@
     }
     
     .first-slide {
-        &-text {
+        &-header {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
             max-width: unset;
             width: 100%;
             flex-basis: 100%;
-            justify-content: space-around;
-            align-items: center;
         }
 
         &-cta {
             margin-bottom: 0;
             font-size: 1rem;
-            max-width: unset;
-    
-            &-text {
-                max-width: 40vw;
-            }
+            max-width: 50%;
+            
             &-plus {
                 width: 5vw;
             }

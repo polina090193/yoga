@@ -4210,13 +4210,11 @@ new fullpage('.fullscreen-slide-wrapper', {
 
 //methods
 fullpage_api.setAllowScrolling(true);
-let tryForms = document.querySelectorAll('.test-form');
+let tryForm1 = document.querySelector('.try-1-form-wrapper');
+let tryForm2 = document.querySelector('.try-2-form-wrapper');
 
-let tryForm3 = document.querySelector('.try-1-form-wrapper');
-let tryForm8 = document.querySelector('.try-2-form-wrapper');
-
-tryForm3.addEventListener('submit', sendForm);
-tryForm8.addEventListener('submit', sendForm);
+tryForm1.addEventListener('submit', sendForm);
+tryForm2.addEventListener('submit', sendForm);
 
 
 function sendForm(){
@@ -4258,27 +4256,19 @@ function setCursorPosition(pos, e) {
     input2.addEventListener("input", mask, false);
   });
 
-
-let giveReviewButton = document.querySelector('.contacts-give-review'),
-    reviewClose = document.querySelector('.give-review-close'),
-    contactsWrapper = document.querySelector('.contacts-wrapper'),
-    reviewWrapper = document.querySelector('.give-review-wrapper'),
-    reviewForm = document.querySelector('.give-review-form'),
-    reviewHeader = document.querySelector('.give-review-header');
-
-giveReviewButton.addEventListener('click', () => {
-  contactsWrapper.style.display = 'none';
-  reviewWrapper.style.display = 'block'
+document.querySelector('.contacts-give-review').addEventListener('click', () => {
+  document.querySelector('.contacts-wrapper').style.display = 'none';
+  document.querySelector('.give-review-wrapper').style.display = 'block'
 })
 
-reviewClose.addEventListener('click', () => {
-  contactsWrapper.style.display = 'block';
-  reviewWrapper.style.display = 'none'
+document.querySelector('.give-review-close').addEventListener('click', () => {
+  document.querySelector('.contacts-wrapper').style.display = 'block';
+  document.querySelector('.give-review-wrapper').style.display = 'none'
 })
 
-reviewForm.addEventListener('submit', () => {
-  reviewHeader.innerHTML = 'Спасибо!';
-  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
+document.querySelector('.give-review-form').addEventListener('submit', () => {
+  document.querySelector('.give-review-header').innerHTML = 'Спасибо!';
+  document.querySelector('.give-review-form').innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
 });
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -4286,19 +4276,22 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-// When orientation changes (for mobile devices)
+// Height, when orientation changes
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-// Open menu (for mobile devices)
-if (window.matchMedia
-    (`only screen and (max-width: 880px)
-    and (orientation: portrait),
-    `).matches) {
-        
-        let menuButtons = document.querySelectorAll('.mobile-menu-icon'), menuButton;
+// Open menu
+window.addEventListener('resize', () => {
+    createMobileMenu();
+});
+
+function createMobileMenu() {
+    let menuButtons = document.querySelectorAll('.mobile-menu-icon'), menuButton,
+    mobileMenu = document.querySelector('.mobile-menu');
+
+    if (window.matchMedia(`only screen and (max-width: 880px) and (orientation: portrait)`).matches) {
 
         for (menuButton of menuButtons) {
             menuButton.style.display = 'block';
@@ -4311,44 +4304,7 @@ if (window.matchMedia
                 menuButton.style.display = 'none';
             }
 
-            let mobileMenu = document.querySelector('.mobile-menu');
-
-            /* let menuIcons = document.querySelectorAll('.menu-icon'), icon;
-
-            for (icon of menuIcons) {
-                icon.style.display = 'none';
-            } */
-
             mobileMenu.style.display = 'block';
-                        
-            /* let mobileMenu = document.createElement('nav');
-                mobileMenu.className = "menu-mobile";
-                mobileMenu.innerHTML = `
-                    <ul class="menu-opened">
-                        <li class="menu-opened-item">
-                            <a href="#main">Главная</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#courses">Направления</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#trainers">Преподаватели</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#prices">Абонементы</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#schedule">Расписание</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#reviews">Отзывы</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#contacts">Контакты</a>
-                        </li>
-                    </ul>`;
-
-            document.querySelector('.main-menu').append(mobileMenu); */
 
             let menuSelector = mobileMenu.querySelectorAll('.mobile-menu-opened-item');
             let currentPage = fullpage_api.getActiveSection();
@@ -4395,4 +4351,10 @@ if (window.matchMedia
         for (backArrow of backArrows) {
             backArrow.addEventListener('click', () => fullpage_api.moveSlideLeft());
         }
+    } else {
+        for (menuButton of menuButtons) {
+            menuButton.style.display = 'none';
+        }
+    }
 }
+createMobileMenu()

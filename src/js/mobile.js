@@ -4,19 +4,22 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-// When orientation changes (for mobile devices)
+// Height, when orientation changes
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-// Open menu (for mobile devices)
-if (window.matchMedia
-    (`only screen and (max-width: 880px)
-    and (orientation: portrait),
-    `).matches) {
-        
-        let menuButtons = document.querySelectorAll('.mobile-menu-icon'), menuButton;
+// Open menu
+window.addEventListener('resize', () => {
+    createMobileMenu();
+});
+
+function createMobileMenu() {
+    let menuButtons = document.querySelectorAll('.mobile-menu-icon'), menuButton,
+    mobileMenu = document.querySelector('.mobile-menu');
+
+    if (window.matchMedia(`only screen and (max-width: 880px) and (orientation: portrait)`).matches) {
 
         for (menuButton of menuButtons) {
             menuButton.style.display = 'block';
@@ -29,44 +32,7 @@ if (window.matchMedia
                 menuButton.style.display = 'none';
             }
 
-            let mobileMenu = document.querySelector('.mobile-menu');
-
-            /* let menuIcons = document.querySelectorAll('.menu-icon'), icon;
-
-            for (icon of menuIcons) {
-                icon.style.display = 'none';
-            } */
-
             mobileMenu.style.display = 'block';
-                        
-            /* let mobileMenu = document.createElement('nav');
-                mobileMenu.className = "menu-mobile";
-                mobileMenu.innerHTML = `
-                    <ul class="menu-opened">
-                        <li class="menu-opened-item">
-                            <a href="#main">Главная</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#courses">Направления</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#trainers">Преподаватели</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#prices">Абонементы</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#schedule">Расписание</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#reviews">Отзывы</a>
-                        </li>
-                        <li class="menu-opened-item">
-                            <a href="#contacts">Контакты</a>
-                        </li>
-                    </ul>`;
-
-            document.querySelector('.main-menu').append(mobileMenu); */
 
             let menuSelector = mobileMenu.querySelectorAll('.mobile-menu-opened-item');
             let currentPage = fullpage_api.getActiveSection();
@@ -113,4 +79,10 @@ if (window.matchMedia
         for (backArrow of backArrows) {
             backArrow.addEventListener('click', () => fullpage_api.moveSlideLeft());
         }
+    } else {
+        for (menuButton of menuButtons) {
+            menuButton.style.display = 'none';
+        }
+    }
 }
+createMobileMenu()

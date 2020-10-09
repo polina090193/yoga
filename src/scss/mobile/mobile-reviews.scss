@@ -1,46 +1,53 @@
 @media screen and (max-width: 1024px) and (max-aspect-ratio: 11/9) {
 
-    .reviews {
-        &-image,
-        &-menu {
-            display: none;
+    .review {
+        &s {
+            &-wrapper {
+                width: 100%;
+                height: 50vh;
+                margin-top: 0;
+                margin-left: 0;
+            }
+    
+            &-image,
+            &-menu {
+                display: none;
+            }
+    
+            &-arrow {
+                &s {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 0 0 0.5% auto;
+                }
+    
+                &-back {
+                    margin-right: 10px;
+                    transform: rotate(90deg);
+                }
+        
+                &-forward {
+                    transform: rotate(275deg);
+                }
+            }
         }
+        
         &-text {
             flex-basis: 100%;
             flex-direction: row;
             justify-content: center;
+
+            overflow-y: auto;
     
-            margin-top: 6%;
+            margin-top: 5%;
             font-size: 1rem;
         }
-        &-wrapper {
-            width: 100%;
-            height: 50vh;
-            margin-top: 0;
-            margin-left: 0;
-        }
+        
         &-review-wrapper {
             width: 100%;
         }
         &-button {
             font-size: 1rem;
-        }
-
-        &-arrow {
-            &s {
-                display: flex;
-                justify-content: flex-end;
-                margin: 0 0 0.5% auto;
-            }
-
-            &-back {
-                margin-right: 10px;
-                transform: rotate(90deg);
-            }
-    
-            &-forward {
-                transform: rotate(275deg);
-            }
         }
     }
 }

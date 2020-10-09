@@ -1,23 +1,22 @@
 @media screen and (max-height: 480px) and (orientation: landscape) {
 
-    .trainers {
-        &-menu-header {
-            display: none;
-        }
+    .trainer {
+        &s {
+            &-menu {
+                flex-basis: content;
 
-        &-menu {
-            flex-basis: content;
+                & + div {
+                    flex-basis: 70%;
+                    height: 70%;
+                }
+            }
 
-            & + div {
-                flex-basis: 70%;
-                height: 70%;
+            &-button {
+                width: 100%;
             }
         }
-
-        &-item {
-            flex-basis: 60%;
-            
-        }
+    
+        flex-basis: 60%;
 
         &-image {
             height: 60vh;
@@ -36,9 +35,6 @@
         &-description {
             font-size: 3vh;
             margin-bottom: 0;
-        }
-        &-button {
-            width: 100%;
         }
     }
 }

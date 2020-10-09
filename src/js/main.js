@@ -1,10 +1,8 @@
-let tryForms = document.querySelectorAll('.test-form');
+let tryForm1 = document.querySelector('.try-1-form-wrapper');
+let tryForm2 = document.querySelector('.try-2-form-wrapper');
 
-let tryForm3 = document.querySelector('.try-1-form-wrapper');
-let tryForm8 = document.querySelector('.try-2-form-wrapper');
-
-tryForm3.addEventListener('submit', sendForm);
-tryForm8.addEventListener('submit', sendForm);
+tryForm1.addEventListener('submit', sendForm);
+tryForm2.addEventListener('submit', sendForm);
 
 
 function sendForm(){
@@ -46,25 +44,17 @@ function setCursorPosition(pos, e) {
     input2.addEventListener("input", mask, false);
   });
 
-
-let giveReviewButton = document.querySelector('.contacts-give-review'),
-    reviewClose = document.querySelector('.give-review-close'),
-    contactsWrapper = document.querySelector('.contacts-wrapper'),
-    reviewWrapper = document.querySelector('.give-review-wrapper'),
-    reviewForm = document.querySelector('.give-review-form'),
-    reviewHeader = document.querySelector('.give-review-header');
-
-giveReviewButton.addEventListener('click', () => {
-  contactsWrapper.style.display = 'none';
-  reviewWrapper.style.display = 'block'
+document.querySelector('.contacts-give-review').addEventListener('click', () => {
+  document.querySelector('.contacts-wrapper').style.display = 'none';
+  document.querySelector('.give-review-wrapper').style.display = 'block'
 })
 
-reviewClose.addEventListener('click', () => {
-  contactsWrapper.style.display = 'block';
-  reviewWrapper.style.display = 'none'
+document.querySelector('.give-review-close').addEventListener('click', () => {
+  document.querySelector('.contacts-wrapper').style.display = 'block';
+  document.querySelector('.give-review-wrapper').style.display = 'none'
 })
 
-reviewForm.addEventListener('submit', () => {
-  reviewHeader.innerHTML = 'Спасибо!';
-  reviewForm.innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
+document.querySelector('.give-review-form').addEventListener('submit', () => {
+  document.querySelector('.give-review-header').innerHTML = 'Спасибо!';
+  document.querySelector('.give-review-form').innerHTML = '<p class="connect">Для нас очень важно ваше мнение!</p>';
 });

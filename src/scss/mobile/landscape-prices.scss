@@ -4,28 +4,42 @@
         &-wrapper {
             width: 100%;
             align-items: center;
-            overflow: auto;
-
         }
+
         &-image {
             display: none;
         }
+
         &-table {
-            width: 80vw;
-            margin-top: 3vh;
-            overflow: auto;
+            margin-top: 2%;
+            margin-bottom: 0;
+
             &-wrapper {
-            height: 50vh;
+                display: none;
+            }
 
-                overflow: auto;
-
+            &-landscape-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
             }
         }
-        &-try > .try-plus {
-            width: 5vw;
+
+        &-td-wrapper {
+            grid-template-rows: 1;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 0;
+            padding: 5%;
         }
+
+        &-plus {
+            display: none;
+        }
+
         &-button {
-            width: 50%;
+            // width: 50%;
         }
     }
 }

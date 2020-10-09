@@ -8,12 +8,15 @@
             font-size: 5vh;
             margin: auto;
         }
-        &-td{
+
+        &-td {
             padding: 0;
-            &-download a:before {
-                content: "";
+
+            &-download-img {
+                width: 5vh;
             }
         }
+
         &-title {
             margin: 3%;
             font-size: .5rem;
